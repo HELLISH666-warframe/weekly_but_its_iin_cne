@@ -1,0 +1,9 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="peppino" icon="peppino" color="#ffffff" x="10" y="190" flipX="true" camx="-240" camy="-20">
+	<anim name="idle" anim="idle"/>
+	<anim name="singLEFT" anim="left" x="120" y="-40"/>
+	<anim name="singDOWN" anim="down" x="20" y="-124"/>
+	<anim name="singUP" anim="up" x="48" y="115"/>
+	<anim name="singRIGHT" anim="right" x="-40" y="-16"/>
+</character>

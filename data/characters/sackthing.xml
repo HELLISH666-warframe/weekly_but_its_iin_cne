@@ -1,0 +1,14 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="im nothing like yall/sackboy" icon="sack" color="#ffff66" x="90" y="250" flipX="true" camx="20" camy="90" holdTime="4.00000000000001">
+	<anim name="singLEFT" anim="Left" x="46" y="4" fps="12"/>
+	<anim name="singDOWN" anim="Down" x="-8" y="-33" fps="12"/>
+	<anim name="idle" anim="Idle" fps="12"/>
+	<anim name="singRIGHT" anim="Right" x="-22" y="-6" fps="12"/>
+	<anim name="singUP" anim="Up" x="-5" y="13" fps="12"/>
+	<anim name="singLEFTmiss" anim="miLeft" x="40" y="30" fps="12"/>
+	<anim name="singDOWNmiss" anim="miDown" x="1" y="-12" fps="12"/>
+	<anim name="singUPmiss" anim="miUp" x="-6" y="37" fps="12"/>
+	<anim name="singRIGHTmiss" anim="miRight" x="-28" y="21" fps="12"/>
+	<anim name="check" anim="Jef" x="8" y="-7" fps="12"/>
+</character>

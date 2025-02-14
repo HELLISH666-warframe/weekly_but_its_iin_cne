@@ -1,0 +1,9 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="sunday_weekly" icon="sunday" color="#669999" x="90" y="260" camy="30">
+	<anim name="idle" anim="sunday idle0" loop="true"/>
+	<anim name="singLEFT" anim="sunday left0" x="35" y="5"/>
+	<anim name="singDOWN" anim="sunday down0" x="2" y="-4"/>
+	<anim name="singUP" anim="sunday up0" x="-1" y="3"/>
+	<anim name="singRIGHT" anim="sunday right0" x="-7" y="-3"/>
+</character>

@@ -1,0 +1,13 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="boris" icon="boris" color="#e1e1e1" x="270" y="40" flipX="true" holdTime="4.00000000000001">
+	<anim name="idle" anim="idle" loop="true"/>
+	<anim name="singLEFT" anim="left" x="58" y="-22"/>
+	<anim name="singLEFTmiss" anim="missleft" x="81" y="0"/>
+	<anim name="singDOWN" anim="down" x="15" y="-10"/>
+	<anim name="singDOWNmiss" anim="missdown" x="19" y="48"/>
+	<anim name="singUP" anim="up" x="-79" y="53"/>
+	<anim name="singUPmiss" anim="missup" x="-21" y="59"/>
+	<anim name="singRIGHT" anim="right" x="1" y="11"/>
+	<anim name="singRIGHTmiss" anim="missright" x="34" y="49"/>
+</character>

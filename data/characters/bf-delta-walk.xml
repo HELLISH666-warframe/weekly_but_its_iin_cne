@@ -1,0 +1,13 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="deltabf_walk" icon="bf-deltarune" color="#ca5981" y="350" flipX="true">
+	<anim name="idle" anim="bfwalk_idle0" x="-5" y="0" loop="true"/>
+	<anim name="singLEFT" anim="bfwalk_left0" x="-6" y="-7"/>
+	<anim name="singDOWN" anim="bf_walkdown0" x="-94" y="-63"/>
+	<anim name="singUP" anim="bfwalk_up0" x="-7" y="14"/>
+	<anim name="singRIGHT" anim="bfwalk_right0" x="-48" y="-11"/>
+	<anim name="singLEFTmiss" anim="BF NOTE walk miss0" x="-6" y="5"/>
+	<anim name="singDOWNmiss" anim="BF NOTE walk miss0" x="-6" y="5"/>
+	<anim name="singUPmiss" anim="BF NOTE walk miss0" x="-6" y="5"/>
+	<anim name="singRIGHTmiss" anim="BF NOTE walk miss0" x="-6" y="5"/>
+</character>

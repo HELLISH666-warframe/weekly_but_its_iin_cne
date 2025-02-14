@@ -1,0 +1,9 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="spiderman" icon="bf" color="#31b0d1" x="30" y="70" flipX="true" camx="130" camy="-10">
+	<anim name="idle" anim="idle"/>
+	<anim name="singLEFT" anim="left" x="170" y="-113"/>
+	<anim name="singDOWN" anim="down" x="10" y="-217"/>
+	<anim name="singUP" anim="up" x="34" y="67"/>
+	<anim name="singRIGHT" anim="right" x="-30" y="-88"/>
+</character>

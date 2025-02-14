@@ -1,0 +1,9 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="alucard_assets" icon="dad" color="#af66ce" x="-10" y="620" camx="-150" camy="50" holdTime="4.00000000000001">
+	<anim name="idle" anim="idle"/>
+	<anim name="singLEFT" anim="left" x="2" y="7"/>
+	<anim name="singDOWN" anim="down" x="0" y="-7"/>
+	<anim name="singUP" anim="up" x="-3" y="6"/>
+	<anim name="singRIGHT" anim="right" x="-7" y="9"/>
+</character>

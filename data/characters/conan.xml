@@ -1,0 +1,10 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="conan" icon="conan" color="#f0a4a4" x="-30" y="460" camx="60" camy="-200" holdTime="4.00000000000001">
+	<anim name="danceLeft" anim="conan idle0" indices="1..10"/>
+	<anim name="danceRight" anim="conan idle0" indices="11..20"/>
+	<anim name="singLEFT" anim="conan left0" x="16" y="4"/>
+	<anim name="singDOWN" anim="conan down" x="-7" y="-52"/>
+	<anim name="singUP" anim="conan up" x="5" y="36"/>
+	<anim name="singRIGHT" anim="conan right" x="-12" y="1"/>
+</character>

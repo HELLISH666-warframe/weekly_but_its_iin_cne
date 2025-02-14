@@ -1,0 +1,11 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="sonic" icon="bf" color="#31b0d1" x="500" y="670" flipX="true" antialiasing="false" scale="4">
+	<anim name="idle" anim="idle" loop="true"/>
+	<anim name="singLEFT" anim="left"/>
+	<anim name="singDOWN" anim="down"/>
+	<anim name="singUP" anim="up"/>
+	<anim name="singRIGHT" anim="right"/>
+	<anim name="transform" anim="transform"/>
+	<anim name="heh" anim="line"/>
+</character>

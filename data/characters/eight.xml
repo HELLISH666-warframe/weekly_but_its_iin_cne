@@ -1,0 +1,15 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="eight" icon="eight" color="#a3827b" x="70" y="350" flipX="true" camx="-280" camy="30">
+	<anim name="idle" anim="idle"/>
+	<anim name="idle-alt" anim="specialIdle" x="-13" y="134"/>
+	<anim name="specialget" anim="getspecial" x="2" y="168"/>
+	<anim name="singLEFT" anim="left" x="52" y="-11"/>
+	<anim name="singDOWN" anim="down" x="38" y="-29"/>
+	<anim name="singUP" anim="up" x="-12" y="86"/>
+	<anim name="singRIGHT" anim="right" x="-35" y="2"/>
+	<anim name="singLEFT-alt" anim="specialLeft" x="31" y="156"/>
+	<anim name="singDOWN-alt" anim="specialDown" x="22" y="99"/>
+	<anim name="singUP-alt" anim="specialUp" x="-17" y="186"/>
+	<anim name="singRIGHT-alt" anim="specialRight" x="-25" y="166"/>
+</character>

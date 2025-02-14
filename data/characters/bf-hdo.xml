@@ -1,0 +1,10 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="hdo_BF" icon="hdo" color="#414acc" x="30" y="120" flipX="true" camx="60" camy="40" scale="1.1">
+	<anim name="singLEFT" anim="left" x="82.72727272727272" y="-29.09090909090909"/>
+	<anim name="singDOWN" anim="down" x="61.81818181818181" y="-156.36363636363635"/>
+	<anim name="singUP" anim="up" x="17.27272727272727" y="39.090909090909086"/>
+	<anim name="singRIGHT" anim="right" x="-27.27272727272727" y="-9.09090909090909"/>
+	<anim name="danceLeft" anim="idle" indices="13..26"/>
+	<anim name="danceRight" anim="idle" indices="27,0..12"/>
+</character>

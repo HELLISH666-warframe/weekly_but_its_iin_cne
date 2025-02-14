@@ -1,0 +1,14 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="gd_icon" icon="gddude" color="#fffd48" x="40" y="480" camx="50" holdTime="6.1">
+	<anim name="idle" anim="gd_idle" loop="true"/>
+	<anim name="singLEFT" anim="gd_left"/>
+	<anim name="singLEFT-loop" anim="gd_left" loop="true" indices="12..15"/>
+	<anim name="singDOWN" anim="gd_down"/>
+	<anim name="singDOWN-loop" anim="gd_down" loop="true" indices="12..15"/>
+	<anim name="singRIGHT" anim="gd_right"/>
+	<anim name="singRIGHT-loop" anim="gd_right" loop="true" indices="12..15"/>
+	<anim name="singUP" anim="gd_up0" x="7" y="185"/>
+	<anim name="singUP-alt" anim="gd_upALT0"/>
+	<anim name="singUP-alt-loop" anim="gd_upALT0" loop="true" indices="12..15"/>
+</character>

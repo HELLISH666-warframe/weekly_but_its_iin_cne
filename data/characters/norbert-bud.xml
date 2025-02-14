@@ -1,0 +1,9 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="norbert_bud" icon="norbert-bud" color="#e1e1e1" y="250" flipX="true">
+	<anim name="idle" anim="idle"/>
+	<anim name="singLEFT" anim="left" x="51" y="-26"/>
+	<anim name="singDOWN" anim="down" x="-55" y="-44"/>
+	<anim name="singUP" anim="up" x="-56" y="47"/>
+	<anim name="singRIGHT" anim="right" x="-57" y="-2"/>
+</character>

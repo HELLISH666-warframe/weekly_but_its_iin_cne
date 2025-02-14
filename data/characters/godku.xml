@@ -1,0 +1,10 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="goku" icon="godku" color="#ff0d41" y="-160" flipX="true" camx="150">
+	<anim name="idle" anim="altidle0" x="0" y="-62"/>
+	<anim name="singLEFT" anim="altleft0" x="175" y="-91"/>
+	<anim name="singDOWN" anim="altdown0" x="63" y="-210"/>
+	<anim name="singUP" anim="altup0" x="-20" y="71"/>
+	<anim name="singRIGHT" anim="altright0" x="-120" y="-87"/>
+	<anim name="sleepyhead" anim="spoilerhedies0" x="0" y="-62"/>
+</character>

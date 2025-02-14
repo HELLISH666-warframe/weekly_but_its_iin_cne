@@ -1,0 +1,9 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="dekulink" icon="bf" color="#31b0d1" y="90" flipX="true">
+	<anim name="idle" anim="idle" fps="20"/>
+	<anim name="singLEFT" anim="left" fps="20"/>
+	<anim name="singDOWN" anim="down" fps="20"/>
+	<anim name="singUP" anim="up" fps="20"/>
+	<anim name="singRIGHT" anim="right" fps="20"/>
+</character>

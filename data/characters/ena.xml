@@ -1,0 +1,13 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="ena" icon="ena" color="#366bff" camx="40" camy="30" holdTime="6.1">
+	<anim name="idle" anim="idle"/>
+	<anim name="singLEFT" anim="left0" x="383" y="-140"/>
+	<anim name="singLEFT-alt" anim="leftalt0" x="383" y="-140"/>
+	<anim name="singDOWN" anim="down0" x="4" y="-251"/>
+	<anim name="singDOWN-alt" anim="downalt0" x="4" y="-251"/>
+	<anim name="singUP" anim="up0" x="26" y="40"/>
+	<anim name="singUP-alt" anim="upalt0" x="26" y="40"/>
+	<anim name="singRIGHT" anim="right0" x="8" y="-42"/>
+	<anim name="singRIGHT-alt" anim="rightalt0" x="8" y="4"/>
+</character>

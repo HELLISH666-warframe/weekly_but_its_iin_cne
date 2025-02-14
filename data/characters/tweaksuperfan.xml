@@ -1,0 +1,10 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="tweaksuperfan_assets" icon="tweakfan" color="#d7d7d7" x="90" y="370" flipX="true">
+	<anim name="idle" anim="idle" loop="true"/>
+	<anim name="singLEFT" anim="left"/>
+	<anim name="singDOWN" anim="down"/>
+	<anim name="singUP" anim="up"/>
+	<anim name="singRIGHT" anim="right"/>
+	<anim name="scared" anim="scared"/>
+</character>

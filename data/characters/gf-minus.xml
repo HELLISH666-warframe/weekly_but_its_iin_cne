@@ -1,0 +1,7 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="minus_gf" icon="gf" color="#a5004d" x="50" y="-70" camx="-80">
+	<anim name="danceLeft" anim="dance0" indices="0..13"/>
+	<anim name="danceRight" anim="dance0" indices="15..29"/>
+	<anim name="sad" anim="sad" x="-29" y="18"/>
+</character>

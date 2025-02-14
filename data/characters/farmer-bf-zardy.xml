@@ -1,0 +1,13 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="farmerbfzardy" icon="bffarmer" color="#c38b3f" x="5" y="340" flipX="true" camx="5" camy="9">
+	<anim name="idle" anim="idle" x="-1" y="-2"/>
+	<anim name="singLEFT" anim="left" x="16" y="-8"/>
+	<anim name="singLEFTmiss" anim="missleft" x="16" y="-7"/>
+	<anim name="singDOWN" anim="down" x="-6" y="-53"/>
+	<anim name="singDOWNmiss" anim="missdown" x="-7" y="-52"/>
+	<anim name="singUP" anim="up" x="-41" y="54"/>
+	<anim name="singUPmiss" anim="missup" x="-42" y="54"/>
+	<anim name="singRIGHT" anim="right" x="-53" y="-10"/>
+	<anim name="singRIGHTmiss" anim="missright" x="-54" y="-12"/>
+</character>

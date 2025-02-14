@@ -1,0 +1,9 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="duckw" icon="duckw" color="#e1e1e1" x="240" y="230" camx="320" camy="-40" holdTime="4.80000000000001">
+	<anim name="idle" anim="idle" loop="true"/>
+	<anim name="singRIGHT" anim="left" x="60" y="-24"/>
+	<anim name="singDOWN" anim="down" x="150" y="-36"/>
+	<anim name="singUP" anim="up" x="82" y="104"/>
+	<anim name="singLEFT" anim="right" x="171" y="41"/>
+</character>

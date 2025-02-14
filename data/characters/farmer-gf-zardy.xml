@@ -1,0 +1,6 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="farmergfzardy" icon="gf" color="#a5004d" x="120" y="610" camx="-220" camy="10">
+	<anim name="danceLeft" anim="GF FARMER" x="0" y="-9" indices="0..13"/>
+	<anim name="danceRight" anim="GF FARMER" x="0" y="-9" indices="14..28"/>
+</character>

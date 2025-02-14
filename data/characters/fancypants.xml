@@ -1,0 +1,13 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="fancypants" icon="pants" color="#ff9900" y="90" antialiasing="false" camx="30" camy="90" holdTime="3">
+	<anim name="idle" anim="idle" loop="true"/>
+	<anim name="singLEFT" anim="left0" fps="12"/>
+	<anim name="singDOWN" anim="down0" fps="12"/>
+	<anim name="singUP" anim="up0" fps="12"/>
+	<anim name="singRIGHT" anim="right0" fps="12"/>
+	<anim name="singLEFT-alt" anim="lefta0" fps="12"/>
+	<anim name="singDOWN-alt" anim="downa0" fps="12"/>
+	<anim name="singUP-alt" anim="upa0" fps="12"/>
+	<anim name="singRIGHT-alt" anim="righta0" fps="12"/>
+</character>

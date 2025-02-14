@@ -1,0 +1,11 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="bowser" icon="bowser" color="#cc7e37" x="-80" y="-40" camx="-50" camy="-30" holdTime="4.00000000000001">
+	<anim name="idle" anim="idle"/>
+	<anim name="singLEFT" anim="left" x="153" y="63"/>
+	<anim name="singDOWN" anim="down" x="38" y="-66"/>
+	<anim name="singUP" anim="up" x="-22" y="77"/>
+	<anim name="singRIGHT" anim="right" x="45" y="98"/>
+	<anim name="singLEFT-alt" anim="buh left" x="-100" y="82"/>
+	<anim name="singRIGHT-alt" anim="buh right" x="-61" y="90"/>
+</character>

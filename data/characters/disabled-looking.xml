@@ -1,0 +1,14 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="disabled" icon="disabled" color="#523c50" x="-40" y="330" flipX="true" camx="-120" camy="30">
+	<anim name="look" anim="forwarddis_lookup0" x="-4" y="0"/>
+	<anim name="singLEFTmiss" anim="dismiss_left0" x="98" y="73"/>
+	<anim name="singDOWNmiss" anim="dismiss_down0" x="10" y="27"/>
+	<anim name="singUPmiss" anim="dismiss_up0" x="3" y="145"/>
+	<anim name="singRIGHTmiss" anim="dismiss_right0" x="14" y="28"/>
+	<anim name="idle" anim="lookupdis_idle0"/>
+	<anim name="singLEFT" anim="lookupdis_left0" x="1" y="14"/>
+	<anim name="singDOWN" anim="lookupdis_down0" x="-2" y="-9"/>
+	<anim name="singUP" anim="lookupdis_up0" x="-13" y="12"/>
+	<anim name="singRIGHT" anim="lookupdis_right0" x="-11" y="3"/>
+</character>

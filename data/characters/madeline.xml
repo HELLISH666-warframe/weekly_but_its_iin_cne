@@ -1,0 +1,11 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="madeline" icon="madeline" color="#bb4446" flipX="true" camx="-340" camy="-20" holdTime="4.00000000000001">
+	<anim name="idle" anim="madeline_idle" x="40" y="-110"/>
+	<anim name="singLEFT" anim="madeline_left" x="103" y="-120"/>
+	<anim name="singDOWN" anim="madeline_down" x="36" y="-181"/>
+	<anim name="singUP" anim="madeline_up" x="73" y="-60"/>
+	<anim name="singRIGHT" anim="madeline_right" x="6" y="-109"/>
+	<anim name="dashprep" anim="madeline_dashprep0" x="42" y="-109"/>
+	<anim name="dash" anim="madeline_dash0" x="52" y="155"/>
+</character>

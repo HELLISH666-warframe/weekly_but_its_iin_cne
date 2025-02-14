@@ -1,0 +1,10 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="roller" icon="orderling" color="#6b6985" x="-40" y="490" camx="-250" holdTime="6.1">
+	<anim name="singLEFT" anim="left" x="73" y="8"/>
+	<anim name="singDOWN" anim="down" x="60" y="-19"/>
+	<anim name="singUP" anim="up" x="-41" y="15"/>
+	<anim name="singRIGHT" anim="right" x="-18" y="1"/>
+	<anim name="rise" anim="rise" x="37" y="-14"/>
+	<anim name="idle" anim="idle"/>
+</character>

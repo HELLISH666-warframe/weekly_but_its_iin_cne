@@ -1,0 +1,9 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="randy_assets" icon="randy" color="#447760" x="25" y="250" flipX="true">
+	<anim name="idle" anim="idle" loop="true"/>
+	<anim name="singLEFT" anim="left" x="2" y="-17"/>
+	<anim name="singDOWN" anim="down" x="46" y="-70"/>
+	<anim name="singUP" anim="up" x="-15" y="32"/>
+	<anim name="singRIGHT" anim="right" x="-17" y="1"/>
+</character>

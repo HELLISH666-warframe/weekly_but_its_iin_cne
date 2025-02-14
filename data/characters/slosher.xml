@@ -1,0 +1,10 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="slosher" icon="orderling" color="#6b6985" x="-40" y="490" camx="-250" holdTime="6.1">
+	<anim name="singLEFT" anim="left" x="-43" y="-86"/>
+	<anim name="singDOWN" anim="down" x="-43" y="-96"/>
+	<anim name="singUP" anim="up" x="-55" y="-61"/>
+	<anim name="singRIGHT" anim="right" x="-54" y="-85"/>
+	<anim name="rise" anim="rise" x="32" y="-59"/>
+	<anim name="idle" anim="idle" x="-51" y="-81"/>
+</character>

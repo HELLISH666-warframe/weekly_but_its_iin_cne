@@ -1,0 +1,9 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="pearl" icon="four" color="#6b6985" x="-40" y="450" camx="-70" camy="80" holdTime="6.1">
+	<anim name="singLEFT" anim="left" x="28" y="-3"/>
+	<anim name="singDOWN" anim="down" x="30" y="-30"/>
+	<anim name="singUP" anim="up" x="31" y="28"/>
+	<anim name="singRIGHT" anim="right" x="-3" y="8"/>
+	<anim name="idle" anim="idle" loop="true"/>
+</character>

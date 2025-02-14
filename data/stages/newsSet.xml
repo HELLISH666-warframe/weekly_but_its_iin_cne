@@ -1,0 +1,6 @@
+<!DOCTYPE codename-engine-stage>
+<stage zoom="0.35" folder="">
+	<girlfriend x="400" y="410"/>
+	<opponent x="-175" y="375"/>
+	<player x="1000" y="350"/>
+</stage>

@@ -1,0 +1,10 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="pegglebf" icon="bf" color="#31b0d1" y="350" camx="-0" camy="300" flipX="true">
+	<anim name="idle" anim="IDLE"/>
+	<anim name="singLEFT" anim="LEFT"/>
+	<anim name="singRIGHT" anim="LEFT" x="-2" y="-1"/>
+	<anim name="singUP" anim="UP"/>
+	<anim name="singDOWN" anim="DOWN"/>
+	<anim name="turn" anim="TURN" fps="48"/>
+</character>

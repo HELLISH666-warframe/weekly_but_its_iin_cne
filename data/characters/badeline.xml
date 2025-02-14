@@ -1,0 +1,15 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="badeline" icon="badeline" color="#7a4772" x="390" y="-230" camx="-270" camy="300">
+	<anim name="singUP" anim="badeline_up" x="-21" y="-144"/>
+	<anim name="singLEFT" anim="badeline_left" x="139" y="-315"/>
+	<anim name="singDOWN" anim="badeline_down" x="4" y="-348"/>
+	<anim name="singRIGHT" anim="badeline_right" x="-95" y="-265"/>
+	<anim name="idle" anim="badeline_idle" x="0" y="-280"/>
+	<anim name="hit" anim="badeline_hit" x="83" y="-212"/>
+	<anim name="idle-alt" anim="badelinealt_idle" x="83" y="-239" loop="true"/>
+	<anim name="singLEFT-alt" anim="badelinealt_left" x="210" y="-317"/>
+	<anim name="singDOWN-alt" anim="badelinealt_down" x="133" y="-358"/>
+	<anim name="singUP-alt" anim="badelinealt_up" x="77" y="-111"/>
+	<anim name="singRIGHT-alt" anim="badelinealt_right" x="-69" y="-285"/>
+</character>

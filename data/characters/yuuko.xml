@@ -1,0 +1,9 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="yuuko" icon="yuuko" color="#e79459" x="160" y="120" camx="-90">
+	<anim name="idle" anim="idle"/>
+	<anim name="singLEFT" anim="left" x="66" y="-17"/>
+	<anim name="singDOWN" anim="down" x="-4" y="-71"/>
+	<anim name="singUP" anim="up" x="16" y="14"/>
+	<anim name="singRIGHT" anim="right" x="-2" y="-23"/>
+</character>

@@ -1,0 +1,10 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="nanoc" icon="nanoc" color="#aca3ff" x="-30" y="480" camx="140" camy="-60">
+	<anim name="danceLeft" anim="nanoc idle0" indices="0..9"/>
+	<anim name="danceRight" anim="nanoc idle0" indices="10..19"/>
+	<anim name="singLEFT" anim="nanoc left0" x="7" y="5"/>
+	<anim name="singDOWN" anim="nanoc down0" x="-15" y="-54"/>
+	<anim name="singUP" anim="nanoc up0" x="-25" y="82"/>
+	<anim name="singRIGHT" anim="nanoc right0" x="-80" y="3"/>
+</character>

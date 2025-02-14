@@ -1,0 +1,13 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="ico" icon="pico" color="#b7d855" x="160" y="500" flipX="true" camx="-50" camy="80">
+	<anim name="idle" anim="idle"/>
+	<anim name="singLEFT" anim="left_ico" x="22" y="9"/>
+	<anim name="singDOWN" anim="down_ico" x="25" y="-6"/>
+	<anim name="singUP" anim="up_ico" x="27" y="6"/>
+	<anim name="singRIGHT" anim="right_ico" x="-3" y="8"/>
+	<anim name="singLEFTmiss" anim="leftMISS" x="22" y="9"/>
+	<anim name="singDOWNmiss" anim="downMISS" x="24" y="-6"/>
+	<anim name="singUPmiss" anim="upMISS" x="27" y="4"/>
+	<anim name="singRIGHTmiss" anim="rightMISS" x="1" y="8"/>
+</character>

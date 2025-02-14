@@ -1,0 +1,10 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="parappa_assets" icon="parappa" color="#c37542" x="10" y="240" flipX="true" camx="30" camy="20">
+	<anim name="idle" anim="paraidle"/>
+	<anim name="singDOWN" anim="paradown" x="-11" y="-69"/>
+	<anim name="singUP" anim="paraup" x="-28" y="20"/>
+	<anim name="splat" anim="splat" x="12" y="742"/>
+	<anim name="singLEFT" anim="paraleft" x="39" y="-7"/>
+	<anim name="singRIGHT" anim="pararight" x="-25" y="0"/>
+</character>

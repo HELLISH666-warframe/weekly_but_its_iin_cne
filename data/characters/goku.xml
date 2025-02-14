@@ -1,0 +1,14 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="goku" icon="goku" color="#ffbd3b" y="-160" flipX="true" camx="150">
+	<anim name="idle" anim="idle0"/>
+	<anim name="singDOWN" anim="down0" x="40" y="-210"/>
+	<anim name="singUP" anim="up0" x="-20" y="150"/>
+	<anim name="singRIGHT" anim="right0" x="-120" y="-10"/>
+	<anim name="idle-alt" anim="altidle0" x="0" y="-62"/>
+	<anim name="singLEFT" anim="left0" x="120" y="-11"/>
+	<anim name="singLEFT-alt" anim="altleft0" x="175" y="-91"/>
+	<anim name="singDOWN-alt" anim="altdown0" x="63" y="-210"/>
+	<anim name="singUP-alt" anim="altup0" x="-20" y="71"/>
+	<anim name="singRIGHT-alt" anim="altright0" x="-120" y="-87"/>
+</character>

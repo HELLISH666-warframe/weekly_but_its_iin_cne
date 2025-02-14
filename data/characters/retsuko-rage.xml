@@ -1,0 +1,9 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="retsuko" icon="retsuko" color="#ff7a49" x="-40" y="340" camx="-30" camy="20" holdTime="6.5">
+	<anim name="singLEFT" anim="leftrage0" x="82" y="-16"/>
+	<anim name="singDOWN" anim="downrage0" x="20" y="-30"/>
+	<anim name="singUP" anim="uprage0" x="90" y="40"/>
+	<anim name="singRIGHT" anim="rightrage0" x="-16" y="-21"/>
+	<anim name="idle" anim="idlerage0" x="-17" y="-30" loop="true"/>
+</character>

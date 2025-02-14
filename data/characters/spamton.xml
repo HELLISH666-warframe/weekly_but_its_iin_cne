@@ -1,0 +1,11 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="spamboi" icon="spamton" color="#c9c9c9" x="160" y="220" camx="30" holdTime="6.1">
+	<anim name="idle" anim="spam_idle0"/>
+	<anim name="singLEFT" anim="spam_left0" x="94" y="48"/>
+	<anim name="singDOWN" anim="spam_down0" x="-5" y="-46"/>
+	<anim name="singUP" anim="spam_up0" x="9" y="62"/>
+	<anim name="singRIGHT" anim="spam_right0" x="-7" y="53"/>
+	<anim name="angry" anim="spam_angry0" x="-3" y="0"/>
+	<anim name="idle-run" anim="spam_run0" x="166" y="89" loop="true"/>
+</character>

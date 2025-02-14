@@ -1,0 +1,5 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="fancygf" icon="fancypants" color="#c8c8c8" y="90" antialiasing="false" camx="30" camy="90" holdTime="3">
+	<anim name="idle" anim="idle" fps="12" loop="true"/>
+</character>

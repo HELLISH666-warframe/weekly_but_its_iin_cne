@@ -1,0 +1,9 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="pico-fbi" icon="fbi-pico" color="#b7d855" x="9" y="295" flipX="true" camx="170" camy="70">
+	<anim name="idle" anim="Pico Idle Dance0" x="-3" y="0"/>
+	<anim name="singLEFT" anim="Pico NOTE LEFT0" x="85" y="-11"/>
+	<anim name="singDOWN" anim="Pico Down Note0" x="90" y="-86"/>
+	<anim name="singUP" anim="pico Up note0" x="17" y="21"/>
+	<anim name="singRIGHT" anim="Pico Note Right0" x="-62" y="1"/>
+</character>
