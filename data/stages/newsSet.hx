@@ -238,5 +238,7 @@ function stepHit(curStep)
                 });
         case 633:
             camGame.flash(0xFFFFFFFF, 0.5);
+        case 1407:
+            camGame.flash(0xFFFFFFFF, 0.5);
     }
 }
