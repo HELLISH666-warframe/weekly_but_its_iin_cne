@@ -1,0 +1,9 @@
+<!DOCTYPE codename-engine-week>
+<week name="tweak9" chars="none,bf,gf" sprite="tutorial">
+	<song>perfect-girl</song>
+	<song>busy-work</song>
+	<song>motivation</song>
+	<song>popular</song>
+	<song>beyond</song>
+	<difficulty name="hard"/>
+</week>

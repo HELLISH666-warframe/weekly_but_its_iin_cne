@@ -1,0 +1,10 @@
+<!DOCTYPE codename-engine-week>
+<week name="tweak7" chars="none,bf,gf" sprite="tutorial">
+	<song>brilliance</song>
+	<song>lifeless</song>
+	<song>doodlequest</song>
+	<song>kb5k</song>
+	<song>evolution</song>
+	<song>legend</song>
+	<difficulty name="hard"/>
+</week>

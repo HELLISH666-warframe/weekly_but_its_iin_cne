@@ -1,0 +1,9 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="Herobrine_OLD" icon="herobrine" color="#0aaad2" x="190" y="200" holdTime="6.1">
+	<anim name="singLEFT" anim="Left" x="34" y="9"/>
+	<anim name="singDOWN" anim="Down" x="-1" y="-26"/>
+	<anim name="singUP" anim="Up" x="0" y="24"/>
+	<anim name="singRIGHT" anim="Right" x="-31" y="12"/>
+	<anim name="idle" anim="Idle" x="3" y="0"/>
+</character>

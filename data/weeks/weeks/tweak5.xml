@@ -1,0 +1,9 @@
+<!DOCTYPE codename-engine-week>
+<week name="tweak5" chars="none,bf,gf" sprite="tutorial">
+	<song>Chorale</song>
+	<song>funky-flow</song>
+	<song>off-the-cuff</song>
+	<song>transient-tribulation</song>
+	<song>love-groove</song>
+	<difficulty name="hard"/>
+</week>

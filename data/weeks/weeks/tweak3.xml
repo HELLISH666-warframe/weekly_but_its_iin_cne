@@ -1,0 +1,7 @@
+<!DOCTYPE codename-engine-week>
+<week name="tweak3" chars="none,bf,gf" sprite="tutorial">
+	<song>mental-temple</song>
+	<song>spaceblasterz</song>
+	<song>crimson-fog</song>
+	<difficulty name="hard"/>
+</week>

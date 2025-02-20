@@ -1,0 +1,10 @@
+<!DOCTYPE codename-engine-week>
+<week name="tweak10" chars="none,bf,gf" sprite="tutorial">
+	<song>Syncopation</song>
+	<song>ScareFull</song>
+	<song>genre-null</song>
+	<song>tenkaichi-battleworld</song>
+	<song>friends-and-fellas</song>
+	<song hide="true">buds-and-bluds</song>
+	<difficulty name="hard"/>
+</week>

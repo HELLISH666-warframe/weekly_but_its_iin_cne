@@ -1,0 +1,10 @@
+<!DOCTYPE codename-engine-week>
+<week name="tweak4" chars="none,bf,gf" sprite="tutorial">
+	<song>plectrum</song>
+	<song>parched</song>
+	<song>Mischief</song>
+	<song>philly-mice</song>
+	<song>champions-ring</song>
+	<song>haystack</song>
+	<difficulty name="hard"/>
+</week>

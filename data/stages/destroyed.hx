@@ -5,14 +5,19 @@ var rainIntensity:Float = 0.2;
 var rainShader; // ty base game
 var rainTime:Float = 0;
 var realSongLength:Float = 0;
+var uScreenResolution:Array<Float> = [FlxG.width, FlxG.height];
+var uCameraBounds:Array<Float> = [camGame.scroll.x + camGame.viewMarginX, camGame.scroll.y + camGame.viewMarginY, camGame.scroll.x + camGame.viewMarginX + camGame.width, camGame.scroll.y + camGame.viewMarginY + camGame.height];
 public var defaultCamZoomAdd:Float = 0;
 public var camZooming:Bool = false;
 public var camZoomingDecay:Float = 1;
 public var defaultCamZoom:Float = 1.05;
 public var defaultHudZoom:Float = 1;
+var rainShader:CustomShader  = new CustomShader("rain");
 
 //var mosaic = newShader("mosaic");
 //var mosaicStrength:Float = 1;
+
+var time:Float = 0;
 
 var bfZoom:Float = 0.6;
 var bossZoom:Float = 0.5;
@@ -162,6 +167,9 @@ function postCreate(){
   //      lyrics.screenCenter(FlxAxes.X);
     //}
     add(lyrics);
+    rainShader.data.uScreenResolution.value = [uScreenResolution];
+    rainShader.data.uScale.value = [FlxG.height / 300];
+   // camGame.addShader(rainShader);
 
 }
 
@@ -178,16 +186,18 @@ function onMoveCamera(){
     }
 }
 
-function onUpdate(elapsed:Float)
+override function update(elapsed:Float)
 {
+    camFollow.x = 710;
+    camFollow.y = 175;
     rainTime += elapsed;
     rainTime++; //My stupid way of making da rain faster
+	rainShader.data.uCameraBounds.value = ([camGame.scroll.x + camGame.viewMarginX, camGame.scroll.y + camGame.viewMarginY, camGame.scroll.x + camGame.viewMarginX + camGame.width, camGame.scroll.y + camGame.viewMarginY + camGame.height]);
+    rainShader.data.uTime.value = [rainTime];
+    rainShader.data.uIntensity.value = [rainIntensity];
     
-    rainShader.setFloatArray('uCameraBounds', [camGame.scroll.x + camGame.viewMarginX, camGame.scroll.y + camGame.viewMarginY, camGame.scroll.x + camGame.viewMarginX + camGame.width, camGame.scroll.y + camGame.viewMarginY + camGame.height]);
-    rainShader.setFloat('uTime', rainTime);
-   rainShader.setFloat('uIntensity', rainIntensity);
 
-    game.camZooming = camCanZoom;
+    camZooming = camCanZoom;
 
     if (isSpinning) {
         iconP2.angle += elapsed * (60 / SONG.meta.bpm) * 12000;
@@ -196,7 +206,7 @@ function onUpdate(elapsed:Float)
 		{
 			FlxG.camera.zoom = FlxMath.lerp(defaultCamZoom + defaultCamZoomAdd, FlxG.camera.zoom, Math.exp(-elapsed * 3.125 * camZoomingDecay));
 			camHUD.zoom = FlxMath.lerp(defaultHudZoom, camHUD.zoom, Math.exp(-elapsed * 3.125 * camZoomingDecay));
-			camOverlay.zoom = camHUD.zoom;
+//			camOverlay.zoom = camHUD.zoom;
 		}
 }
 

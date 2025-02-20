@@ -1,0 +1,10 @@
+<!DOCTYPE codename-engine-week>
+<week name="tweak2" chars="none,bf,gf" sprite="tutorial">
+	<song>Dustloop</song>
+	<song>pirate-indie-games</song>
+	<song>Undead</song>
+	<song>Termina</song>
+	<song>luminary-clock</song>
+	<song>koopa-karnage</song>
+	<difficulty name="hard"/>
+</week>
