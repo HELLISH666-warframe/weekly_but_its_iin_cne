@@ -1,6 +1,6 @@
 <!DOCTYPE codename-engine-character>
 <!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
-<character sprite="madeline" icon="madeline" color="#bb4446" flipX="true" camx="-340" camy="-20" holdTime="4.00000000000001">
+<character sprite="madeline" icon="madeline" color="#bb4446" flipX="true" camx="0" camy="-20" holdTime="4.00000000000001">
 	<anim name="idle" anim="madeline_idle" x="40" y="-110"/>
 	<anim name="singLEFT" anim="madeline_left" x="103" y="-120"/>
 	<anim name="singDOWN" anim="madeline_down" x="36" y="-181"/>

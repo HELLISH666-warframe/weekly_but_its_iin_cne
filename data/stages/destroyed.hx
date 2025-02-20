@@ -5,6 +5,11 @@ var rainIntensity:Float = 0.2;
 var rainShader; // ty base game
 var rainTime:Float = 0;
 var realSongLength:Float = 0;
+public var defaultCamZoomAdd:Float = 0;
+public var camZooming:Bool = false;
+public var camZoomingDecay:Float = 1;
+public var defaultCamZoom:Float = 1.05;
+public var defaultHudZoom:Float = 1;
 
 //var mosaic = newShader("mosaic");
 //var mosaicStrength:Float = 1;
@@ -18,7 +23,7 @@ var camZoomOveride:Bool = false;
 var shit = null; //array of stuff from da HUD
 
 var intro:PsychVideoSprite;
-var emotional:PsychVideoSprite;
+var emotional:FlxVideoSprite;
 
 var leftpile:FlxSprite;
 var rightpile:FlxSprite;
@@ -30,8 +35,6 @@ var bossTweak:Float = 0;
 var bfTweak:Float = 0;
 var iconCanTweak:Bool = true;
 var isSpinning:Bool = false;
-
-var heythere:BGSprite;
 
 var videoString:String = 'bnb_gameover';
 
@@ -187,8 +190,14 @@ function onUpdate(elapsed:Float)
     game.camZooming = camCanZoom;
 
     if (isSpinning) {
-        game.iconP2.angle += elapsed * (60 / curBpm) * 12000;
+        iconP2.angle += elapsed * (60 / SONG.meta.bpm) * 12000;
     }
+    		if (camZooming)
+		{
+			FlxG.camera.zoom = FlxMath.lerp(defaultCamZoom + defaultCamZoomAdd, FlxG.camera.zoom, Math.exp(-elapsed * 3.125 * camZoomingDecay));
+			camHUD.zoom = FlxMath.lerp(defaultHudZoom, camHUD.zoom, Math.exp(-elapsed * 3.125 * camZoomingDecay));
+			camOverlay.zoom = camHUD.zoom;
+		}
 }
 
 function onSongStart()
@@ -267,10 +276,6 @@ function beatHit()
                     blackHUD.alpha = 1;
                     game.camGame.alpha = 0; // this because windowed fullscreen has a sinlgle pixel u can see and im not bothered to try to properly fix it fuck my baka life
                     camGame.setFilters([]);
-                case 'hey there':
-                    FlxTween.tween(heythere, {alpha : 0.1}, (60 / curBpm) * 4, {onComplete: function(twn:FlxTween) {
-                        heythere.alpha = 0;
-                    }});
                 case 'cut in':
                     for(s in shit){ s.alpha = 1; }
                     modManager.setValue("alpha", 0);
@@ -398,7 +403,7 @@ function stepHit(curStep)
         blackStage.visible = false;
         rightpile.alpha = 1;
         leftpile.alpha = 1;
-        FlxTween.tween(heythere, {alpha: 0.8}, (60 / Conductor.songPosition) * 4, {onComplete: function(twn:FlxTween) {
+        FlxTween.tween(heythere, {alpha: 0.2}, (60 / SONG.meta.bpm) * 4, {onComplete: function(twn:FlxTween) {
             heythere.alpha = 0;
         }});
     }
@@ -410,7 +415,43 @@ function stepHit(curStep)
         camGame.flash(0xFFFFFFFF, 1.0);
     }
 }
-function onSubstateOpen() 
+
+
+/*emotional.restart([PsychVideoSprite.muted]);
+emotional.visible = true;
+emotional.pauseOverride = false;
+emotional.addCallback('onEnd',()->{
+    emotional.kill();
+    camCanZoom = true;
+    game.boyfriendCameraOffset[0] = -200;
+    game.boyfriendCameraOffset[1] = -210;
+    game.opponentCameraOffset[0] = 100;
+    game.opponentCameraOffset[1] = -185;
+});
+game.camHUD.zoom = 1;
+game.vocals.volume = 1;*/
+function SHIT(){  
+    add(emotional = new FlxVideoSprite()).load(Paths.video("notsillybilly"), [FlxVideoSprite.MUTED]);
+    emotional.antialiasing = true;
+    emotional.cameras = [camHUD];
+    vocals.volume = 0;
+    inst.volume = 0;
+    emotional.bitmap.onEndReached.add(emotional.destroy);
+    emotional.play([FlxVideoSprite.MUTED]);}
+function SHITend(){  
+    camGame.flash(0xFFFFFFFF, 9.0);
+    blackHUD.alpha = 0;
+    vocals.volume = 1;
+    inst.volume = 1;
+    FlxTween.tween(titlecard, {alpha: 1}, 0.5);
+    new FlxTimer().start(2.25, function(tmr:FlxTimer)
+    {
+        FlxTween.tween(titlecard, {alpha: 0}, 0.5);
+    });
+}
+function onSubstateOpen() {
 if (intro != null && paused) intro.pause();
-function onSubstateClose()
+if (emotional != null && paused) emotional.pause();}
+function onSubstateClose(){
  if (intro != null && paused) intro.resume();
+if (emotional != null && paused) emotional.resume();}

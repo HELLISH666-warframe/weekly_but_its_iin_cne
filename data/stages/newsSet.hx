@@ -220,7 +220,7 @@ function stepHit(curStep)
             boyfriend.x = 950;
             boyfriend.alpha = 1;
             boyfriend.playAnim('splat', true);
-            boyfriend.altAnim = true;
+   //         boyfriend.altAnim = true;
         case 111:
             iconP1.setIcon('parappa');
             healthBar.createFilledBar(FlxColor.fromRGB(54, 107, 255), FlxColor.fromRGB(195, 117, 66));

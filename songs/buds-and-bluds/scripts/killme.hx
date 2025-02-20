@@ -64,9 +64,9 @@ function stepHit(curStep)
         case 127:
             bossTweak = 5;
             bfTweak = 0;
-        case 176 | 239 | 303 | 1031:
-            FlxTween.tween(FlxG.camera, {zoom: 1.2}, 0.6, {ease: FlxEase.elasticOut});
-        case 184 | 247 | 311 | 767 | 799 | 1047 | 1111 | 1143:
+//        case 176 | 239 | 303 | 1031:
+//            FlxTween.tween(FlxG.camera, {zoom: 1.2}, 0.6, {ease: FlxEase.elasticOut});
+        case 184 | 247 | 311 | 767 | 799 | 1047 | 1111 | 1143 | 2088:
             FlxTween.tween(FlxG.camera, {zoom: 1.4}, 0.6, {ease: FlxEase.elasticOut});
         case 144 | 208 | 271 | 335 | 895:
             FlxTween.tween(FlxG.camera, {zoom: 1.2}, 1.2, {ease: FlxEase.elasticOut});
@@ -93,7 +93,7 @@ function stepHit(curStep)
             FlxTween.tween(FlxG.camera, {zoom: 1.2}, 0.6, {ease: FlxEase.elasticIn});
         case  527 | 543 | 559 | 575 | 591 | 607 | 719 | 1279 | 1295 | 1311 | 1327 | 1343 | 1359 | 1375:
             FlxTween.tween(FlxG.camera, {zoom: 1.1}, 0.6, {ease: FlxEase.elasticIn});
-        case  551 | 583 | 615 | 815 | 1095 | 1287 | 1319 | 1351:
+        case  176 | 239 | 303 |551 | 583 | 615 | 815 | 1031 |  1095 | 1287 | 1319 | 1351 | 1909 | 1930 | 1945 | 1959 | 1973 | 1987 | 2002 | 2024 | 2048 | 2065 | 2103:
             FlxTween.tween(FlxG.camera, {zoom: 1.2}, 0.6, {ease: FlxEase.elasticOut});
         case 623:
             FlxTween.tween(FlxG.camera, {zoom: 1.45}, 0.6, {ease: FlxEase.elasticIn});
@@ -146,7 +146,7 @@ function stepHit(curStep)
             FlxTween.tween(FlxG.camera, {zoom:1.35}, 0.45, {ease: FlxEase.elasticOut});
         case 1013:
             FlxTween.tween(FlxG.camera, {zoom:1.4}, 0.75, {ease: FlxEase.elasticOut});
-        case 1039 | 1103:
+        case 1039 | 1103 | 1937 | 1966 | 1994 | 2056 | 2080 | 2096 | 2111:
             FlxTween.tween(FlxG.camera, {zoom:1.3}, 0.6, {ease: FlxEase.elasticOut});
         case 1055:
             FlxTween.tween(FlxG.camera, {zoom:0.95}, 2.4, {ease: FlxEase.elasticOut});
@@ -215,5 +215,19 @@ function stepHit(curStep)
         case 1901:
             bossTweak = 80;
             bfTweak = 80;
+        case 1916 | 1952 | 1980 | 2032 | 2072:
+            FlxTween.tween(FlxG.camera, {zoom:1.1}, 0.6, {ease: FlxEase.elasticOut});
+        case 2009:
+            FlxTween.tween(FlxG.camera, {zoom:1.4}, 0.3, {ease: FlxEase.elasticOut});
+        case 2013:
+            FlxTween.tween(FlxG.camera, {zoom:1.6}, 0.3, {ease: FlxEase.elasticOut});
+        case 2430:
+            bossTweak = 90;
+            bfTweak = 40;
+        case 2430:
+            bossTweak = 90;
+            bfTweak = 40;
     }
 }
+camCanZoom = false;
+FlxTween.tween(FlxG.camera, {zoom: 0.75}, 1.0, {ease: FlxEase.quadOut});
