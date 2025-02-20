@@ -1,9 +1,8 @@
 <!DOCTYPE codename-engine-character>
-<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
-<character sprite="norbert" icon="norbert" color="#e1e1e1" x="-70" y="50" flipX="true" camx="30" camy="-10" holdTime="6.1">
-	<anim name="idle" anim="idle0"/>
-	<anim name="singLEFT" anim="left0" x="66" y="-5"/>
-	<anim name="singDOWN" anim="down0" x="8" y="-24"/>
-	<anim name="singUP" anim="up0" x="12" y="36"/>
-	<anim name="singRIGHT" anim="right0" x="-55" y="4"/>
+<character x="-70" y="50" sprite="norbert" flipX="true" camx="30" camy="-10" icon="norbert" color="#E1E1E1" holdTime="6.1">
+	<anim name="idle" anim="idle0" x="0" y="0" fps="24" loop="false"/>
+	<anim name="singLEFT" anim="left0" x="-5" y="-5" fps="24" loop="false"/>
+	<anim name="singDOWN" anim="down0" x="51" y="-24" fps="24" loop="false"/>
+	<anim name="singUP" anim="up0" x="-23" y="36" fps="24" loop="false"/>
+	<anim name="singRIGHT" anim="right0" x="51" y="4" fps="24" loop="false"/>
 </character>
