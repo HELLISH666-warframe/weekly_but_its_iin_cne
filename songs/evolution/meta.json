@@ -1,1 +1,6 @@
-null
+{
+	"displayName": "evolution",
+	"bpm": 270.0,
+	"icon": "duckb",
+	"color": "#9271FD"
+}

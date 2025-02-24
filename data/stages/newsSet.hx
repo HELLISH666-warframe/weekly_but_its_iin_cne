@@ -45,6 +45,11 @@ function create()
     black.alpha = 0.001;
     black.cameras = [camHUD];
     add(black);
+    if(PlayState.isStoryMode)
+    {
+        introLength = 0;
+        function onCountdown(event) event.cancel();
+    }
 }
 
 function onUpdate(elapsed)
@@ -55,48 +60,24 @@ function onUpdate(elapsed)
 	    game.camFollowPos.setPosition(FlxMath.lerp(game.camFollowPos.x, game.camFollow.x, lerpVal), FlxMath.lerp(game.camFollowPos.y, game.camFollow.y, lerpVal));
     }
 }
-
-function doStartCountdown()
-{
-    if(PlayState.isStoryMode)
+function onSongStart() // Add onto this however needed, just dont mess with the snapcamfollowtopos line please
     {
-        return Function_Stop;
-        allowEnd = true;
-    }
-}
-
-if (PlayState.isStoryMode)
-{
-    function presongCutscene() // Add onto this however needed, just dont mess with the snapcamfollowtopos line please
-    {
-        isCameraOnForcedPos = true;
-        snapCamFollowToPos(639.5, 359.5);
+    //    isCameraOnForcedPos = true;
+      //  snapCamFollowToPos(639.5, 359.5);
         inCutscene = true;
         camHUD.alpha = 0;
         defaultCamZoom = 0.7;
         FlxTween.tween(FlxG.camera, {zoom: 0.7}, 2, {ease: FlxEase.smootherStepInOut});
-        FlxTween.tween(game.camFollow, {x: 239.5, y: 647}, 1, {ease: FlxEase.smootherStepInOut});
+        FlxTween.tween(camFollow, {x: 239.5, y: 647}, 1, {ease: FlxEase.smootherStepInOut});
         new FlxTimer().start(2, function(tmr:FlxTimer)
         {
-            FlxTween.tween(game.camHUD, {alpha : 1}, 1);
+            FlxTween.tween(camHUD, {alpha : 1}, 1);
             inCutscene = false;
             startCountdown();
         });
     }
-}
 
-function onCountdownStarted()
-{
-    game.isCameraOnForcedPos = false;
-    fakestartTimer = new FlxTimer().start((Conductor.crotchet / 1000), function(tmr:FlxTimer) //Replicates the way the rest of the character bop during da countdown
-    {
-        if (tmr.loopsLeft % 2 == 0)
-        {
-            norbert.animation.play("idle");
-        }
-    }, 
-    5);
-}
+
 
 function beatHit()
 {
@@ -169,7 +150,7 @@ function postCreate()
     }
 }
 
-function onEndSong()
+function endSong()
 {
     if (PlayState.isStoryMode)
     {
@@ -217,7 +198,7 @@ function stepHit(curStep)
     switch (curStep)
     {
         case 110:
-            boyfriend.x = 950;
+            boyfriend.x = 1350;
             boyfriend.alpha = 1;
             boyfriend.playAnim('splat', true);
    //         boyfriend.altAnim = true;
@@ -237,8 +218,10 @@ function stepHit(curStep)
                     });
                 });
         case 633:
+            healthBar.createFilledBar(FlxColor.fromRGB(59, 177, 255), FlxColor.fromRGB(70, 70, 70));
             camGame.flash(0xFFFFFFFF, 0.5);
         case 1407:
+            healthBar.createFilledBar(FlxColor.fromRGB(102, 153, 153), FlxColor.fromRGB(255, 122, 73));
             camGame.flash(0xFFFFFFFF, 0.5);
     }
 }

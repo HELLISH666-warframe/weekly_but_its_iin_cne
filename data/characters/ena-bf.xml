@@ -1,9 +1,8 @@
 <!DOCTYPE codename-engine-character>
-<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
-<character sprite="ena_bf" icon="ena-bf" color="#88ecff" x="80" y="175" flipX="true" camx="170" camy="70">
-	<anim name="idle" anim="ena bf idle0"/>
-	<anim name="singLEFT" anim="ena bf left0" x="29" y="0"/>
-	<anim name="singDOWN" anim="ena bf down0" x="47" y="-103"/>
-	<anim name="singUP" anim="ena bf up0" x="-34" y="16"/>
-	<anim name="singRIGHT" anim="ena bf right0" x="-53" y="-6"/>
+<character x="-80" y="175" sprite="ena_bf" flipX="true" camx="0" camy="70" icon="ena-bf" color="#88ECFF">
+	<anim name="idle" anim="ena bf idle0" x="0" y="0" fps="24" loop="false"/>
+	<anim name="singLEFT" anim="ena bf right0" x="77" y="0" fps="24" loop="false"/>
+	<anim name="singDOWN" anim="ena bf down0" x="-53" y="-103" fps="24" loop="false"/>
+	<anim name="singUP" anim="ena bf up0" x="26" y="16" fps="24" loop="false"/>
+	<anim name="singRIGHT" anim="ena bf left0" x="-39" y="0" fps="24" loop="false"/>
 </character>

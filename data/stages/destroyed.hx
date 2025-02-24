@@ -105,6 +105,7 @@ function postCreate(){
 
     blackHUD = new FlxSprite(0, 0).makeGraphic(FlxG.width * 1.2, FlxG.height * 1.2, FlxColor.BLACK); // UGHHHHHHH
     blackHUD.cameras = [camHUD];
+    insert(0, blackHUD);
     add(blackHUD);
 
     whiteHUD = new FlxSprite(0, 0).makeGraphic(FlxG.width * 1.2, FlxG.height * 1.2, FlxColor.WHITE); // UGHHHHHHH
@@ -424,6 +425,10 @@ function stepHit(curStep)
         camGame.alpha = 1;
         camGame.flash(0xFFFFFFFF, 1.0);
     }
+    if (curStep == 3330)
+    {
+        inst.volume = 1;
+    }
 }
 
 
@@ -446,18 +451,9 @@ function SHIT(){
     emotional.cameras = [camHUD];
     vocals.volume = 0;
     inst.volume = 0;
-    emotional.bitmap.onEndReached.add(emotional.destroy);
+    emotional.bitmap.onEndReached.add(function() {vidTailsEnd();});
     emotional.play([FlxVideoSprite.MUTED]);}
 function SHITend(){  
-    camGame.flash(0xFFFFFFFF, 9.0);
-    blackHUD.alpha = 0;
-    vocals.volume = 1;
-    inst.volume = 1;
-    FlxTween.tween(titlecard, {alpha: 1}, 0.5);
-    new FlxTimer().start(2.25, function(tmr:FlxTimer)
-    {
-        FlxTween.tween(titlecard, {alpha: 0}, 0.5);
-    });
 }
 function onSubstateOpen() {
 if (intro != null && paused) intro.pause();
@@ -465,3 +461,17 @@ if (emotional != null && paused) emotional.pause();}
 function onSubstateClose(){
  if (intro != null && paused) intro.resume();
 if (emotional != null && paused) emotional.resume();}
+function vidTailsEnd() {
+    trace('oh');
+
+    emotional.visible = false;
+    emotional.destroy();
+    camGame.flash(0xFFFFFFFF, 1.0);
+    blackHUD.alpha = 0;
+    vocals.volume = 1;
+    FlxTween.tween(titlecard, {alpha: 1}, 0.5);
+    new FlxTimer().start(1.25, function(tmr:FlxTimer)
+    {
+        FlxTween.tween(titlecard, {alpha: 0}, 0.5);
+    });
+}

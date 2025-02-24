@@ -1,6 +1,7 @@
 import Xml;
 import meta.states.substate.FadeTransitionSubstate;
 import flixel.addons.transition.FlxTransitionableState;
+import funkin.backend.MusicBeatState;
 var weeklogo:FlxSprite;
 var norbertcanIdle:Bool = false;
 var imagePrefix:String = 'mainmenu/';
@@ -138,11 +139,12 @@ function postCreate(){
 	tracklist.antialiasing = true;
 	add(tracklist);
 
-	scoreText = new FlxText(872, 63, "", 25, 25);
+	scoreText = new FlxText(872, 63, "", 0, 25);
 	scoreText.alignment = 'LEFT';
 	scoreText.font = "VCR OSD Mono";
 	scoreText.color = 0xffffffff;
 	scoreText.antialiasing = true;
+	scoreText.y = tracklist.height + 60;
 	add(scoreText);
 
 	weekTitle = new FlxText(1110, 63, 0, "", 25, 25);
@@ -170,7 +172,11 @@ override function update() {
 	}
 	else if (controls.ACCEPT)
 	{
-		selectWeek();
+		FlxG.sound.play(Paths.sound('confirmMenu'));
+		FlxG.mouse.visible = false;
+		norbertcanIdle = false;
+		norbert.offset.set(-970, -9);
+		norbert.animation.play('start', true);
 	}
 }
 override function tweak10Select()
@@ -216,5 +222,13 @@ override function tweak10Select()
 		new FlxTimer().start(5.0, function(tmr:FlxTimer)
 		{
 			selectWeek();
+			MusicBeatState.skipTransIn = MusicBeatState.skipTransOut = true;
+			skipTransition = true;
 		});
 	}
+function postUpdate() {
+	if (curWeek == 10 && controls.ACCEPT){
+    MusicBeatState.skipTransIn = MusicBeatState.skipTransOut = true;
+    skipTransition = true;
+	}
+}

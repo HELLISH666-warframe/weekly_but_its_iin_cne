@@ -1,14 +1,13 @@
 <!DOCTYPE codename-engine-character>
-<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
-<character sprite="matt" icon="matt" color="#ffb64a" x="100" y="210" flipX="true" camx="40" camy="-80">
-	<anim name="danceLeft" anim="idle" indices="27,28,1..12"/>
-	<anim name="danceRight" anim="idle" indices="13..26"/>
-	<anim name="singLEFT" anim="left" x="142" y="-54"/>
-	<anim name="singLEFTmiss" anim="missleft" x="142" y="-54"/>
-	<anim name="singDOWN" anim="down" x="-98" y="-49"/>
-	<anim name="singDOWNmiss" anim="missdown" x="-98" y="-44"/>
-	<anim name="singUP" anim="up" x="-43" y="118"/>
-	<anim name="singUPmiss" anim="missup" x="-40" y="118"/>
-	<anim name="singRIGHT" anim="right" x="-98" y="-19"/>
-	<anim name="singRIGHTmiss" anim="missright" x="-98" y="-20"/>
+<character x="100" y="210" sprite="matt" flipX="true" camx="40" camy="-80" icon="matt" color="#FFB64A">
+	<anim name="danceLeft" anim="idle" x="0" y="0" fps="24" loop="false" indices="27,28,1..12"/>
+	<anim name="danceRight" anim="idle" x="0" y="0" fps="24" loop="false" indices="13..26"/>
+	<anim name="singLEFT" anim="left" x="-48" y="-54" fps="24" loop="false"/>
+	<anim name="singLEFTmiss" anim="missleft" x="-48" y="-54" fps="24" loop="false"/>
+	<anim name="singDOWN" anim="down" x="67" y="-49" fps="24" loop="false"/>
+	<anim name="singDOWNmiss" anim="missdown" x="67" y="-44" fps="24" loop="false"/>
+	<anim name="singUP" anim="up" x="7" y="118" fps="24" loop="false"/>
+	<anim name="singUPmiss" anim="missup" x="10" y="118" fps="24" loop="false"/>
+	<anim name="singRIGHT" anim="right" x="-18" y="-19" fps="24" loop="false"/>
+	<anim name="singRIGHTmiss" anim="missright" x="-8" y="-20" fps="24" loop="false"/>
 </character>

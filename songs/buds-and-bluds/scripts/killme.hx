@@ -227,6 +227,15 @@ function stepHit(curStep)
         case 2430:
             bossTweak = 90;
             bfTweak = 40;
+        case 3327:
+            bossTweak = 0;
+            bfTweak = 0;
+        case 3343:
+            bossTweak = 150;
+        case 3599:
+            bossTweak = 180;
+        case 3855:
+            bossTweak = 0;
     }
 }
 camCanZoom = false;

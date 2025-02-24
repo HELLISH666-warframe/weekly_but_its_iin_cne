@@ -1,0 +1,5 @@
+<!DOCTYPE codename-engine-stage>
+<stage zoom="1" folder="">
+	<boyfriend x="950" y="635" camxoffset="-180" camyoffset="150" />
+	<opponent x="300" y="600" camxoffset="240" camyoffset="220" />
+</stage>
