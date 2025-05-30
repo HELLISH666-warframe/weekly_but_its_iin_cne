@@ -1,5 +1,4 @@
 // I'm so exhausted man
-
 import hxvlc.flixel.FlxVideoSprite;
 var rainIntensity:Float = 0.2;
 var rainShader; // ty base game
@@ -10,7 +9,7 @@ var uCameraBounds:Array<Float> = [camGame.scroll.x + camGame.viewMarginX, camGam
 public var defaultCamZoomAdd:Float = 0;
 public var camZooming:Bool = false;
 public var camZoomingDecay:Float = 1;
-public var defaultCamZoom:Float = 1.05;
+
 public var defaultHudZoom:Float = 1;
 var rainShader:CustomShader  = new CustomShader("rain");
 
@@ -18,9 +17,6 @@ var rainShader:CustomShader  = new CustomShader("rain");
 //var mosaicStrength:Float = 1;
 
 var time:Float = 0;
-
-var bfZoom:Float = 0.6;
-var bossZoom:Float = 0.5;
 
 var camCanZoom:Bool = true;
 var camZoomOveride:Bool = false;
@@ -133,7 +129,7 @@ function postCreate(){
     intro.antialiasing = true;
     intro.cameras = [camHUD];
 
-    shit = [scoreTxt, healthBarBG, healthBar, iconP1, iconP2];
+    shit = [scoreTxt, healthBarBG, healthBar, iconP1, iconP2, accuracyTxt, missesTxt];
 
 /*    intro('onStart',{
         for(s in shit){ s.visible = false; }
@@ -173,20 +169,6 @@ function postCreate(){
    // camGame.addShader(rainShader);
 
 }
-
-function onMoveCamera(){ 
-    if(!camZoomOveride)
-    {
-        switch(game.whosTurn)
-        {
-            case 'dad':
-                game.defaultCamZoom = bossZoom;
-            case 'boyfriend':
-                game.defaultCamZoom = bfZoom;
-        }
-    }
-}
-
 override function update(elapsed:Float)
 {
     camFollow.x = 710;
@@ -207,7 +189,6 @@ override function update(elapsed:Float)
 		{
 			FlxG.camera.zoom = FlxMath.lerp(defaultCamZoom + defaultCamZoomAdd, FlxG.camera.zoom, Math.exp(-elapsed * 3.125 * camZoomingDecay));
 			camHUD.zoom = FlxMath.lerp(defaultHudZoom, camHUD.zoom, Math.exp(-elapsed * 3.125 * camZoomingDecay));
-//			camOverlay.zoom = camHUD.zoom;
 		}
 }
 
@@ -240,8 +221,6 @@ function beatHit()
         case 'Bud Events':
             switch (v1) 
             {
-                case 'fade':
-                    FlxTween.tween(blackHUD, {alpha: 1}, 0.25);
                 case 'fade hud':
                     for(s in shit){ FlxTween.tween(s, {alpha: 0}, 0.25, {ease: FlxEase.quadOut}); }
                     FlxTween.num(0, 1, 0.25, {ease: FlxEase.quadOut, onUpdate: function(hudIn:FlxTween){
@@ -381,70 +360,51 @@ function onDestroy() {
 }
 function stepHit(curStep)
 {
-    if (curStep == 128)
-	{
-        remove(intro);
-        blackHUD.alpha = 0;
-        camGame.flash(0xFFFFFFFF, 1.0);
-	}
-    if (curStep == 1423)
-	{
-        blackHUD.alpha = 1;
-//        camGame.alpha = 0;
-	}
-    if (curStep == 1439)
+    switch (curStep)
     {
-        blackStage.visible = true;
-        rightpile.alpha = 0;
-        leftpile.alpha = 0;
-    }
-    if (curStep == 1471)
-    {
-        blackHUD.alpha = 0;
-    }
-    if (curStep == 1856)
-    {
-        for(s in shit){ s.alpha = 0; }
-        blackHUD.alpha = 1;
-        camGame.alpha = 0; // this because windowed fullscreen has a sinlgle pixel u can see and im not bothered to try to properly fix it fuck my baka life
-//        camGame.setFilters([]);
-    }
-    if (curStep == 1888)
-    {
-        blackStage.visible = false;
-        rightpile.alpha = 1;
-        leftpile.alpha = 1;
-        FlxTween.tween(heythere, {alpha: 0.2}, (60 / SONG.meta.bpm) * 4, {onComplete: function(twn:FlxTween) {
-            heythere.alpha = 0;
-        }});
-    }
-    if (curStep == 1902)
-    {
-        for(s in shit){ s.alpha = 1; }
-        blackHUD.alpha = 0;
-        camGame.alpha = 1;
-        camGame.flash(0xFFFFFFFF, 1.0);
-    }
-    if (curStep == 3330)
-    {
-        inst.volume = 1;
+        case 128:
+            remove(intro);
+            blackHUD.alpha = 0;
+            camGame.flash(0xFFFFFFFF, 1.0);
+        case 1440:
+            defaultCamZoom = 0.65;
+            blackStage.visible = true;
+            rightpile.alpha = 0;
+            leftpile.alpha = 0;
+        case 1423:
+            blackHUD.alpha = 1;
+            //camGame.alpha = 0;
+        case 1439:
+            blackStage.visible = true;
+            rightpile.alpha = 0;
+            leftpile.alpha = 0;
+        case 1471:
+            blackHUD.alpha = 0;
+        case 1856:
+            for(s in shit){ s.alpha = 0; }
+            blackHUD.alpha = 1;
+            camGame.alpha = 0; // this because windowed fullscreen has a sinlgle pixel u can see and im not bothered to try to properly fix it fuck my baka life
+    //      camGame.setFilters([]);
+        case 1888:
+            blackStage.visible = false;
+            rightpile.alpha = 1;
+            leftpile.alpha = 1;
+            FlxTween.tween(heythere, {alpha: 0.2}, (60 / SONG.meta.bpm) * 4, {onComplete: function(twn:FlxTween) {
+                heythere.alpha = 0;
+            }});
+        case 1902:
+            for(s in shit){ s.alpha = 1; }
+            blackHUD.alpha = 0;
+            camGame.alpha = 1;
+            camGame.flash(0xFFFFFFFF, 1.0);
+        case 2431:
+            FlxTween.tween(blackHUD, {alpha: 1}, 0.25);
+            camCanZoom = false;
+            FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * 0.75}, 1.0, {ease: FlxEase.quadOut});
+        case 3330:
+            inst.volume = 1;
     }
 }
-
-
-/*emotional.restart([PsychVideoSprite.muted]);
-emotional.visible = true;
-emotional.pauseOverride = false;
-emotional.addCallback('onEnd',()->{
-    emotional.kill();
-    camCanZoom = true;
-    game.boyfriendCameraOffset[0] = -200;
-    game.boyfriendCameraOffset[1] = -210;
-    game.opponentCameraOffset[0] = 100;
-    game.opponentCameraOffset[1] = -185;
-});
-game.camHUD.zoom = 1;
-game.vocals.volume = 1;*/
 function SHIT(){  
     add(emotional = new FlxVideoSprite()).load(Paths.video("notsillybilly"), [FlxVideoSprite.MUTED]);
     emotional.antialiasing = true;
@@ -455,6 +415,27 @@ function SHIT(){
     emotional.play([FlxVideoSprite.MUTED]);}
 function SHITend(){  
 }
+function fadehud(){  
+    for(s in shit){ FlxTween.tween(s, {alpha: 0}, 0.25, {ease: FlxEase.quadOut}); }
+    FlxTween.num(0, 1, 0.25, {ease: FlxEase.quadOut, onUpdate: function(hudIn:FlxTween){
+        onComplete: alpha= hudIn }});
+}
+function fadeinhud(){  
+    for(s in shit){ FlxTween.tween(s, {alpha: 1}, 0.25, {ease: FlxEase.quadOut}); }
+    FlxTween.num(1, 0, 0.25, {ease: FlxEase.quadOut, onUpdate: function(hudIn:FlxTween){
+        onComplete: alpha= hudIn }});
+}
+function hudback(){  
+    for(s in shit){ FlxTween.tween(s, {alpha: 1}, 1.5, {ease: FlxEase.quadOut}); }
+    FlxTween.num(1, 0, 1.5, {ease: FlxEase.quadOut, onUpdate: function(hudIn:FlxTween){
+        onComplete: alpha= hudIn }});
+}
+function spindash(){  
+iconCanTweak = false;
+FlxTween.angle(iconP2, 0, 360 * 4, (60 / SONG.meta.bpm) * 4, {ease: FlxEase.expoIn, onComplete: function(twn:FlxTween) {
+    isSpinning = true;
+}});
+}
 function onSubstateOpen() {
 if (intro != null && paused) intro.pause();
 if (emotional != null && paused) emotional.pause();}
@@ -462,7 +443,7 @@ function onSubstateClose(){
  if (intro != null && paused) intro.resume();
 if (emotional != null && paused) emotional.resume();}
 function vidTailsEnd() {
-    trace('oh');
+    trace('feelin_OOOGLY_GOOD!');
 
     emotional.visible = false;
     emotional.destroy();
@@ -474,4 +455,10 @@ function vidTailsEnd() {
     {
         FlxTween.tween(titlecard, {alpha: 0}, 0.5);
     });
+    boyfriend.cameraOffset[0] = 70;
+    boyfriend.cameraOffset[1] = -210;
+    dad.cameraOffset[0] = 100;
+    dad.cameraOffset[1] = -185;
+    camHUD.zoom = 1;
+    camCanZoom = true;
 }

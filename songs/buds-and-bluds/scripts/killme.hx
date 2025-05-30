@@ -19,22 +19,16 @@ function Create() {}
 introLength = 0;
 function onCountdown(event) event.cancel();
 function postCreate(){
-    shit = [scoreTxt, healthBarBG, healthBar, iconP1, iconP2];
+    shit = [scoreTxt, healthBarBG, healthBar, iconP1, iconP2, accuracyTxt, missesTxt];
 }
 
-function onMoveCamera(){ 
-    if(!camZoomOveride)
-    {
-        switch(game.whosTurn)
-        {
-            case 'dad':
-                game.defaultCamZoom = bossZoom;
-            case 'boyfriend':
-                game.defaultCamZoom = bfZoom;
-        }
+function postUpdate(){
+    if (strumLines.members[curCameraTarget].characters[0].isPlayer == true){
+        defaultCamZoom = bfZoom;
+    }else{
+        defaultCamZoom = bossZoom;
     }
 }
-
 function onUpdate(elapsed:Float)
 {
     game.camZooming = camCanZoom;
@@ -67,93 +61,93 @@ function stepHit(curStep)
 //        case 176 | 239 | 303 | 1031:
 //            FlxTween.tween(FlxG.camera, {zoom: 1.2}, 0.6, {ease: FlxEase.elasticOut});
         case 184 | 247 | 311 | 767 | 799 | 1047 | 1111 | 1143 | 2088:
-            FlxTween.tween(FlxG.camera, {zoom: 1.4}, 0.6, {ease: FlxEase.elasticOut});
+            FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * 1.4}, 0.6, {ease: FlxEase.elasticOut});
         case 144 | 208 | 271 | 335 | 895:
-            FlxTween.tween(FlxG.camera, {zoom: 1.2}, 1.2, {ease: FlxEase.elasticOut});
+            FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * 1.2}, 1.2, {ease: FlxEase.elasticOut});
         case 367:
-            FlxTween.tween(FlxG.camera, {zoom: 0.95}, 0.45, {ease: FlxEase.elasticOut});
+            FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * 0.95}, 0.45, {ease: FlxEase.elasticOut});
         case 373:
-            FlxTween.tween(FlxG.camera, {zoom: 1.3}, 0.3, {ease: FlxEase.elasticOut});
+            FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom *  1.3}, 0.3, {ease: FlxEase.elasticOut});
         case 382:
             bossTweak = 15;
             bfTweak = 15;
         case 383:
-            FlxTween.tween(FlxG.camera, {zoom: 1}, 1.2, {ease: FlxEase.elasticIn});
+            FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * 1}, 1.2, {ease: FlxEase.elasticIn});
         case 399 | 415 | 431 | 447 | 463 | 479 | 1215 | 1231 | 1247:
-            FlxTween.tween(FlxG.camera, {zoom: 1.15}, 0.6, {ease: FlxEase.elasticIn});
+            FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * 1.15}, 0.6, {ease: FlxEase.elasticIn});
         case 423 | 455 | 487 | 831 | 863:
-            FlxTween.tween(FlxG.camera, {zoom: 1.25}, 0.6, {ease: FlxEase.elasticOut});
+            FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * 1.25}, 0.6, {ease: FlxEase.elasticOut});
         case 495 | 1263:
-            FlxTween.tween(FlxG.camera, {zoom: 1.15}, 0.3, {ease: FlxEase.elasticIn});
+            FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * 1.15}, 0.3, {ease: FlxEase.elasticIn});
         case 499:
-            FlxTween.tween(FlxG.camera, {zoom: 0.86}, 1.2, {ease: FlxEase.elasticOut});
+            FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * 0.86}, 1.2, {ease: FlxEase.elasticOut});
         case 515:
-            FlxTween.tween(FlxG.camera, {zoom: 1.1}, 0.3, {ease: FlxEase.elasticIn});
+            FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * 1.1}, 0.3, {ease: FlxEase.elasticIn});
         case 519 | 727 | 1383:
-            FlxTween.tween(FlxG.camera, {zoom: 1.2}, 0.6, {ease: FlxEase.elasticIn});
+            FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * 1.2}, 0.6, {ease: FlxEase.elasticIn});
         case  527 | 543 | 559 | 575 | 591 | 607 | 719 | 1279 | 1295 | 1311 | 1327 | 1343 | 1359 | 1375:
-            FlxTween.tween(FlxG.camera, {zoom: 1.1}, 0.6, {ease: FlxEase.elasticIn});
+            FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * 1.1}, 0.6, {ease: FlxEase.elasticIn});
         case  176 | 239 | 303 |551 | 583 | 615 | 815 | 1031 |  1095 | 1287 | 1319 | 1351 | 1909 | 1930 | 1945 | 1959 | 1973 | 1987 | 2002 | 2024 | 2048 | 2065 | 2103:
-            FlxTween.tween(FlxG.camera, {zoom: 1.2}, 0.6, {ease: FlxEase.elasticOut});
+            FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * 1.2}, 0.6, {ease: FlxEase.elasticOut});
         case 623:
-            FlxTween.tween(FlxG.camera, {zoom: 1.45}, 0.6, {ease: FlxEase.elasticIn});
+            FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * 1.45}, 0.6, {ease: FlxEase.elasticIn});
  //       case 623:
 //            FlxTween.tween(FlxG.camera, {zoom: 1.6}, 0.6, {ease: FlxEase.elasticIn});
         case 638:
             bossTweak = 20;
             bfTweak = 20;
         case 639:
-            FlxTween.tween(FlxG.camera, {zoom: 0.95}, 0.6, {ease: FlxEase.elasticOut});
+            FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * 0.95}, 0.6, {ease: FlxEase.elasticOut});
         case 655 | 687 | 1167 | 1183 | 1199:
-            FlxTween.tween(FlxG.camera, {zoom:1.15}, 0.6, {ease: FlxEase.elasticIn});
+            FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * 1.15}, 0.6, {ease: FlxEase.elasticIn});
         case 663 | 696 | 1191 | 1223 | 1255:
-            FlxTween.tween(FlxG.camera, {zoom:1.25}, 0.6, {ease: FlxEase.elasticIn});
+            FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * 1.25}, 0.6, {ease: FlxEase.elasticIn});
         case 735:
-            FlxTween.tween(FlxG.camera, {zoom:0.85}, 2.1, {ease: FlxEase.elasticIn});
+            FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * 0.85}, 2.1, {ease: FlxEase.elasticIn});
         case 763:
-            FlxTween.tween(FlxG.camera, {zoom:1.1}, 0.3, {ease: FlxEase.elasticOut});
+            FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * 1.1}, 0.3, {ease: FlxEase.elasticOut});
         case 766:
             bossTweak = 25;
             bfTweak = 25;
         case 775 | 807:
-            FlxTween.tween(FlxG.camera, {zoom:1.6}, 0.6, {ease: FlxEase.elasticOut});
+            FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * 1.6}, 0.6, {ease: FlxEase.elasticOut});
         case 783 | 847:
-            FlxTween.tween(FlxG.camera, {zoom:0.95}, 1.2, {ease: FlxEase.elasticOut});
+            FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * 0.95}, 1.2, {ease: FlxEase.elasticOut});
         case 823:
-            FlxTween.tween(FlxG.camera, {zoom:1}, 0.6, {ease: FlxEase.elasticOut});
+            FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * 1}, 0.6, {ease: FlxEase.elasticOut});
         case 839:
-            FlxTween.tween(FlxG.camera, {zoom:1.35}, 0.6, {ease: FlxEase.elasticOut});
+            FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * 1.35}, 0.6, {ease: FlxEase.elasticOut});
         case 871:
-            FlxTween.tween(FlxG.camera, {zoom:1.45}, 0.6, {ease: FlxEase.elasticOut});
+            FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * 1.45}, 0.6, {ease: FlxEase.elasticOut});
         case 879:
-            FlxTween.tween(FlxG.camera, {zoom:0.825}, 1.2, {ease: FlxEase.elasticOut});
+            FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * 0.825}, 1.2, {ease: FlxEase.elasticOut});
         case 879:
             bossTweak = 8;
             bfTweak = 8;
         case 911:
-            FlxTween.tween(FlxG.camera, {zoom:1.1}, 1.2, {ease: FlxEase.elasticOut});
+            FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * 1.1}, 1.2, {ease: FlxEase.elasticOut});
         case 927:
-            FlxTween.tween(FlxG.camera, {zoom:1.25}, 1.2, {ease: FlxEase.elasticOut});
+            FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * 1.25}, 1.2, {ease: FlxEase.elasticOut});
         case 943:
-            FlxTween.tween(FlxG.camera, {zoom:1.05}, 1.2, {ease: FlxEase.elasticOut});
+            FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * 1.05}, 1.2, {ease: FlxEase.elasticOut});
         case 959:
-            FlxTween.tween(FlxG.camera, {zoom:1.22}, 1.2, {ease: FlxEase.elasticOut});
+            FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * 1.22}, 1.2, {ease: FlxEase.elasticOut});
         case 975:
-            FlxTween.tween(FlxG.camera, {zoom:1.12}, 1.2, {ease: FlxEase.elasticOut});
+            FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * 1.12}, 1.2, {ease: FlxEase.elasticOut});
         case 991:
-            FlxTween.tween(FlxG.camera, {zoom:1.2}, 1.2, {ease: FlxEase.elasticOut});
+            FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * 1.2}, 1.2, {ease: FlxEase.elasticOut});
         case 1007:
-            FlxTween.tween(FlxG.camera, {zoom:1.35}, 0.45, {ease: FlxEase.elasticOut});
+            FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * 1.35}, 0.45, {ease: FlxEase.elasticOut});
         case 1013:
-            FlxTween.tween(FlxG.camera, {zoom:1.4}, 0.75, {ease: FlxEase.elasticOut});
+            FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * 1.4}, 0.75, {ease: FlxEase.elasticOut});
         case 1039 | 1103 | 1937 | 1966 | 1994 | 2056 | 2080 | 2096 | 2111:
-            FlxTween.tween(FlxG.camera, {zoom:1.3}, 0.6, {ease: FlxEase.elasticOut});
+            FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * 1.3}, 0.6, {ease: FlxEase.elasticOut});
         case 1055:
-            FlxTween.tween(FlxG.camera, {zoom:0.95}, 2.4, {ease: FlxEase.elasticOut});
+            FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * 0.95}, 2.4, {ease: FlxEase.elasticOut});
         case 1119:
-            FlxTween.tween(FlxG.camera, {zoom:0.85}, 1.8, {ease: FlxEase.elasticOut});
+            FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * 0.85}, 1.8, {ease: FlxEase.elasticOut});
         case 1139:
-            FlxTween.tween(FlxG.camera, {zoom:1}, 0.6, {ease: FlxEase.elasticIn});
+            FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * 1}, 0.6, {ease: FlxEase.elasticIn});
         case 1150:
             bossTweak = 40;
             bfTweak = 40;
@@ -161,11 +155,11 @@ function stepHit(curStep)
             bossTweak = 40;
             bfTweak = 40;
         case 1267:
-            FlxTween.tween(FlxG.camera, {zoom:0.86}, 0.95, {ease: FlxEase.elasticOut});
+            FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * 0.86}, 0.95, {ease: FlxEase.elasticOut});
         case 1391:
-            FlxTween.tween(FlxG.camera, {zoom:1.3}, 0.6, {ease: FlxEase.elasticIn});
+            FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * 1.3}, 0.6, {ease: FlxEase.elasticIn});
         case 1399:
-            FlxTween.tween(FlxG.camera, {zoom:1.4}, 0.6, {ease: FlxEase.elasticIn});
+            FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * 1.4}, 0.6, {ease: FlxEase.elasticIn});
         case 1267:
             bossTweak = 45;
             bfTweak = 45;
@@ -188,8 +182,8 @@ function stepHit(curStep)
             bossTweak = 60;
             bfTweak = 60;
         case 1422:
-            bossTweak = 60;
-            bfTweak = 60;
+            bossTweak = 5;
+            bfTweak = 5;
         case 1423:
             FlxG.camera.removeShader(mosaic);camHUD.removeShader(mosaic);
             for(s in shit){ s.alpha = 0; }
@@ -203,9 +197,9 @@ function stepHit(curStep)
             camGame.alpha = 1;
         //                    ExUtils.addShader(rainShader, game.camGame);
         case 1664:
-            FlxTween.tween(FlxG.camera, {zoom:1.3}, 8.4, {ease: FlxEase.elasticIn});
+            FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * 1.3}, 8.4, {ease: FlxEase.elasticIn});
         case 1760:
-            FlxTween.tween(FlxG.camera, {zoom:1.2}, 8.4, {ease: FlxEase.elasticIn});
+            FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * .2}, 8.4, {ease: FlxEase.elasticIn});
         case 1843:
             bossTweak = 20;
             bfTweak = 5;
@@ -216,17 +210,29 @@ function stepHit(curStep)
             bossTweak = 80;
             bfTweak = 80;
         case 1916 | 1952 | 1980 | 2032 | 2072:
-            FlxTween.tween(FlxG.camera, {zoom:1.1}, 0.6, {ease: FlxEase.elasticOut});
+            FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * 1.1}, 0.6, {ease: FlxEase.elasticOut});
         case 2009:
-            FlxTween.tween(FlxG.camera, {zoom:1.4}, 0.3, {ease: FlxEase.elasticOut});
+            FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * 1.4}, 0.3, {ease: FlxEase.elasticOut});
         case 2013:
-            FlxTween.tween(FlxG.camera, {zoom:1.6}, 0.3, {ease: FlxEase.elasticOut});
+            FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * 1.6}, 0.3, {ease: FlxEase.elasticOut});
+        case 2143:
+            bossTweak = 80;
+            bfTweak = 80;
+        case 2435:
+            bossTweak = 90;
+            bfTweak = 20;
         case 2430:
             bossTweak = 90;
             bfTweak = 40;
-        case 2430:
+        case 2439:
             bossTweak = 90;
-            bfTweak = 40;
+            bfTweak = 10;
+        case 2443:
+            bossTweak = 90;
+            bfTweak = 5;
+        case 2447:
+            bossTweak = 70;
+            bfTweak = 0;
         case 3327:
             bossTweak = 0;
             bfTweak = 0;

@@ -1,17 +1,26 @@
 import Xml;
-import meta.states.substate.FadeTransitionSubstate;
+//import meta.states.substate.FadeTransitionSubstate;
 import flixel.addons.transition.FlxTransitionableState;
 import funkin.backend.MusicBeatState;
+import funkin.menus.ModSwitchMenu;
+import funkin.options.OptionsMenu;
 var weeklogo:FlxSprite;
 var norbertcanIdle:Bool = false;
+public static var fcMode:Bool;
+public static var marathon:Bool = false;
 var imagePrefix:String = 'mainmenu/';
+var canClick:Bool = true;
+var optionGrp:FlxTypedGroup = null;
 var options:Array<String> = [
 	'freeplay',
+	'marathon',
 	'more', // Gallery + Credits
 	'left', // arrows that change the week you have selected
 	'right',
 	'play', // basically story mode
 	'options',
+	'fc', // For marathon mode
+	'reset' // For marathon mode
 ];
 override function create()
 {
@@ -29,13 +38,8 @@ override function create()
 
 	bg = new FlxSprite(-7, -9).loadGraphic(Paths.image('mainmenu/bg'));
 	bg.antialiasing = true;
-	insert(3, bg);
+	insert(29, bg);
 	add(bg);
-
-	weeklogo = new FlxSprite(170, 180).loadGraphic(Paths.image('mainmenu/logos/' + curWeek ));
-	weeklogo.antialiasing = true;
-	insert(4, weeklogo);
-	add(weeklogo);
 
 	staticSprite = new FlxSprite(168, 181.2);
 	staticSprite.frames = Paths.getSparrowAtlas('mainmenu/logos/static');
@@ -98,21 +102,67 @@ override function create()
 	border.loadGraphic(Paths.image('mainmenu/border'));
 	border.antialiasing = true;
 
+	optionGrp = new FlxTypedGroup();
+        for(i in 0...options.length){
+            var button = new FlxSprite();
+
+			if (i == 7)
+			{
+				button.frames = Paths.getSparrowAtlas('mainmenu/button_' + options[i]);
+				button.animation.addByPrefix('idleon', 'on0', 24, false);
+            	button.animation.addByPrefix('hoveron', 'on hover0', 24, false);
+				button.animation.addByPrefix('idleoff', 'off0', 24, false);
+            	button.animation.addByPrefix('hoveroff', 'off hover0', 24, false);
+			}
+			else
+			{
+				if (i == 8)
+				{
+					button.frames = Paths.getSparrowAtlas('mainmenu/button_' + options[i]);
+				}
+				else
+				{
+					button.frames = Paths.getSparrowAtlas(imagePrefix + 'button_' + options[i]);
+				}
+				button.animation.addByPrefix('idle', options[i] + '0', 24, false);
+           	 	button.animation.addByPrefix('hover', options[i] + 'hover0', 24, false);
+			}
+            button.x = optionGrp.members[i - 1] != null ? optionGrp.members[i - 1].x + 262 : 44;
+			button.y = 41;
+            button.antialiasing = true;
+            button.ID = i;
+			button.updateHitbox();
+            optionGrp.add(button);
+        }
+
+		optionGrp.members[3].x = 60; //left arrow
+		optionGrp.members[3].y = 224;
+		optionGrp.members[4].x = 729; //right arrow
+		optionGrp.members[4].y = optionGrp.members[3].y;
+		optionGrp.members[5].x = 1046; //play
+		optionGrp.members[5].y = 491;
+		optionGrp.members[6].x = -70; //options
+		optionGrp.members[6].y = 550;
+		optionGrp.members[7].x = 220; //fc
+		optionGrp.members[7].y = 605;
+		optionGrp.members[8].x = optionGrp.members[7].x + 262; //reset
+		optionGrp.members[8].y = optionGrp.members[7].y;
+
+		optionGrp.members[7].visible = optionGrp.members[7].active = false;
+		optionGrp.members[8].visible = optionGrp.members[8].active = false;
 	
 }
 function postCreate(){
 	insert(23, norbert);
-	add(norbert);
 	insert(24, counter);
-	add(counter);
 	insert(25, fakegf);
 	add(fakegf);
 	insert(26, bar);
-	add(bar);
 	insert(27, border);
-	add(border);
 	add(newsTxt1);
 	add(newsTxt2);
+	insert(28, norbert);
+	add(optionGrp);
 	new FlxTimer().start(0.50, function(tmr:FlxTimer)
 	{
 		norbert.visible = true;
@@ -132,7 +182,7 @@ function postCreate(){
 	remove(scoreText);
 	remove(difficultySprites);
 //	diffSprite.visible = false;
-	tracklist = new FlxText(872, 63, "", 25,25);
+	tracklist = new FlxText(872, 63, "tracklist", 25,25);
 	tracklist.alignment = 'LEFT';
 	tracklist.font = "VCR OSD Mono";
 	tracklist.color = 0xffffffff;
@@ -144,7 +194,6 @@ function postCreate(){
 	scoreText.font = "VCR OSD Mono";
 	scoreText.color = 0xffffffff;
 	scoreText.antialiasing = true;
-	scoreText.y = tracklist.height + 60;
 	add(scoreText);
 
 	weekTitle = new FlxText(1110, 63, 0, "", 25, 25);
@@ -162,12 +211,51 @@ override function beatHit(){
 		norbert.animation.play('idle', true);
 	}
 }
+function changeWeek(onChangeWeek) {
+	remove(weeklogo);
+	weeklogo = new FlxSprite(170, 180).loadGraphic(Paths.image('mainmenu/logos/' + curWeek ));
+	weeklogo.antialiasing = true;
+	insert(3, weeklogo);
+	add(weeklogo);
+}
 override function update() {
+
+	if (optionGrp != null) {
+		for(i in optionGrp.members){ 
+			if(FlxG.mouse.overlaps(i) && canClick){ //if hovering over a button
+				if (i == optionGrp.members[7]){ //if button is fc mode
+					if (fcMode == true)
+						optionGrp.members[7].animation.play('hoveron');
+					else
+						optionGrp.members[7].animation.play('hoveroff');
+					if(FlxG.mouse.justPressed && canClick) selectOption(i.ID);
+				}
+				else{ //if button is not fc mode
+				i.animation.play('hover');
+				if(FlxG.mouse.justPressed && canClick) selectOption(i.ID);
+				}
+			}else{ //if not hovering over a button
+				if (i == optionGrp.members[7]) //if button is fc mode
+					if (fcMode == true)
+						optionGrp.members[7].animation.play('idleon');
+					else
+						optionGrp.members[7].animation.play('idleoff');
+				else //if button is not fc mode
+				i.animation.play('idle');
+			}
+		}
+		if (marathon == true)
+		{
+			optionGrp.members[1].animation.play('hover');
+		}
+	}
+	scoreText.y = tracklist.height + 60;
 	changeWeek((controls.LEFT_P ? -1 : 0) + (controls.RIGHT_P ? 1 : 0));
 	if (FlxG.keys.justPressed.P){
 		tweak10Select();}
 	if (curWeek == 10 && controls.ACCEPT)
 	{
+		canSelect = false;
 		tweak10Select();
 	}
 	else if (controls.ACCEPT)
@@ -177,6 +265,17 @@ override function update() {
 		norbertcanIdle = false;
 		norbert.offset.set(-970, -9);
 		norbert.animation.play('start', true);
+	}
+	if (FlxG.keys.justPressed.SEVEN) {
+		persistentUpdate = false;
+		persistentDraw = true;
+		import funkin.editors.EditorPicker;
+		openSubState(new EditorPicker());
+	}
+	if (controls.SWITCHMOD) {
+		openSubState(new ModSwitchMenu());
+		persistentUpdate = false;
+		persistentDraw = true;
 	}
 }
 override function tweak10Select()
@@ -203,10 +302,11 @@ override function tweak10Select()
 			norbert.animation.play('transition', true);
 		});
 		FlxTween.tween(FlxG.camera, {zoom: 0.35}, 2.25, {ease: FlxEase.expoInOut, startDelay: 2.5});   
-	/*	optionGrp.forEach(function(obj:FlxSprite)
+		FlxTween.tween(FlxG.camera, {zoom: 0.35}, 2.25, {ease: FlxEase.expoInOut, startDelay: 2.5});   
+		optionGrp.forEach(function(obj:FlxSprite)
 		{
 			FlxTween.tween(obj, {alpha: 0}, 1, {ease: FlxEase.expoInOut, startDelay: 2.5});  
-		});*/
+		});
 		FlxTween.tween(border, {alpha: 0}, 1, {ease: FlxEase.expoInOut, startDelay: 2.5}); 
 		FlxTween.tween(bar, {alpha: 0}, 1, {ease: FlxEase.expoInOut, startDelay: 2.5}); 
 		FlxTween.tween(bg, {alpha: 0}, 1, {ease: FlxEase.expoInOut, startDelay: 2.5}); 
@@ -230,5 +330,71 @@ function postUpdate() {
 	if (curWeek == 10 && controls.ACCEPT){
     MusicBeatState.skipTransIn = MusicBeatState.skipTransOut = true;
     skipTransition = true;
+	}
+}
+function selectOption(id:Int){
+	canClick = false;
+	switch(options[id]){
+		case 'play':
+			if (curWeek == 10)
+			{
+				tweak10Select();
+			}
+			else
+			{
+				selectWeek();
+				FlxG.sound.play(Paths.sound('confirmMenu'));
+				FlxG.mouse.visible = false;
+				norbertcanIdle = false;
+				norbert.offset.set(-970, -9);
+				norbert.animation.play('start', true);
+			}	
+		case 'freeplay':
+			FlxG.switchState(new FreeplayState());
+			marathon = false;
+			FlxG.sound.play(Paths.sound('scrollMenu'));
+			FlxG.mouse.visible = false;
+		case 'options':
+			FlxG.switchState(new OptionsMenu());
+			FlxG.sound.play(Paths.sound('scrollMenu'));
+			FlxG.mouse.visible = false;
+		case 'left':
+			changeWeek(-1);
+			canClick = true;
+			FlxG.sound.play(Paths.sound('scrollMenu'));
+		case 'right':
+			changeWeek(1);
+			canClick = true;
+			FlxG.sound.play(Paths.sound('scrollMenu'));
+		case 'marathon':
+			switch(marathon){
+				case true:
+					updateMarathon(false);
+				case false:
+					updateMarathon(true);
+			}
+			updateText();
+			canClick = true;
+			trace(marathon);
+		case 'fc':
+			if (optionGrp.members[7].active == true){
+				switch(fcMode){
+					case true:
+						fcMode = false;
+					case false:
+						fcMode = true;
+				}
+				trace(fcMode);
+			}
+			canClick = true;
+		case 'reset':
+			if (optionGrp.members[8].active == true){
+				openSubState(new MarathonButtonsSubstate(0));
+			}
+			canClick = true;
+		case 'more':
+			MusicBeatState.switchState(new WeeklyGalleryState()); //FuckingTriangleEffect
+			FlxG.sound.play(Paths.sound('scrollMenu'));
+			FlxG.mouse.visible = true;
 	}
 }

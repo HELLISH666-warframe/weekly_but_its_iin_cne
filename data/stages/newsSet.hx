@@ -138,7 +138,7 @@ function beatHit()
 function postCreate()
 {
     iconP1.setIcon('bf');
-    healthBar.createFilledBar(FlxColor.fromRGB(54, 107, 255), FlxColor.fromRGB(49, 176, 209));
+    iconP1.health = FlxColor.fromRGB(54, 107, 255);
     healthBar.updateBar();
     boyfriend.alpha = 0;
 

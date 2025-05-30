@@ -1,5 +1,7 @@
 var crowd:FlxSprite;
 
+defaultCamZoom = 0.55;
+
 function create() {
     var sky:FlxSprite = new FlxSprite(-600, -300);
     sky.loadGraphic(Paths.image("stages/minus/sky"));

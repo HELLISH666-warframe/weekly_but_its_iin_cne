@@ -1,9 +1,10 @@
 //
 import funkin.menus.MainMenuState;
+import funkin.menus.StoryMenuState;
 function update(elapsed:Float)
 	if (FlxG.keys.justPressed.F5) FlxG.resetState();
 var redirectStates:Map<FlxState, String> = [
-
+    MainMenuState => "TitleState", 
 ];
 function preStateSwitch() {
 	for (redirectState in redirectStates.keys())
