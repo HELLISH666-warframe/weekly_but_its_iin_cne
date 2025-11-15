@@ -1,6 +1,16 @@
 {
-	"displayName": "buds-and-bluds",
-	"bpm": 196.0,
+	"customValues": {},
+	"color": "#000000",
+	"opponentModeAllowed": false,
 	"icon": "tweak-bud",
-	"color": "#9271FD"
+	"difficulties": [
+		"hard"
+	],
+	"coopAllowed": false,
+	"stepsPerBeat": 4,
+	"displayName": "buds-and-bluds",
+	"beatsPerMeasure": 4,
+	"needsVoices": true,
+	"tweak":10,
+	"bpm": 196
 }

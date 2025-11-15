@@ -1,11 +1,12 @@
 // I'm so exhausted man
+import hxvlc.flixel.FlxVideoSprite;
 var bfZoom:Float = 0.6;
 var bossZoom:Float = 0.5;
 
 var camCanZoom:Bool = true;
 var camZoomOveride:Bool = false;
 
-var mosaic:CustomShader  = new CustomShader("mosaic");
+var mosaic:CustomShader = new CustomShader("mosaic");
 var mosaicStrength:Float = 1;
 
 var shit = null; //array of stuff from da HUD
@@ -18,231 +19,191 @@ var isSpinning:Bool = false;
 function Create() {}
 introLength = 0;
 function onCountdown(event) event.cancel();
+var emotional;
+var intro;
+var blackHUD:FlxSprite;
+var titlecard:FlxSprite;
+var whiteHUD:FlxSprite;
+var shit = [];
 function postCreate(){
     shit = [scoreTxt, healthBarBG, healthBar, iconP1, iconP2, accuracyTxt, missesTxt];
+    blackHUD = new FlxSprite(0, 0).makeGraphic(FlxG.width * 1.2, FlxG.height * 1.2, FlxColor.BLACK); // UGHHHHHHH
+    blackHUD.cameras = [camHUD];
+    insert(0, blackHUD);
+    add(blackHUD);
+
+    whiteHUD = new FlxSprite(0, 0).makeGraphic(FlxG.width * 1.2, FlxG.height * 1.2, FlxColor.WHITE); // UGHHHHHHH
+    whiteHUD.alpha = 0;
+    whiteHUD.cameras = [camHUD];
+    add(whiteHUD);
+
+    titlecard = new FlxSprite(0, 0).loadGraphic(Paths.image('stages/bud/introcard')); // UGHHHHHHH
+    titlecard.screenCenter();
+    titlecard.cameras = [camHUD];
+    titlecard.alpha = 0;
+    add(titlecard);
+
+    heythere = new FlxSprite(0, 0).loadGraphic(Paths.image('stages/bud/Hey there'));
+    heythere.scale.set(0.15, 0.15);
+    heythere.cameras = [camHUD];
+    heythere.screenCenter();
+    heythere.alpha = 0.001;
+    add(heythere);
+
+    shit = [scoreTxt, healthBarBG, healthBar, iconP1, iconP2, accuracyTxt, missesTxt];
+    add(emotional = new FlxVideoSprite()).load(Paths.video("notsillybilly"));
+    emotional.camera = camHUD;
+    add(emotional);
+
+    intro = new FlxVideoSprite().load(Assets.getPath(Paths.video('BudsIntro'))); 
+    add(intro = new FlxVideoSprite()).load(Paths.video("BudsIntro"));
+    intro.antialiasing = true;
+    intro.camera = camHUD;
+    add(intro);
+
+     intro.bitmap.onEndReached.add(function() {
+        intro.kill();
+        camGame.alpha = 1;
+        camGame.flash(0xFFFFFFFF, 1.0);
+         for(s in shit){ s.visible = true; }
+         blackHUD.alpha = 0;
+    });
+}
+function onSongStart() {
+    intro.play();
 }
 
-function postUpdate(){
-    if (strumLines.members[curCameraTarget].characters[0].isPlayer == true){
-        defaultCamZoom = bfZoom;
-    }else{
-        defaultCamZoom = bossZoom;
-    }
+function postUpdate()
+    strumLines.members[curCameraTarget].characters[0].isPlayer == true ? defaultCamZoom = bfZoom : defaultCamZoom = bossZoom;
+function update(elapsed:Float) {
+    if (isSpinning) iconP2.angle += elapsed * (60 / Conductor.bpm) * 12000;
 }
-function onUpdate(elapsed:Float)
-{
-    game.camZooming = camCanZoom;
-
-    if (isSpinning) {
-        game.iconP2.angle += elapsed * (60 / curBpm) * 12000;
-    }
-}
-function beatHit()
-{
+function beatHit() {
     // i love you tweaking icons
     if (iconCanTweak) {
         var degreeMult:Float = ((curBeat % 2) * 2) - 1;
 
-        FlxTween.angle(iconP1, bfTweak * degreeMult, 0, 60 / curBeat, {ease: FlxEase.sineOut});
-        FlxTween.angle(iconP2, bossTweak * degreeMult, 0, 60 / curBeat, {ease: FlxEase.sineOut});
+        for(i in [iconP1,iconP2])FlxTween.cancelTweensOf(i,['angle']);
+        FlxTween.angle(iconP1, bfTweak * degreeMult, 0, 60 / Conductor.bpm, {ease: FlxEase.sineOut});
+        FlxTween.angle(iconP2, bossTweak * degreeMult, 0, 60 / Conductor.bpm, {ease: FlxEase.sineOut});
     }
 }
 function onDestroy() {
     if (intro != null) intro.destroy();
     if (emotional != null) emotional.destroy();
 }
-function stepHit(curStep)
-{
-    switch (curStep)
-    {
-        case 127:
-            bossTweak = 5;
-            bfTweak = 0;
-//        case 176 | 239 | 303 | 1031:
-//            FlxTween.tween(FlxG.camera, {zoom: 1.2}, 0.6, {ease: FlxEase.elasticOut});
-        case 184 | 247 | 311 | 767 | 799 | 1047 | 1111 | 1143 | 2088:
-            FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * 1.4}, 0.6, {ease: FlxEase.elasticOut});
-        case 144 | 208 | 271 | 335 | 895:
-            FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * 1.2}, 1.2, {ease: FlxEase.elasticOut});
-        case 367:
-            FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * 0.95}, 0.45, {ease: FlxEase.elasticOut});
-        case 373:
-            FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom *  1.3}, 0.3, {ease: FlxEase.elasticOut});
-        case 382:
-            bossTweak = 15;
-            bfTweak = 15;
-        case 383:
-            FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * 1}, 1.2, {ease: FlxEase.elasticIn});
-        case 399 | 415 | 431 | 447 | 463 | 479 | 1215 | 1231 | 1247:
-            FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * 1.15}, 0.6, {ease: FlxEase.elasticIn});
-        case 423 | 455 | 487 | 831 | 863:
-            FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * 1.25}, 0.6, {ease: FlxEase.elasticOut});
-        case 495 | 1263:
-            FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * 1.15}, 0.3, {ease: FlxEase.elasticIn});
-        case 499:
-            FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * 0.86}, 1.2, {ease: FlxEase.elasticOut});
-        case 515:
-            FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * 1.1}, 0.3, {ease: FlxEase.elasticIn});
-        case 519 | 727 | 1383:
-            FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * 1.2}, 0.6, {ease: FlxEase.elasticIn});
-        case  527 | 543 | 559 | 575 | 591 | 607 | 719 | 1279 | 1295 | 1311 | 1327 | 1343 | 1359 | 1375:
-            FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * 1.1}, 0.6, {ease: FlxEase.elasticIn});
-        case  176 | 239 | 303 |551 | 583 | 615 | 815 | 1031 |  1095 | 1287 | 1319 | 1351 | 1909 | 1930 | 1945 | 1959 | 1973 | 1987 | 2002 | 2024 | 2048 | 2065 | 2103:
-            FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * 1.2}, 0.6, {ease: FlxEase.elasticOut});
-        case 623:
-            FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * 1.45}, 0.6, {ease: FlxEase.elasticIn});
- //       case 623:
-//            FlxTween.tween(FlxG.camera, {zoom: 1.6}, 0.6, {ease: FlxEase.elasticIn});
-        case 638:
-            bossTweak = 20;
-            bfTweak = 20;
-        case 639:
-            FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * 0.95}, 0.6, {ease: FlxEase.elasticOut});
-        case 655 | 687 | 1167 | 1183 | 1199:
-            FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * 1.15}, 0.6, {ease: FlxEase.elasticIn});
-        case 663 | 696 | 1191 | 1223 | 1255:
-            FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * 1.25}, 0.6, {ease: FlxEase.elasticIn});
-        case 735:
-            FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * 0.85}, 2.1, {ease: FlxEase.elasticIn});
-        case 763:
-            FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * 1.1}, 0.3, {ease: FlxEase.elasticOut});
-        case 766:
-            bossTweak = 25;
-            bfTweak = 25;
-        case 775 | 807:
-            FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * 1.6}, 0.6, {ease: FlxEase.elasticOut});
-        case 783 | 847:
-            FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * 0.95}, 1.2, {ease: FlxEase.elasticOut});
-        case 823:
-            FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * 1}, 0.6, {ease: FlxEase.elasticOut});
-        case 839:
-            FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * 1.35}, 0.6, {ease: FlxEase.elasticOut});
-        case 871:
-            FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * 1.45}, 0.6, {ease: FlxEase.elasticOut});
-        case 879:
-            FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * 0.825}, 1.2, {ease: FlxEase.elasticOut});
-        case 879:
-            bossTweak = 8;
-            bfTweak = 8;
-        case 911:
-            FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * 1.1}, 1.2, {ease: FlxEase.elasticOut});
-        case 927:
-            FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * 1.25}, 1.2, {ease: FlxEase.elasticOut});
-        case 943:
-            FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * 1.05}, 1.2, {ease: FlxEase.elasticOut});
-        case 959:
-            FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * 1.22}, 1.2, {ease: FlxEase.elasticOut});
-        case 975:
-            FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * 1.12}, 1.2, {ease: FlxEase.elasticOut});
-        case 991:
-            FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * 1.2}, 1.2, {ease: FlxEase.elasticOut});
-        case 1007:
-            FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * 1.35}, 0.45, {ease: FlxEase.elasticOut});
-        case 1013:
-            FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * 1.4}, 0.75, {ease: FlxEase.elasticOut});
-        case 1039 | 1103 | 1937 | 1966 | 1994 | 2056 | 2080 | 2096 | 2111:
-            FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * 1.3}, 0.6, {ease: FlxEase.elasticOut});
-        case 1055:
-            FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * 0.95}, 2.4, {ease: FlxEase.elasticOut});
-        case 1119:
-            FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * 0.85}, 1.8, {ease: FlxEase.elasticOut});
-        case 1139:
-            FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * 1}, 0.6, {ease: FlxEase.elasticIn});
-        case 1150:
-            bossTweak = 40;
-            bfTweak = 40;
-        case 1150:
-            bossTweak = 40;
-            bfTweak = 40;
-        case 1267:
-            FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * 0.86}, 0.95, {ease: FlxEase.elasticOut});
-        case 1391:
-            FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * 1.3}, 0.6, {ease: FlxEase.elasticIn});
-        case 1399:
-            FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * 1.4}, 0.6, {ease: FlxEase.elasticIn});
-        case 1267:
-            bossTweak = 45;
-            bfTweak = 45;
+function stepHit(curStep) {
+    switch (curStep) {
         case 1407:
             FlxG.camera.addShader(mosaic);camHUD.addShader(mosaic);
-            FlxTween.tween(FlxG.camera, {zoom:1.5}, 1.5, {ease: FlxEase.smootherStepInOut});
             FlxTween.num(1, 25, 1.5, {ease: FlxEase.linear, onUpdate: function(strength:FlxTween){
                 mosaic.data.uBlocksize.value = [strength.value, strength.value];
             }});
-        case 1406:
-            bossTweak = 45;
-            bfTweak = 45;
-        case 1410:
-            bossTweak = 50;
-            bfTweak = 50;
-        case 1414:
-            bossTweak = 55;
-            bfTweak = 55;
-        case 1418:
-            bossTweak = 60;
-            bfTweak = 60;
-        case 1422:
-            bossTweak = 5;
-            bfTweak = 5;
         case 1423:
             FlxG.camera.removeShader(mosaic);camHUD.removeShader(mosaic);
             for(s in shit){ s.alpha = 0; }
-        case 1439:
-            defaultCamZoom = 0.65;
-        case 1455:
-            for(s in shit){ FlxTween.tween(s, {alpha: 1}, 0.25, {ease: FlxEase.quadOut}); }
-            FlxTween.num(1, 0, 0.25, {ease: FlxEase.quadOut});
         case 1471:
             for(s in shit){ s.alpha = 1; }
             camGame.alpha = 1;
-        //                    ExUtils.addShader(rainShader, game.camGame);
-        case 1664:
-            FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * 1.3}, 8.4, {ease: FlxEase.elasticIn});
-        case 1760:
-            FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * .2}, 8.4, {ease: FlxEase.elasticIn});
-        case 1843:
-            bossTweak = 20;
-            bfTweak = 5;
-        case 1856:
-            bossTweak = 20;
-            bfTweak = 5;
-        case 1901:
-            bossTweak = 80;
-            bfTweak = 80;
-        case 1916 | 1952 | 1980 | 2032 | 2072:
-            FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * 1.1}, 0.6, {ease: FlxEase.elasticOut});
-        case 2009:
-            FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * 1.4}, 0.3, {ease: FlxEase.elasticOut});
-        case 2013:
-            FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * 1.6}, 0.3, {ease: FlxEase.elasticOut});
-        case 2143:
-            bossTweak = 80;
-            bfTweak = 80;
-        case 2435:
-            bossTweak = 90;
-            bfTweak = 20;
-        case 2430:
-            bossTweak = 90;
-            bfTweak = 40;
-        case 2439:
-            bossTweak = 90;
-            bfTweak = 10;
-        case 2443:
-            bossTweak = 90;
-            bfTweak = 5;
-        case 2447:
-            bossTweak = 70;
-            bfTweak = 0;
-        case 3327:
-            bossTweak = 0;
-            bfTweak = 0;
-        case 3343:
-            bossTweak = 150;
-        case 3599:
-            bossTweak = 180;
-        case 3855:
-            bossTweak = 0;
+        //  ExUtils.addShader(rainShader, game.camGame);
     }
 }
 camCanZoom = false;
-FlxTween.tween(FlxG.camera, {zoom: 0.75}, 1.0, {ease: FlxEase.quadOut});
+
+function onSubstateOpen() {
+if (intro != null && paused) intro.pause();
+if (emotional != null && paused) emotional.pause();}
+function onSubstateClose(){
+ if (intro != null && paused) intro.resume();
+if (emotional != null && paused) emotional.resume();}
+
+function setIconTweak(icon1:String,icon2:String){
+    bossTweak = Std.parseFloat(icon1);
+    bfTweak = Std.parseFloat(icon2);
+}
+
+function norbert_Video(){  
+    emotional.antialiasing = true;
+    emotional.camera = camHUD;
+    vocals.volume = 0;
+    inst.volume = 0;
+    emotional.play([FlxVideoSprite.MUTED]);
+    emotional.bitmap.onEndReached.add(function() {
+        camGame.flash(0xFFFFFFFF, 1.0);
+        blackHUD.alpha = 0;
+        emotional.kill();
+        camCanZoom = true;
+        boyfriend.cameraOffset[0] = -200;
+        boyfriend.cameraOffset[1] = -210;
+        dad.cameraOffset[0] = 100;
+        dad.cameraOffset[1] = -185;
+        videoString = 'OOGITYGOOGAMEOVER';
+        FlxTween.tween(titlecard, {alpha: 1}, 0.5);
+        new FlxTimer().start(1.25, function(tmr:FlxTimer) {
+            FlxTween.tween(titlecard, {alpha: 0}, 0.5);
+        });
+    });
+}
+function tenseSection(ok:Bool){
+    if(ok){
+        blackStage.visible = true;
+        rightpile.alpha = 0;
+        leftpile.alpha = 0;
+    }else{
+        blackStage.visible = false;
+        rightpile.alpha = 1;
+        leftpile.alpha = 1;
+    }
+
+}
+
+function cutToBlack(){
+    for(s in shit){ s.alpha = 0; }
+    blackHUD.alpha = 1;
+    camGame.alpha = 0;
+    //camGame.setFilters([]);
+}
+
+function fade(){
+    FlxTween.tween(blackHUD, {alpha: 1}, 0.25);
+}
+
+function fadehud(){  
+    for(s in shit){ FlxTween.tween(s, {alpha: 0}, 0.25, {ease: FlxEase.quadOut}); }
+}
+function fadeinhud(){  
+    for(s in shit){ FlxTween.tween(s, {alpha: 1}, 0.25, {ease: FlxEase.quadOut}); }
+}
+function hudback(){  
+    for(s in shit){ FlxTween.tween(s, {alpha: 1}, 1.5, {ease: FlxEase.quadOut}); }
+}
+function heyThere(){  
+    FlxTween.tween(heythere, {alpha : 0.1}, (60 / Conductor.bpm) * 4, {onComplete: function(twn:FlxTween) {
+        heythere.alpha = 0;
+    }});
+}
+function cutIn(?flash){  
+    for(s in shit){ s.alpha = 1; }
+    blackHUD.alpha = 0;
+    camGame.alpha = 1;
+    //ExUtils.addShader(rainShader, game.camGame);
+    if(flash)
+        camGame.flash(0xFFFFFFFF, 1.0);
+}
+function fakeoutZoom(){  
+    camCanZoom = false;
+    FlxTween.tween(FlxG.camera, {zoom: 0.75}, 1.0, {ease: FlxEase.quadOut});
+}
+
+function spindash(){  
+    iconCanTweak = false;
+    FlxTween.angle(iconP2, 0, 360 * 4, (60 / Conductor.bpm) * 4, {ease: FlxEase.expoIn, onComplete: function(twn:FlxTween) {isSpinning = true;}});
+}
+
+function end(){  
+    //isCameraOnForcedPos = true;
+    camCanZoom = false;
+    //FlxTween.tween(game.camFollow, {x: 710, y: -200}, 1.0, {ease: FlxEase.smootherStepInOut});
+    FlxTween.tween(whiteHUD, {alpha: 1}, 0.75, {ease: FlxEase.linear});
+    FlxTween.tween(FlxG.camera, {zoom: 0.45}, 1.0, {ease: FlxEase.smootherStepInOut});
+}
