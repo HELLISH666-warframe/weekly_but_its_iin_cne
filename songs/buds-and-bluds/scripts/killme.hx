@@ -3,20 +3,16 @@ import hxvlc.flixel.FlxVideoSprite;
 var bfZoom:Float = 0.6;
 var bossZoom:Float = 0.5;
 
-var camCanZoom:Bool = true;
 var camZoomOveride:Bool = false;
 
 var mosaic:CustomShader = new CustomShader("mosaic");
 var mosaicStrength:Float = 1;
-
-var shit = null; //array of stuff from da HUD
 
 var bossTweak:Float = 0;
 var bfTweak:Float = 0;
 var iconCanTweak:Bool = true;
 var isSpinning:Bool = false;
 
-function Create() {}
 introLength = 0;
 function onCountdown(event) event.cancel();
 var emotional;
@@ -24,9 +20,14 @@ var intro;
 var blackHUD:FlxSprite;
 var titlecard:FlxSprite;
 var whiteHUD:FlxSprite;
-var shit = [];
+function create() {
+    songLength=199000;
+}
+function destroy() {
+    Options.camZoomOnBeat=true;
+}
 function postCreate(){
-    shit = [scoreTxt, healthBarBG, healthBar, iconP1, iconP2, accuracyTxt, missesTxt];
+    Options.camZoomOnBeat=true;
     blackHUD = new FlxSprite(0, 0).makeGraphic(FlxG.width * 1.2, FlxG.height * 1.2, FlxColor.BLACK); // UGHHHHHHH
     blackHUD.cameras = [camHUD];
     insert(0, blackHUD);
@@ -50,7 +51,6 @@ function postCreate(){
     heythere.alpha = 0.001;
     add(heythere);
 
-    shit = [scoreTxt, healthBarBG, healthBar, iconP1, iconP2, accuracyTxt, missesTxt];
     add(emotional = new FlxVideoSprite()).load(Paths.video("notsillybilly"));
     emotional.camera = camHUD;
     add(emotional);
@@ -61,11 +61,11 @@ function postCreate(){
     intro.camera = camHUD;
     add(intro);
 
-     intro.bitmap.onEndReached.add(function() {
+    intro.bitmap.onEndReached.add(function() {
         intro.kill();
         camGame.alpha = 1;
         camGame.flash(0xFFFFFFFF, 1.0);
-         for(s in shit){ s.visible = true; }
+        for(s in budAndBludsShitVar){ s.visible = true; }
          blackHUD.alpha = 0;
     });
 }
@@ -73,7 +73,7 @@ function onSongStart() {
     intro.play();
 }
 
-function postUpdate()
+function onCameraMove(e)
     strumLines.members[curCameraTarget].characters[0].isPlayer == true ? defaultCamZoom = bfZoom : defaultCamZoom = bossZoom;
 function update(elapsed:Float) {
     if (isSpinning) iconP2.angle += elapsed * (60 / Conductor.bpm) * 12000;
@@ -88,10 +88,6 @@ function beatHit() {
         FlxTween.angle(iconP2, bossTweak * degreeMult, 0, 60 / Conductor.bpm, {ease: FlxEase.sineOut});
     }
 }
-function onDestroy() {
-    if (intro != null) intro.destroy();
-    if (emotional != null) emotional.destroy();
-}
 function stepHit(curStep) {
     switch (curStep) {
         case 1407:
@@ -101,14 +97,10 @@ function stepHit(curStep) {
             }});
         case 1423:
             FlxG.camera.removeShader(mosaic);camHUD.removeShader(mosaic);
-            for(s in shit){ s.alpha = 0; }
-        case 1471:
-            for(s in shit){ s.alpha = 1; }
-            camGame.alpha = 1;
+            for(s in budAndBludsShitVar){ s.alpha = 0; }
         //  ExUtils.addShader(rainShader, game.camGame);
     }
 }
-camCanZoom = false;
 
 function onSubstateOpen() {
 if (intro != null && paused) intro.pause();
@@ -123,6 +115,7 @@ function setIconTweak(icon1:String,icon2:String){
 }
 
 function norbert_Video(){  
+    camZooming=false;
     emotional.antialiasing = true;
     emotional.camera = camHUD;
     vocals.volume = 0;
@@ -132,13 +125,14 @@ function norbert_Video(){
         camGame.flash(0xFFFFFFFF, 1.0);
         blackHUD.alpha = 0;
         emotional.kill();
-        camCanZoom = true;
         boyfriend.cameraOffset[0] = -200;
         boyfriend.cameraOffset[1] = -210;
         dad.cameraOffset[0] = 100;
         dad.cameraOffset[1] = -185;
         videoString = 'OOGITYGOOGAMEOVER';
+        Options.camZoomOnBeat = true;
         FlxTween.tween(titlecard, {alpha: 1}, 0.5);
+        songLength = FlxG.sound.music.length;
         new FlxTimer().start(1.25, function(tmr:FlxTimer) {
             FlxTween.tween(titlecard, {alpha: 0}, 0.5);
         });
@@ -158,7 +152,7 @@ function tenseSection(ok:Bool){
 }
 
 function cutToBlack(){
-    for(s in shit){ s.alpha = 0; }
+    for(s in budAndBludsShitVar){ s.alpha = 0; }
     blackHUD.alpha = 1;
     camGame.alpha = 0;
     //camGame.setFilters([]);
@@ -169,13 +163,13 @@ function fade(){
 }
 
 function fadehud(){  
-    for(s in shit){ FlxTween.tween(s, {alpha: 0}, 0.25, {ease: FlxEase.quadOut}); }
+    for(s in budAndBludsShitVar){ FlxTween.tween(s, {alpha: 0}, 0.25, {ease: FlxEase.quadOut}); }
 }
 function fadeinhud(){  
-    for(s in shit){ FlxTween.tween(s, {alpha: 1}, 0.25, {ease: FlxEase.quadOut}); }
+    for(s in budAndBludsShitVar){ FlxTween.tween(s, {alpha: 1}, 0.25, {ease: FlxEase.quadOut}); }
 }
 function hudback(){  
-    for(s in shit){ FlxTween.tween(s, {alpha: 1}, 1.5, {ease: FlxEase.quadOut}); }
+    for(s in budAndBludsShitVar){ FlxTween.tween(s, {alpha: 1}, 1.5, {ease: FlxEase.quadOut}); }
 }
 function heyThere(){  
     FlxTween.tween(heythere, {alpha : 0.1}, (60 / Conductor.bpm) * 4, {onComplete: function(twn:FlxTween) {
@@ -183,7 +177,7 @@ function heyThere(){
     }});
 }
 function cutIn(?flash){  
-    for(s in shit){ s.alpha = 1; }
+    for(s in budAndBludsShitVar){ s.alpha = 1; }
     blackHUD.alpha = 0;
     camGame.alpha = 1;
     //ExUtils.addShader(rainShader, game.camGame);
@@ -191,7 +185,7 @@ function cutIn(?flash){
         camGame.flash(0xFFFFFFFF, 1.0);
 }
 function fakeoutZoom(){  
-    camCanZoom = false;
+    Options.camZoomOnBeat = false;
     FlxTween.tween(FlxG.camera, {zoom: 0.75}, 1.0, {ease: FlxEase.quadOut});
 }
 
@@ -202,7 +196,7 @@ function spindash(){
 
 function end(){  
     //isCameraOnForcedPos = true;
-    camCanZoom = false;
+    Options.camZoomOnBeat = false;
     //FlxTween.tween(game.camFollow, {x: 710, y: -200}, 1.0, {ease: FlxEase.smootherStepInOut});
     FlxTween.tween(whiteHUD, {alpha: 1}, 0.75, {ease: FlxEase.linear});
     FlxTween.tween(FlxG.camera, {zoom: 0.45}, 1.0, {ease: FlxEase.smootherStepInOut});
