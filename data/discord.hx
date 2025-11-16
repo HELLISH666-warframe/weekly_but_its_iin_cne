@@ -8,9 +8,9 @@ function onDiscordPresenceUpdate(e) {
 	var data = e.presence;
 
 	if(data.button1Label == null)
-		data.button1Label = "Codename Engine Discord";
+		data.button1Label = "Funny port repo";
 	if(data.button1Url == null)
-		data.button1Url = "https://discord.gg/2NTCdsQvx4";
+		data.button1Url = "https://github.com/HELLISH666-warframe/weekly_but_its_iin_cne";
 }
 
 function onPlayStateUpdate() {

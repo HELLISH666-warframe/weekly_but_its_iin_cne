@@ -8,9 +8,9 @@
 	],
 	"coopAllowed": false,
 	"stepsPerBeat": 4,
+	"tweak": 10,
 	"displayName": "buds-and-bluds",
 	"beatsPerMeasure": 4,
 	"needsVoices": true,
-	"tweak":10,
 	"bpm": 196
 }

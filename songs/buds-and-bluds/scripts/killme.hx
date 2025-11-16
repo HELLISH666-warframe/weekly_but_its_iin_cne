@@ -17,9 +17,8 @@ introLength = 0;
 function onCountdown(event) event.cancel();
 var emotional;
 var intro;
-var blackHUD:FlxSprite;
-var titlecard:FlxSprite;
-var whiteHUD:FlxSprite;
+var blackHUD,titlecard,whiteHUD;
+var rainShader = new CustomShader("rain");
 function create() {
     songLength=199000;
 }
@@ -27,46 +26,43 @@ function destroy() {
     Options.camZoomOnBeat=true;
 }
 function postCreate(){
+    FlxG.camera.addShader(rainShader);
+    rainShader.data.uScreenResolution.value=[FlxG.width, FlxG.height];
+    rainShader.data.uScale.value=[FlxG.height / 300];
+    rainShader.data.uIntensity.value=[0.2];
+
     Options.camZoomOnBeat=true;
     blackHUD = new FlxSprite(0, 0).makeGraphic(FlxG.width * 1.2, FlxG.height * 1.2, FlxColor.BLACK); // UGHHHHHHH
-    blackHUD.cameras = [camHUD];
-    insert(0, blackHUD);
-    add(blackHUD);
+    insert(0, blackHUD).camera = camHUD;
 
     whiteHUD = new FlxSprite(0, 0).makeGraphic(FlxG.width * 1.2, FlxG.height * 1.2, FlxColor.WHITE); // UGHHHHHHH
     whiteHUD.alpha = 0;
-    whiteHUD.cameras = [camHUD];
-    add(whiteHUD);
+    insert(1,whiteHUD).camera = camHUD;
 
     titlecard = new FlxSprite(0, 0).loadGraphic(Paths.image('stages/bud/introcard')); // UGHHHHHHH
     titlecard.screenCenter();
-    titlecard.cameras = [camHUD];
     titlecard.alpha = 0;
-    add(titlecard);
+    insert(2,titlecard).camera = camHUD;
 
     heythere = new FlxSprite(0, 0).loadGraphic(Paths.image('stages/bud/Hey there'));
     heythere.scale.set(0.15, 0.15);
-    heythere.cameras = [camHUD];
     heythere.screenCenter();
     heythere.alpha = 0.001;
-    add(heythere);
+    insert(3,heythere).camera = camHUD;
 
-    add(emotional = new FlxVideoSprite()).load(Paths.video("notsillybilly"));
-    emotional.camera = camHUD;
-    add(emotional);
-
-    intro = new FlxVideoSprite().load(Assets.getPath(Paths.video('BudsIntro'))); 
+    insert(4,emotional = new FlxVideoSprite()).load(Paths.video("notsillybilly"));
+    insert(4,emotional).camera = camHUD;
+ 
     add(intro = new FlxVideoSprite()).load(Paths.video("BudsIntro"));
-    intro.antialiasing = true;
     intro.camera = camHUD;
-    add(intro);
+    intro.antialiasing = true;
 
     intro.bitmap.onEndReached.add(function() {
         intro.kill();
         camGame.alpha = 1;
         camGame.flash(0xFFFFFFFF, 1.0);
         for(s in budAndBludsShitVar){ s.visible = true; }
-         blackHUD.alpha = 0;
+            blackHUD.alpha = 0;
     });
 }
 function onSongStart() {
@@ -75,8 +71,13 @@ function onSongStart() {
 
 function onCameraMove(e)
     strumLines.members[curCameraTarget].characters[0].isPlayer == true ? defaultCamZoom = bfZoom : defaultCamZoom = bossZoom;
+var rainTime:Float=0;
 function update(elapsed:Float) {
     if (isSpinning) iconP2.angle += elapsed * (60 / Conductor.bpm) * 12000;
+    rainShader.data.uCameraBounds.value=[camGame.scroll.x + camGame.viewMarginX, camGame.scroll.y + camGame.viewMarginY, camGame.scroll.x + camGame.viewMarginX + camGame.width, camGame.scroll.y + camGame.viewMarginY + camGame.height];
+    rainTime += elapsed;
+    rainTime++;
+    rainShader.uTime = rainTime;
 }
 function beatHit() {
     // i love you tweaking icons
@@ -197,7 +198,7 @@ function spindash(){
 function end(){  
     //isCameraOnForcedPos = true;
     Options.camZoomOnBeat = false;
-    //FlxTween.tween(game.camFollow, {x: 710, y: -200}, 1.0, {ease: FlxEase.smootherStepInOut});
+    //FlxTween.tween(camFollow, {x: 710, y: -200}, 1.0, {ease: FlxEase.smootherStepInOut});
     FlxTween.tween(whiteHUD, {alpha: 1}, 0.75, {ease: FlxEase.linear});
     FlxTween.tween(FlxG.camera, {zoom: 0.45}, 1.0, {ease: FlxEase.smootherStepInOut});
 }

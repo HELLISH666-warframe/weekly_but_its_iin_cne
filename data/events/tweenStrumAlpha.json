@@ -1,0 +1,29 @@
+{
+	"params": [
+		{
+			"name": "Alpha(Opponent)",
+			"type": "String",
+			"defaultValue": 1
+		},{
+			"name": "Alpha(Player)",
+			"type": "String",
+			"defaultValue": 1
+		},{
+			"name": "Speed",
+			"type": "String",
+			"defaultValue": 1
+		},{
+			"name": "Tween",
+			"type": "String",
+			"defaultValue": "expoOut"
+		},{
+			"name": "Tweened?",
+			"type": "Bool",
+			"defaultValue": true
+		},{
+			"name": "Tweened_Notes?(LAG)",
+			"type": "Bool",
+			"defaultValue": false
+		}
+	]
+}
