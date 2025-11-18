@@ -1,0 +1,9 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="tweak1/ramsey" icon="tweak1/ramsay" color="#c2a06f" y="-100" camx="50" camy="-60" holdTime="4.00000000000001">
+	<anim name="idle" anim="idle"/>
+	<anim name="singLEFT" anim="left" x="98" y="7"/>
+	<anim name="singDOWN" anim="down" x="-19" y="67"/>
+	<anim name="singUP" anim="up" x="-35" y="84"/>
+	<anim name="singRIGHT" anim="right" x="11" y="89"/>
+</character>

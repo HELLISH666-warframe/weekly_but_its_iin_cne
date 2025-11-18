@@ -1,0 +1,12 @@
+<!DOCTYPE codename-engine-stage>
+<stage folder="stages/tweak10/bud/">
+    <sprite name="sky" x="-491" y="-800" sprite="sky" scroll="0.5"/>
+	<sprite name="city" x="-575" y="-772" sprite="city" scroll="0.6"/>
+	<sprite name="fire" x="-1266" y="-375" sprite="fire" scroll="0.95" type="loop"/>
+        <anim name="idle" anim="flicker0" loop="true"/>
+	<sprite name="mainbg" x="-1214" y="-945" sprite="mainbg"/>
+	<sprite name="leftpile" x="-1350" y="126" sprite="leftpile" scroll="1.1"/>
+	<sprite name="rightpile" x="1574" y="138" sprite="rightpile" scroll="1.1"/>
+	<boyfriend x="1125" y="15" camxoffset="-175" camyoffset="-50" />
+	<opponent x="-100" y="10" camxoffset="75" camyoffset="5" />
+</stage>

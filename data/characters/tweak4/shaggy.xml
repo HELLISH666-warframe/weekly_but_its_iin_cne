@@ -1,0 +1,9 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="tweak4/shaggy" icon="tweak4/shaggy" color="#49b354" x="30" y="-50">
+	<anim name="singLEFT" anim="left" x="264" y="-112"/>
+	<anim name="singDOWN" anim="down" x="15" y="-314"/>
+	<anim name="singUP" anim="up" x="10" y="59"/>
+	<anim name="singRIGHT" anim="right" x="55" y="-21"/>
+	<anim name="idle" anim="idle"/>
+</character>

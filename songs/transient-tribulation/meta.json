@@ -1,6 +1,15 @@
 {
+	"customValues": {},
+	"color": "#FFFD48",
+	"opponentModeAllowed": true,
+	"icon": "tweak5/gddude",
+	"difficulties": [
+		"normal"
+	],
+	"coopAllowed": true,
+	"stepsPerBeat": 4,
 	"displayName": "transient-tribulation",
-	"bpm": 120.0,
-	"icon": "gddude",
-	"color": "#9271FD"
+	"beatsPerMeasure": 4,
+	"needsVoices": true,
+	"bpm": 120
 }

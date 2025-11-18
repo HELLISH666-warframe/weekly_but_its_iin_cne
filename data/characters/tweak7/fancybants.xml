@@ -1,0 +1,12 @@
+<!DOCTYPE codename-engine-character>
+<character x="-100" y="160" antialiasing="false" flipX="true" camx="160" camy="50" isPlayer="true" icon="tweak7/bants" color="#0D86FF" holdTime="3">
+	<anim name="idle" anim="idle" x="-2" y="-1" loop="true"/>
+	<anim name="singLEFT" anim="left0" x="-7" y="1" fps="12"/>
+	<anim name="singDOWN" anim="down0" x="4" y="-3" fps="12"/>
+	<anim name="singUP" anim="up0" x="1" y="-2" fps="12"/>
+	<anim name="singRIGHT" anim="right0" x="-3" y="-1" fps="12"/>
+	<anim name="singLEFTmiss" anim="leftm" x="-10" y="3" fps="12"/>
+	<anim name="singDOWNmiss" anim="downm" x="4" y="-4" fps="12"/>
+	<anim name="singUPmiss" anim="upm" fps="12"/>
+	<anim name="singRIGHTmiss" anim="rightm" x="-4" y="1" fps="12"/>
+</character>

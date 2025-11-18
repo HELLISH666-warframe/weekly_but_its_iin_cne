@@ -1,9 +1,0 @@
-<!DOCTYPE codename-engine-character>
-<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
-<character sprite="kita" icon="kita" color="#e37a7a" x="-100" y="-80" camx="-270" camy="110" holdTime="4.00000000000001">
-	<anim name="idle" anim="kita idle0"/>
-	<anim name="singLEFT" anim="kita left0" x="90" y="28"/>
-	<anim name="singDOWN" anim="kita down0" x="50" y="-35"/>
-	<anim name="singUP" anim="kita up0" x="50" y="97"/>
-	<anim name="singRIGHT" anim="kita right0" x="2" y="-4"/>
-</character>

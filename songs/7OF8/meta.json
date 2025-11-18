@@ -1,6 +1,15 @@
 {
-	"displayName": "7OF8",
-	"bpm": 121.0,
+	"customValues": {},
+	"color": "#FFFFFF",
+	"opponentModeAllowed": false,
 	"icon": "slenderman",
-	"color": "#9271FD"
+	"difficulties": [
+		"normal"
+	],
+	"coopAllowed": false,
+	"stepsPerBeat": 4,
+	"displayName": "7OF8",
+	"beatsPerMeasure": 4,
+	"needsVoices": true,
+	"bpm": 121
 }

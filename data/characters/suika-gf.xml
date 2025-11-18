@@ -1,6 +1,0 @@
-<!DOCTYPE codename-engine-character>
-<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
-<character sprite="applegf" icon="gf" color="#a5004d" x="360" y="490" camx="-240" camy="50">
-	<anim name="danceLeft" anim="GF0" indices="1..14"/>
-	<anim name="danceRight" anim="GF0" indices="15..28"/>
-</character>

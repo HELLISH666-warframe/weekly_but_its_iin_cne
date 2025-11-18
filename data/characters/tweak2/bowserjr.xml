@@ -1,0 +1,14 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="tweak2/bowserjr" icon="tweak2/bowserjr" color="#d9b45a" camx="20" camy="70" holdTime="4.00000000000001">
+	<anim name="singDOWN" anim="down" x="1" y="-5"/>
+	<anim name="singUP" anim="up" x="-2" y="47"/>
+	<anim name="singRIGHT" anim="right" x="-7" y="2"/>
+	<anim name="idle-loop" anim="idle" loop="true" indices="15,16"/>
+	<anim name="singLEFT-loop" anim="left" x="12" y="-2" loop="true" indices="15,16"/>
+	<anim name="singDOWN-loop" anim="down" x="1" y="-5" loop="true" indices="15,16"/>
+	<anim name="singUP-loop" anim="up" x="-2" y="47" loop="true" indices="15,16"/>
+	<anim name="singRIGHT-loop" anim="right" x="-7" y="2" loop="true" indices="15,16"/>
+	<anim name="idle" anim="idle"/>
+	<anim name="singLEFT" anim="left" x="12" y="-2"/>
+</character>

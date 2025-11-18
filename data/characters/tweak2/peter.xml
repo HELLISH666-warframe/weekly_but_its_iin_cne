@@ -1,0 +1,10 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="tweak2/peter" icon="tweak2/peter" color="#ff6551" flipX="true" holdTime="6.1">
+	<anim name="idle" anim="peteridle" x="-85" y="-161"/>
+	<anim name="singLEFT" anim="peterleft" x="50" y="-109"/>
+	<anim name="singDOWN" anim="peterdown" x="-67" y="-147"/>
+	<anim name="singUP" anim="peterup" x="-140" y="-69"/>
+	<anim name="singRIGHT" anim="peterright" x="-177" y="-217"/>
+	<anim name="singRIGHT-alt" anim="peterpunch" x="19" y="-207"/>
+</character>

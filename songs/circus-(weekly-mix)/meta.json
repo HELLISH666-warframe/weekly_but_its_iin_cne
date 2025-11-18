@@ -1,6 +1,15 @@
 {
+	"customValues": {},
+	"color": "#464646",
+	"opponentModeAllowed": true,
+	"icon": "siiva",
+	"difficulties": [
+		"normal"
+	],
+	"coopAllowed": true,
+	"stepsPerBeat": 4,
 	"displayName": "circus-(weekly-mix)",
-	"bpm": 125.0,
-	"icon": "gilva",
-	"color": "#9271FD"
+	"beatsPerMeasure": 4,
+	"needsVoices": true,
+	"bpm": 125
 }

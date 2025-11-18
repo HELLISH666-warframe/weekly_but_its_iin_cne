@@ -1,0 +1,11 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="tweak8/666" icon="tweak8/666" color="#dc000a" camx="-20" camy="250" holdTime="4.00000000000001">
+	<anim name="idle" anim="Idle" x="20" y="-290"/>
+	<anim name="singLEFT" anim="Left" x="49" y="-299"/>
+	<anim name="singDOWN" anim="Down" x="23" y="-297"/>
+	<anim name="singUP" anim="Up" x="38" y="-288"/>
+	<anim name="singRIGHT" anim="RIght" x="24" y="-290"/>
+	<anim name="scary" anim="Scary" x="46" y="-287" loop="true"/>
+	<anim name="scarystart" anim="JSJcary" x="39" y="-295" loop="true"/>
+</character>

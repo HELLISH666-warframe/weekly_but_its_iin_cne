@@ -1,6 +1,15 @@
 {
+	"customValues": {},
+	"color": "#D13D60",
+	"opponentModeAllowed": true,
+	"icon": "tweak4/annie",
+	"difficulties": [
+		"normal"
+	],
+	"coopAllowed": true,
+	"stepsPerBeat": 4,
 	"displayName": "parched",
-	"bpm": 120.0,
-	"icon": "annie",
-	"color": "#9271FD"
+	"beatsPerMeasure": 4,
+	"needsVoices": true,
+	"bpm": 120
 }

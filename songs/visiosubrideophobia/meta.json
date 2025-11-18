@@ -1,6 +1,15 @@
 {
-	"displayName": "visiosubrideophobia",
-	"bpm": 170.0,
+	"customValues": {},
+	"color": "#A685FD",
+	"opponentModeAllowed": true,
 	"icon": "tweak",
-	"color": "#9271FD"
+	"difficulties": [
+		"normal"
+	],
+	"coopAllowed": true,
+	"stepsPerBeat": 4,
+	"displayName": "visiosubrideophobia",
+	"beatsPerMeasure": 4,
+	"needsVoices": true,
+	"bpm": 170
 }

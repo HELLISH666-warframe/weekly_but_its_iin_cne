@@ -7,4 +7,5 @@
 		<value name="Disabled" value="disabled"/>
 	</choice>
 	<checkbox id="WBNBRAIN" name="Rain" desc="Toggle'the rain shader in the tweaking boss fight.(WIP)" />
+	<checkbox id="WEEKLYSPLASHSCREEN" name="Splash-screen" desc="Toggle'the splash screen on start up." />
 </menu>

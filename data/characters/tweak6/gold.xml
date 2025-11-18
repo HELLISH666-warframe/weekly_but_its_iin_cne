@@ -1,0 +1,13 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="tweak6/gold" icon="tweak6/gold" color="#e1e1e1" x="110" y="240" camx="-140" camy="90">
+	<anim name="idle" anim="gold_idle0" loop="true"/>
+	<anim name="singLEFT" anim="gold_left" x="123" y="-57"/>
+	<anim name="singDOWN" anim="gold_down0" x="-10" y="-106"/>
+	<anim name="singUP" anim="gold_up0" x="6" y="79"/>
+	<anim name="singRIGHT" anim="gold_right0" x="-75" y="-32"/>
+	<anim name="intro" anim="gold_intro0"/>
+	<anim name="no more" anim="gold_no more0" x="0" y="-13"/>
+	<anim name="tweak" anim="gold_tweak0" x="1" y="-13"/>
+	<anim name="tweak-loop" anim="gold_tweak0" x="1" y="-13" loop="true" indices="12..15"/>
+</character>

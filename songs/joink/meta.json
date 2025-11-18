@@ -1,6 +1,15 @@
 {
+	"customValues": {},
+	"color": "#F0A4A4",
+	"opponentModeAllowed": true,
+	"icon": "tweak1/conan",
+	"difficulties": [
+		"normal"
+	],
+	"coopAllowed": true,
+	"stepsPerBeat": 4,
 	"displayName": "joink",
-	"bpm": 105,
-	"icon": "conan",
-	"color": "#9271FD"
+	"beatsPerMeasure": 4,
+	"needsVoices": true,
+	"bpm": 150
 }

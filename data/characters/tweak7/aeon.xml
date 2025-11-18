@@ -1,0 +1,9 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="tweak7/aeon" color="#af66ce" x="-20" y="640" antialiasing="false" camx="-200" holdTime="4.00000000000001" scale="4">
+	<anim name="singLEFT" anim="left"/>
+	<anim name="singDOWN" anim="down"/>
+	<anim name="singUP" anim="up"/>
+	<anim name="singRIGHT" anim="right"/>
+	<anim name="idle" anim="idle" loop="true"/>
+</character>

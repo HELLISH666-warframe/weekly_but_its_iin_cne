@@ -1,9 +1,0 @@
-<!DOCTYPE codename-engine-character>
-<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
-<character sprite="oni_takuro" icon="bf" color="#ff0000" x="100" y="510" antialiasing="false" camx="-150" camy="90" scale="3">
-	<anim name="idle" anim="idle"/>
-	<anim name="singLEFT" anim="left"/>
-	<anim name="singDOWN" anim="down"/>
-	<anim name="singUP" anim="up"/>
-	<anim name="singRIGHT" anim="right"/>
-</character>

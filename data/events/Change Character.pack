@@ -37,6 +37,9 @@ function onEvent(_) {
 				iconP1.setIcon(char.icon!=null?char.icon:char.curCharacter);
 			}
 		}
+		if(!_.event.params[4])
+		healthBar.createFilledBar(dad.iconColor, boyfriend.iconColor);
+		healthBar.updateBar();
 	}
 }________PACKSEP________{
 	"params": [

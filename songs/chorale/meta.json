@@ -1,6 +1,15 @@
 {
+	"customValues": {},
+	"color": "#E1E1E1",
+	"opponentModeAllowed": false,
+	"icon": "tweak5/chorus",
+	"difficulties": [
+		"normal"
+	],
+	"coopAllowed": false,
+	"stepsPerBeat": 4,
 	"displayName": "chorale",
-	"bpm": 126.0,
-	"icon": "chorus",
-	"color": "#9271FD"
+	"beatsPerMeasure": 4,
+	"needsVoices": true,
+	"bpm": 126
 }

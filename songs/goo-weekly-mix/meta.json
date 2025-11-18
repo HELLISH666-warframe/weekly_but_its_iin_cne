@@ -1,0 +1,15 @@
+{
+	"color": "#A6E9FD",
+	"customValues": {},
+	"opponentModeAllowed": true,
+	"difficulties": [
+		"normal"
+	],
+	"icon": "tweakBONUS/boss",
+	"coopAllowed": true,
+	"stepsPerBeat": 4,
+	"displayName": "goo-weekly-mix",
+	"needsVoices": true,
+	"beatsPerMeasure": 4,
+	"bpm": 115
+}

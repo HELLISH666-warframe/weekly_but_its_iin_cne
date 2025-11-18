@@ -1,6 +1,15 @@
 {
-	"displayName": "legend",
-	"bpm": 170.0,
+	"customValues": {},
+	"color": "#22BADD",
+	"opponentModeAllowed": false,
 	"icon": "herobrine",
-	"color": "#9271FD"
+	"difficulties": [
+		"normal"
+	],
+	"coopAllowed": false,
+	"stepsPerBeat": 4,
+	"displayName": "legend",
+	"beatsPerMeasure": 4,
+	"needsVoices": true,
+	"bpm": 170
 }

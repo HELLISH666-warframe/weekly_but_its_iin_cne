@@ -1,6 +1,15 @@
 {
+	"customValues": {},
+	"color": "#00FF4D",
+	"opponentModeAllowed": false,
+	"icon": "tweak7/aeon",
+	"difficulties": [
+		"normal"
+	],
+	"coopAllowed": false,
+	"stepsPerBeat": 4,
 	"displayName": "kb5k",
-	"bpm": 184.0,
-	"icon": "aeon",
-	"color": "#9271FD"
+	"beatsPerMeasure": 4,
+	"needsVoices": true,
+	"bpm": 184
 }

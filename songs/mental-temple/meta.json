@@ -1,6 +1,15 @@
 {
-	"displayName": "mental-temple",
-	"bpm": 162.0,
+	"customValues": {},
+	"color": "#366BFF",
+	"opponentModeAllowed": true,
 	"icon": "ena",
-	"color": "#9271FD"
+	"difficulties": [
+		"normal"
+	],
+	"coopAllowed": true,
+	"stepsPerBeat": 4,
+	"displayName": "mental-temple",
+	"beatsPerMeasure": 4,
+	"needsVoices": true,
+	"bpm": 162
 }

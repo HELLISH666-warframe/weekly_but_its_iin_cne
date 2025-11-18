@@ -1,7 +1,9 @@
 import flixel.text.FlxTextBorderStyle;
 import flixel.util.FlxStringUtil;
 import flixel.ui.FlxBar;
-public var timeTxt,timeBarBG,timeBar;
+public var timeTxt;
+public var timeBarBG;
+public var timeBar;
 public var songLength = FlxG.sound.music.length;
 public var budAndBludsShitVar=[];
 function create() {

@@ -1,6 +1,15 @@
 {
+	"customValues": {},
+	"color": "#F4DF22",
+	"opponentModeAllowed": true,
+	"icon": "tweak3/hominid",
+	"difficulties": [
+		"normal"
+	],
+	"coopAllowed": true,
+	"stepsPerBeat": 4,
 	"displayName": "spaceblasterz",
-	"bpm": 150.0,
-	"icon": "hominid",
-	"color": "#9271FD"
+	"beatsPerMeasure": 4,
+	"needsVoices": true,
+	"bpm": 150
 }

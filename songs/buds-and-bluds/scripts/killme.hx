@@ -39,21 +39,21 @@ function postCreate(){
     whiteHUD.alpha = 0;
     insert(1,whiteHUD).camera = camHUD;
 
-    titlecard = new FlxSprite(0, 0).loadGraphic(Paths.image('stages/bud/introcard')); // UGHHHHHHH
+    titlecard = new FlxSprite(0, 0).loadGraphic(Paths.image('stages/tweak10/bud/introcard')); // UGHHHHHHH
     titlecard.screenCenter();
     titlecard.alpha = 0;
     insert(2,titlecard).camera = camHUD;
 
-    heythere = new FlxSprite(0, 0).loadGraphic(Paths.image('stages/bud/Hey there'));
+    heythere = new FlxSprite(0, 0).loadGraphic(Paths.image('stages/tweak10/bud/Hey there'));
     heythere.scale.set(0.15, 0.15);
     heythere.screenCenter();
     heythere.alpha = 0.001;
     insert(3,heythere).camera = camHUD;
 
-    insert(4,emotional = new FlxVideoSprite()).load(Paths.video("notsillybilly"));
+    insert(4,emotional = new FlxVideoSprite()).load(Paths.video("tweak10/notsillybilly"));
     insert(4,emotional).camera = camHUD;
  
-    add(intro = new FlxVideoSprite()).load(Paths.video("BudsIntro"));
+    add(intro = new FlxVideoSprite()).load(Paths.video("tweak10/BudsIntro"));
     intro.camera = camHUD;
     intro.antialiasing = true;
 
@@ -130,7 +130,7 @@ function norbert_Video(){
         boyfriend.cameraOffset[1] = -210;
         dad.cameraOffset[0] = 100;
         dad.cameraOffset[1] = -185;
-        videoString = 'OOGITYGOOGAMEOVER';
+        videoString = 'tweak10/OOGITYGOOGAMEOVER';
         Options.camZoomOnBeat = true;
         FlxTween.tween(titlecard, {alpha: 1}, 0.5);
         songLength = FlxG.sound.music.length;

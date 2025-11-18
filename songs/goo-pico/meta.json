@@ -1,0 +1,15 @@
+{
+	"color": "#A6E9FD",
+	"customValues": {},
+	"opponentModeAllowed": true,
+	"difficulties": [
+		"normal"
+	],
+	"icon": "tweak",
+	"coopAllowed": true,
+	"stepsPerBeat": 4,
+	"displayName": "goo-pico",
+	"needsVoices": true,
+	"beatsPerMeasure": 4,
+	"bpm": 115
+}

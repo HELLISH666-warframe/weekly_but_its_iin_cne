@@ -1,9 +1,0 @@
-<!DOCTYPE codename-engine-character>
-<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
-<character sprite="zardy_foolshardy" icon="zardy" color="#bf5128" x="-80" y="30" camx="40" camy="70">
-	<anim name="idle" anim="idle"/>
-	<anim name="singLEFT" anim="left" x="67" y="-34"/>
-	<anim name="singDOWN" anim="down" x="-66" y="-152"/>
-	<anim name="singUP" anim="up" x="-50" y="30"/>
-	<anim name="singRIGHT" anim="right" x="-127" y="-78"/>
-</character>

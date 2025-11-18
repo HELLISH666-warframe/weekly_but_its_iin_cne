@@ -1,9 +1,0 @@
-<!DOCTYPE codename-engine-character>
-<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
-<character sprite="unlucky" icon="lucky" color="#a22433" y="80" camx="10" holdTime="4.00000000000001">
-	<anim name="idle" anim="idle"/>
-	<anim name="singLEFT" anim="left" x="-1" y="5"/>
-	<anim name="singDOWN" anim="down" x="0" y="3"/>
-	<anim name="singUP" anim="up" x="0" y="8"/>
-	<anim name="singRIGHT" anim="right" x="0" y="-4"/>
-</character>

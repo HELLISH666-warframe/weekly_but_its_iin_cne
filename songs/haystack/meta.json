@@ -1,6 +1,15 @@
 {
-	"displayName": "haystack",
-	"bpm": 192.0,
+	"customValues": {},
+	"color": "#BF5128",
+	"opponentModeAllowed": true,
 	"icon": "zardy",
-	"color": "#9271FD"
+	"difficulties": [
+		"normal"
+	],
+	"coopAllowed": true,
+	"stepsPerBeat": 4,
+	"displayName": "haystack",
+	"beatsPerMeasure": 4,
+	"needsVoices": true,
+	"bpm": 192
 }

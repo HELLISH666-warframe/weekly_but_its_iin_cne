@@ -1,6 +1,15 @@
 {
-	"displayName": "crimson-fog",
-	"bpm": 174.0,
+	"customValues": {},
+	"color": "#4E3759",
+	"opponentModeAllowed": true,
 	"icon": "hank",
-	"color": "#9271FD"
+	"difficulties": [
+		"normal"
+	],
+	"coopAllowed": true,
+	"stepsPerBeat": 4,
+	"displayName": "crimson-fog",
+	"beatsPerMeasure": 4,
+	"needsVoices": true,
+	"bpm": 174
 }

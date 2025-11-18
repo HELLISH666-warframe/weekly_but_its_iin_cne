@@ -1,9 +1,0 @@
-<!DOCTYPE codename-engine-character>
-<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
-<character sprite="bocchi" icon="bocchi" color="#eacd50" x="150" y="-250" flipX="true" camx="250" camy="90">
-	<anim name="idle" anim="bocchi idle0"/>
-	<anim name="singLEFT" anim="bocchi left0" x="167" y="-23"/>
-	<anim name="singDOWN" anim="bocchi down0" x="110" y="-124"/>
-	<anim name="singUP" anim="bocchi up0" x="34" y="16"/>
-	<anim name="singRIGHT" anim="bocchi right0" x="63" y="-9"/>
-</character>

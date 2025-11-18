@@ -1,6 +1,15 @@
 {
+	"customValues": {},
+	"color": "#CC99CC",
+	"opponentModeAllowed": false,
+	"icon": "tweak6/kinito",
+	"difficulties": [
+		"normal"
+	],
+	"coopAllowed": false,
+	"stepsPerBeat": 4,
 	"displayName": "good-will",
-	"bpm": 173.0,
-	"icon": "kinito",
-	"color": "#9271FD"
+	"beatsPerMeasure": 4,
+	"needsVoices": true,
+	"bpm": 173
 }

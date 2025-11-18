@@ -1,6 +1,15 @@
 {
+	"customValues": {},
+	"color": "#282828",
+	"opponentModeAllowed": false,
+	"icon": "tweak6/bendy",
+	"difficulties": [
+		"normal"
+	],
+	"coopAllowed": false,
+	"stepsPerBeat": 4,
 	"displayName": "devil's-ditty",
-	"bpm": 117.0,
-	"icon": "bendy",
-	"color": "#9271FD"
+	"beatsPerMeasure": 4,
+	"needsVoices": true,
+	"bpm": 117
 }

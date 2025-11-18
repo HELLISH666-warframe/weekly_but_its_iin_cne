@@ -1,6 +1,15 @@
 {
+	"customValues": {},
+	"color": "#7A4772",
+	"opponentModeAllowed": true,
+	"icon": "tweak8/badeline",
+	"difficulties": [
+		"normal"
+	],
+	"coopAllowed": true,
+	"stepsPerBeat": 4,
 	"displayName": "rock-bottom",
-	"bpm": 140.0,
-	"icon": "badeline",
-	"color": "#9271FD"
+	"beatsPerMeasure": 4,
+	"needsVoices": true,
+	"bpm": 140
 }

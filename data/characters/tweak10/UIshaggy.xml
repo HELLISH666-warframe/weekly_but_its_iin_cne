@@ -1,0 +1,9 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="tweak10/shaggy" icon="tweak10/shag666" color="#49b354" x="100" y="190" antialiasing="false" camx="-60" camy="-110" holdTime="4.00000000000001" scale="1.7">
+	<anim name="idle" anim="idle"/>
+	<anim name="singLEFT" anim="left" x="218.23529411764707" y="-94.11764705882354"/>
+	<anim name="singDOWN" anim="down" x="23.529411764705884" y="-98.82352941176471"/>
+	<anim name="singUP" anim="up" x="21.176470588235293" y="57.05882352941177"/>
+	<anim name="singRIGHT" anim="right" x="38.82352941176471" y="-37.64705882352941"/>
+</character>

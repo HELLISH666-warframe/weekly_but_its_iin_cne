@@ -1,6 +1,40 @@
 {
+	"card": {
+		"duration": 3,
+		"expandBeat": 48,
+		"name": "CAN YOU HEAR ME"
+	},
+	"customValues": {},
+	"color": "#282828",
+	"opponentModeAllowed": false,
+	"icon": "tweak6/gold",
+	"difficulties": [
+		"normal"
+	],
+	"credits": {
+		"code": [
+			"Lethrial"
+		],
+		"music": [
+			"Dollie",
+			"kloogybaboogy"
+		],
+		"chart": [
+			"kloogybaboogy",
+			"lemlem_mew"
+		],
+		"va": [
+			"kloogybaboogy"
+		],
+		"art": [
+			"KatAnims",
+			"DerpDrawz"
+		]
+	},
+	"coopAllowed": false,
+	"stepsPerBeat": 4,
 	"displayName": "can-you-hear-me",
-	"bpm": 193.0,
-	"icon": "disabled",
-	"color": "#9271FD"
+	"needsVoices": true,
+	"beatsPerMeasure": 4,
+	"bpm": 193
 }

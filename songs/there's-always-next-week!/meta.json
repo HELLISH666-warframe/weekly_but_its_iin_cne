@@ -1,0 +1,15 @@
+{
+	"color": "#FFCA50",
+	"customValues": {},
+	"opponentModeAllowed": false,
+	"difficulties": [
+		"normal"
+	],
+	"icon": "weekly",
+	"coopAllowed": false,
+	"stepsPerBeat": 4,
+	"displayName": "there's-always-next-week!",
+	"needsVoices": false,
+	"beatsPerMeasure": 4,
+	"bpm": 204
+}

@@ -1,9 +1,0 @@
-<!DOCTYPE codename-engine-character>
-<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
-<character sprite="slender_assets" icon="slenderman" color="#d7d7d7" x="20" y="-290">
-	<anim name="idle" anim="idle" loop="true"/>
-	<anim name="singLEFT" anim="left" x="116" y="-45"/>
-	<anim name="singDOWN" anim="down" x="28" y="-283"/>
-	<anim name="singUP" anim="up" x="3" y="81"/>
-	<anim name="singRIGHT" anim="right" x="7" y="-84"/>
-</character>

@@ -1,0 +1,9 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="tweak9beerus" icon="tweak9/beerus" color="#be52dc" x="-60" y="-200" camx="50" camy="20">
+	<anim name="idle" anim="idle0"/>
+	<anim name="singLEFT" anim="left0" x="60" y="20"/>
+	<anim name="singDOWN" anim="down0" x="49" y="-99"/>
+	<anim name="singUP" anim="up0" x="-30" y="80"/>
+	<anim name="singRIGHT" anim="right0" x="-61" y="-2"/>
+</character>

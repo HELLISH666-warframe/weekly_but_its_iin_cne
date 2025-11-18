@@ -1,9 +1,0 @@
-<!DOCTYPE codename-engine-character>
-<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
-<character sprite="dropin" icon="bf" color="#31b0d1" flipX="true">
-	<anim name="drop-four" anim="FourDrop0" loop="true"/>
-	<anim name="drop" anim="drop0" loop="true"/>
-	<anim name="fall" anim="fall0" x="-30" y="-53" loop="true"/>
-	<anim name="fall-four" anim="FourFall0" x="-30" y="-53" loop="true"/>
-	<anim name="splash" anim="splash0" x="-21" y="-241"/>
-</character>

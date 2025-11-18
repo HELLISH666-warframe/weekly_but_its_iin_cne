@@ -1,6 +1,15 @@
 {
+	"customValues": {},
+	"color": "#AD78EE",
+	"opponentModeAllowed": false,
+	"icon": "tweak8/onitakoru",
+	"difficulties": [
+		"normal"
+	],
+	"coopAllowed": false,
+	"stepsPerBeat": 4,
 	"displayName": "dangerous-to-go-alone",
-	"bpm": 142.0,
-	"icon": "onitakoru",
-	"color": "#9271FD"
+	"beatsPerMeasure": 4,
+	"needsVoices": true,
+	"bpm": 142
 }

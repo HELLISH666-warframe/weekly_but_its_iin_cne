@@ -1,6 +1,15 @@
 {
+	"customValues": {},
+	"color": "#4F4F4F",
+	"opponentModeAllowed": false,
+	"icon": "tweak7/duckb",
+	"difficulties": [
+		"normal"
+	],
+	"coopAllowed": false,
+	"stepsPerBeat": 4,
 	"displayName": "evolution",
-	"bpm": 270.0,
-	"icon": "duckb",
-	"color": "#9271FD"
+	"beatsPerMeasure": 4,
+	"needsVoices": true,
+	"bpm": 270
 }

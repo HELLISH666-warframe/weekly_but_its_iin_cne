@@ -1,0 +1,9 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="tweak9/sukobf" icon="tweak9/bfsuko" color="#31b0e5" x="110" y="460" flipX="true" camx="20" holdTime="6.49999999999999">
+	<anim name="idle" anim="idle instance"/>
+	<anim name="singLEFT" anim="left instance" x="81" y="2"/>
+	<anim name="singDOWN" anim="down instance" x="28" y="2"/>
+	<anim name="singUP" anim="up instance" x="4" y="34"/>
+	<anim name="singRIGHT" anim="right instance" x="4" y="2"/>
+</character>

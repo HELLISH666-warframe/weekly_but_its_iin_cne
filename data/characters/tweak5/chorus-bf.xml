@@ -1,0 +1,14 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="tweak5/chorus_bf" icon="bf" color="#31b0d1" x="170" y="510" flipX="true">
+	<anim name="idle" anim="idle_BF" loop="true"/>
+	<anim name="singLEFT" anim="left_BF" x="55" y="-5"/>
+	<anim name="singLEFT-loop" anim="left_BF" x="55" y="-5" loop="true" indices="12..15"/>
+	<anim name="singDOWN" anim="down_BF" x="17" y="-24"/>
+	<anim name="singDOWN-loop" anim="down_BF" x="17" y="-24" loop="true" indices="12..15"/>
+	<anim name="singUP" anim="up_BF" x="6" y="26"/>
+	<anim name="singUP-loop" anim="up_BF" x="6" y="26" loop="true" indices="12..15"/>
+	<anim name="singRIGHT" anim="right_BF" x="-9" y="-7"/>
+	<anim name="singRIGHT-loop" anim="right_BF" x="-9" y="-7" loop="true" indices="12..15"/>
+	<anim name="hey" anim="sing_BF" x="14" y="29"/>
+</character>

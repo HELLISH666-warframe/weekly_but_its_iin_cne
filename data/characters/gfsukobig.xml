@@ -1,6 +1,0 @@
-<!DOCTYPE codename-engine-character>
-<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
-<character sprite="gfsukobig" icon="gf" color="#a5004d" x="70" y="190" camx="-140">
-	<anim name="danceLeft" anim="gf1" indices="30,0..14"/>
-	<anim name="danceRight" anim="gf1" indices="15..29"/>
-</character>

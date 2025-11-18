@@ -1,6 +1,15 @@
 {
-	"displayName": "brilliance",
-	"bpm": 165.0,
+	"customValues": {},
+	"color": "#333056",
+	"opponentModeAllowed": false,
 	"icon": "alucard",
-	"color": "#9271FD"
+	"difficulties": [
+		"normal"
+	],
+	"coopAllowed": false,
+	"stepsPerBeat": 4,
+	"displayName": "brilliance",
+	"beatsPerMeasure": 4,
+	"needsVoices": true,
+	"bpm": 165
 }

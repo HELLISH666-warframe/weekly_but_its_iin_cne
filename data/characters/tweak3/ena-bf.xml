@@ -1,0 +1,9 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="tweak3/ena_bf" icon="tweak3/ena-bf" color="#88ecff" x="80" y="175" flipX="true" camx="170" camy="70">
+	<anim name="idle" anim="ena bf idle0"/>
+	<anim name="singLEFT" anim="ena bf left0" x="29" y="0"/>
+	<anim name="singDOWN" anim="ena bf down0" x="47" y="-103"/>
+	<anim name="singUP" anim="ena bf up0" x="-34" y="16"/>
+	<anim name="singRIGHT" anim="ena bf right0" x="-53" y="-6"/>
+</character>

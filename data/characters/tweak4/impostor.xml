@@ -1,0 +1,13 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="tweak4/impostor" icon="tweak4/impostor" color="#ad1919" y="20">
+	<anim name="singLEFT" anim="Left" x="-24" y="0" fps="12"/>
+	<anim name="singUP" anim="Up" x="-64" y="9" fps="12"/>
+	<anim name="singRIGHT" anim="Right" x="-139" y="1" fps="12"/>
+	<anim name="singDOWN" anim="Down" x="-34" y="-14" fps="12"/>
+	<anim name="idle-alt" anim="KnowingSmile" x="-5" y="0" fps="12"/>
+	<anim name="check-true" anim="Yay" x="-3" y="3" fps="12"/>
+	<anim name="check" anim="Nay" x="-3" y="3" fps="12"/>
+	<anim name="shoot" anim="KillAhaha" x="-6" y="0" fps="12"/>
+	<anim name="idle" anim="Idle" x="-5" y="0" fps="12"/>
+</character>

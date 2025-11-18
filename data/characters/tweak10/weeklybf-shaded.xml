@@ -1,0 +1,17 @@
+<!DOCTYPE codename-engine-character>
+<character x="50" y="360" sprite="tweak10/weeklybf_bud" flipX="true" camx="25" camy="-23" isPlayer="true" icon="tweak10/bf-bud" color="#31B0D1">
+	<anim name="idle" anim="idle"/>
+	<anim name="singDOWN" anim="down" x="15" y="-56"/>
+	<anim name="singUP" anim="up" x="-6" y="31"/>
+	<anim name="singRIGHT" anim="right" x="-7" y="-5"/>
+	<anim name="singDOWNmiss" anim="missdown" x="15" y="-45"/>
+	<anim name="singUPmiss" anim="missup" x="4" y="31"/>
+	<anim name="singRIGHTmiss" anim="missright" x="2" y="-8"/>
+	<anim name="hey" anim="hey" x="31" y="11"/>
+	<anim name="singLEFT-alt" anim="altleft" x="99" y="-22"/>
+	<anim name="singDOWN-alt" anim="altdown" x="55" y="-82"/>
+	<anim name="singUP-alt" anim="altup" x="-22" y="21"/>
+	<anim name="singRIGHT-alt" anim="altright" x="-43"/>
+	<anim name="singLEFT" anim="left" x="11" y="-2"/>
+	<anim name="singLEFTmiss" anim="missleft" x="11" y="-3"/>
+</character>

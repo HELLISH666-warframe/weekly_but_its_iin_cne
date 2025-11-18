@@ -1,9 +1,0 @@
-<!DOCTYPE codename-engine-character>
-<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
-<character sprite="kinito_3d" icon="kinito" color="#cc99cc" x="-120" y="260" camx="-180" camy="-30" scale="0.699999999999999">
-	<anim name="idle" anim="idle"/>
-	<anim name="singLEFT" anim="left"/>
-	<anim name="singDOWN" anim="down"/>
-	<anim name="singUP" anim="up"/>
-	<anim name="singRIGHT" anim="right"/>
-</character>

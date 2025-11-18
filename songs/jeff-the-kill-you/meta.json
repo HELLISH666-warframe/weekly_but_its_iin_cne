@@ -1,6 +1,15 @@
 {
+	"customValues": {},
+	"color": "#FFFFFF",
+	"opponentModeAllowed": false,
+	"icon": "tweak6/jeff",
+	"difficulties": [
+		"normal"
+	],
+	"coopAllowed": false,
+	"stepsPerBeat": 4,
 	"displayName": "jeff-the-kill-you",
-	"bpm": 140.0,
-	"icon": "jeff",
-	"color": "#9271FD"
+	"beatsPerMeasure": 4,
+	"needsVoices": true,
+	"bpm": 140
 }

@@ -1,9 +1,0 @@
-<!DOCTYPE codename-engine-character>
-<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
-<character sprite="Pac" icon="pac" color="#233ece" x="200" y="130" flipX="true" camx="-280" camy="-130" holdTime="6.1">
-	<anim name="idle" anim="Idle" x="-69" y="14"/>
-	<anim name="singLEFT" anim="Left" x="-9" y="10"/>
-	<anim name="singDOWN" anim="Down" x="-100" y="25"/>
-	<anim name="singUP" anim="Up" x="-65" y="36"/>
-	<anim name="singRIGHT" anim="Right" x="-113" y="12"/>
-</character>

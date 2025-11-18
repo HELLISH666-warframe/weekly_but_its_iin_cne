@@ -1,0 +1,9 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="tweak2/mario" icon="tweak2/bros" color="#ff6450" y="280" flipX="true" camx="10" camy="-70" holdTime="6.1">
+	<anim name="idle" anim="idle"/>
+	<anim name="singLEFT" anim="left" x="95" y="-40"/>
+	<anim name="singDOWN" anim="down" x="-26" y="138"/>
+	<anim name="singUP" anim="up" x="-41" y="38"/>
+	<anim name="singRIGHT" anim="right" x="-28" y="-8"/>
+</character>

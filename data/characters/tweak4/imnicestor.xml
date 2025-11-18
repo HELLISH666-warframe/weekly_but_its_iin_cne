@@ -1,0 +1,10 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="tweak4imnicestor" icon="tweak4/imnicestor" color="#ad1919" x="400" y="-30">
+	<anim name="singLEFT" anim="Left" x="-4" y="0" fps="12"/>
+	<anim name="singUP" anim="Up" x="0" y="13" fps="12"/>
+	<anim name="singRIGHT" anim="Right" x="-18" y="0" fps="12"/>
+	<anim name="singDOWN" anim="Down" x="-14" y="-16" fps="12"/>
+	<anim name="idle" anim="Idle" x="-5" y="0" fps="12"/>
+	<anim name="check" anim="Point" x="-3" y="0" fps="12"/>
+</character>

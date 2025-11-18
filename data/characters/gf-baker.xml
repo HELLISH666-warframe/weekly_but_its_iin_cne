@@ -1,6 +1,0 @@
-<!DOCTYPE codename-engine-character>
-<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
-<character sprite="gf_ramsay" icon="gf" color="#a5004d" y="-100">
-	<anim name="danceLeft" anim="GF Dancing Beat" indices="30,0..14"/>
-	<anim name="danceRight" anim="GF Dancing Beat" indices="15..29"/>
-</character>

@@ -1,0 +1,9 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="tweak9/fenneko" icon="gf" color="#a5004d" x="70" y="190" camx="-140">
+	<anim name="danceLeft" anim="fenneko0" indices="0..14"/>
+	<anim name="danceRight" anim="fenneko" indices="15..29"/>
+	<anim name="shocked" anim="fenneko_surprise" x="5" y="0" indices="0..9"/>
+	<anim name="shockedloop" anim="fenneko_surprise" x="5" y="0" loop="true" indices="10,11"/>
+	<anim name="shockedend" anim="fenneko_surprise" x="5" y="0" indices="26..29"/>
+</character>

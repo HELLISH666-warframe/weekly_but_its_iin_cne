@@ -1,6 +1,15 @@
 {
-	"displayName": "philly-mice",
-	"bpm": 175,
+	"customValues": {},
+	"color": "#B7D855",
+	"opponentModeAllowed": true,
 	"icon": "pico",
-	"color": "#9271FD"
+	"difficulties": [
+		"normal"
+	],
+	"coopAllowed": true,
+	"stepsPerBeat": 4,
+	"displayName": "philly-mice",
+	"beatsPerMeasure": 4,
+	"needsVoices": true,
+	"bpm": 175
 }

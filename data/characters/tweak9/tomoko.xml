@@ -1,0 +1,21 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="tweak9/tomoko" icon="tweak9/tomoko" color="#424256" y="30" flipX="true" camx="-70" camy="50" holdTime="5.1">
+	<anim name="idle" anim="idle" loop="true"/>
+	<anim name="singLEFT" anim="left0" x="9" y="1"/>
+	<anim name="singDOWN" anim="down0" x="5" y="-8"/>
+	<anim name="singUP" anim="up0" x="4" y="11"/>
+	<anim name="singRIGHT" anim="right0" x="-5" y="3"/>
+	<anim name="singLEFT-loop" anim="left0" x="9" y="1" loop="true" indices="4..7"/>
+	<anim name="singDOWN-loop" anim="down0" x="5" y="-8" loop="true" indices="4..7"/>
+	<anim name="singUP-loop" anim="up0" x="4" y="11" loop="true" indices="4..7"/>
+	<anim name="singRIGHT-loop" anim="right0" x="-5" y="3" loop="true" indices="4..7"/>
+	<anim name="singLEFT-alt" anim="leftALT" x="105" y="-51"/>
+	<anim name="singDOWN-alt" anim="downALT" x="6" y="-76"/>
+	<anim name="singUP-alt" anim="upALT" x="-4" y="31"/>
+	<anim name="singRIGHT-alt" anim="rightALT" x="-78" y="-64"/>
+	<anim name="singLEFT-alt-loop" anim="leftALT" x="105" y="-51" loop="true" indices="4..7"/>
+	<anim name="singDOWN-alt-loop" anim="downALT" x="6" y="-76" loop="true" indices="4..7"/>
+	<anim name="singUP-alt-loop" anim="upALT" x="-4" y="31" loop="true" indices="4..7"/>
+	<anim name="singRIGHT-alt-loop" anim="rightALT" x="-78" y="-64" loop="true" indices="4..7"/>
+</character>

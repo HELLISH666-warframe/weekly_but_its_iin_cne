@@ -1,6 +1,15 @@
 {
+	"customValues": {},
+	"color": "#AD1919",
+	"opponentModeAllowed": true,
+	"icon": "tweak4/impostor",
+	"difficulties": [
+		"normal"
+	],
+	"coopAllowed": true,
+	"stepsPerBeat": 4,
 	"displayName": "mischief",
-	"bpm": 110.0,
-	"icon": "impostor",
-	"color": "#9271FD"
+	"beatsPerMeasure": 4,
+	"needsVoices": true,
+	"bpm": 110
 }

@@ -1,6 +1,15 @@
 {
-	"displayName": "boss-tweaks-in-brasil",
-	"bpm": 128.0,
+	"customValues": {},
+	"color": "#A6E9FD",
+	"opponentModeAllowed": false,
 	"icon": "tweak",
-	"color": "#9271FD"
+	"difficulties": [
+		"normal"
+	],
+	"coopAllowed": false,
+	"stepsPerBeat": 4,
+	"displayName": "boss-tweaks-in-brasil",
+	"beatsPerMeasure": 4,
+	"needsVoices": true,
+	"bpm": 128
 }

@@ -1,0 +1,9 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="tweak1/John" icon="john" color="#64a0dc" x="30" y="20" flipX="true" holdTime="6.1">
+	<anim name="idle" anim="Idle"/>
+	<anim name="singLEFT" anim="Left" x="34" y="-23"/>
+	<anim name="singDOWN" anim="Down" x="0" y="4"/>
+	<anim name="singUP" anim="Up" x="-6" y="4"/>
+	<anim name="singRIGHT" anim="Right" x="-17" y="-12"/>
+</character>

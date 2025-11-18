@@ -1,6 +1,15 @@
 {
+	"customValues": {},
+	"color": "#49B354",
+	"opponentModeAllowed": true,
+	"icon": "tweak4/shaggy",
+	"difficulties": [
+		"normal"
+	],
+	"coopAllowed": true,
+	"stepsPerBeat": 4,
 	"displayName": "champions-ring",
-	"bpm": 175,
-	"icon": "shaggy",
-	"color": "#9271FD"
+	"beatsPerMeasure": 4,
+	"needsVoices": true,
+	"bpm": 175
 }

@@ -1,9 +1,0 @@
-<!DOCTYPE codename-engine-character>
-<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
-<character sprite="makoto" icon="makoto" color="#2ec370" x="100" y="300" flipX="true">
-	<anim name="idle" anim="makotoidle"/>
-	<anim name="singLEFT" anim="makotoleft" x="-31" y="-8"/>
-	<anim name="singDOWN" anim="makotodown" x="8" y="-27"/>
-	<anim name="singUP" anim="makotoup" x="-28" y="23"/>
-	<anim name="singRIGHT" anim="makotoright" x="-1" y="-3"/>
-</character>

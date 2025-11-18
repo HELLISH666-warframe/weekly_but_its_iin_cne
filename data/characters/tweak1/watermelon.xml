@@ -1,0 +1,9 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="tweak1/watermelon" icon="tweak1/watermelon" color="#358538" x="20" y="540" camx="40" camy="-40" holdTime="4.00000000000001">
+	<anim name="idle" anim="watermelonidle" x="0" y="1"/>
+	<anim name="singLEFT" anim="watermelonleft" x="-3" y="-4"/>
+	<anim name="singDOWN" anim="watermelondown" x="-3" y="-4"/>
+	<anim name="singUP" anim="watermelonup" x="-2" y="-4"/>
+	<anim name="singRIGHT" anim="watermelonright" x="-3" y="-4"/>
+</character>

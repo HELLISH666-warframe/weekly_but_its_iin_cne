@@ -1,6 +1,15 @@
 {
+	"customValues": {},
+	"color": "#AF062E",
+	"opponentModeAllowed": false,
+	"icon": "tweak8/doppelbloxxers",
+	"difficulties": [
+		"normal"
+	],
+	"coopAllowed": false,
+	"stepsPerBeat": 4,
 	"displayName": "silence-is-death",
-	"bpm": 185,
-	"icon": "666",
-	"color": "#9271FD"
+	"beatsPerMeasure": 4,
+	"needsVoices": true,
+	"bpm": 185
 }

@@ -424,7 +424,7 @@ function selectWeek() {
 	selectedWeek = true;
 
 	new FlxTimer().start(0.75, function(tmr:FlxTimer) {
-		PlayState.loadWeek(weeklist.weeks[curWeek], 'hard');
+		PlayState.loadWeek(weeklist.weeks[curWeek], 'normal');
 		FlxG.switchState(new PlayState());
 	});
 }

@@ -23,7 +23,7 @@ songRealList = [
 	['dangerous-to-go-alone','frauduccine','circus-(weekly-mix)','rock-bottom','silence-is-death','simul4crum'],
 	['perfect-girl','busy-work','motivation','popular','beyond'],
 	['syncopation','scarefull','genre-null','tenkaichi-battleworld','friends-and-fellas','buds-and-bluds'],
-	['Teaking Pico','Goo Pico','Teaking Weekly Mix','Goo Weekly Mix',"There's Always Next Week!"]];
+	['Teaking-Pico','Goo-Pico','Teaking-Weekly-Mix','Goo-Weekly-Mix',"There's-Always-Next-Week!"]];
 
 static var prevSong:String = "balls";
 
@@ -77,7 +77,7 @@ function update(elapsed:Float) {
 	if (controls.LEFT_P||controls.RIGHT_P) changeCat(controls.LEFT_P ? -1 : 1);
 	if (controls.ACCEPT){
 		prevSong="FUCK";
-		PlayState.loadSong(songs[curSelectedFP].name, 'hard');
+		PlayState.loadSong(songs[curSelectedFP].name, 'normal');
 		FlxG.switchState(new PlayState());
 	}
 	interpColor.fpsLerpTo(songs[curSelectedFP].color, 0.0625);
@@ -98,7 +98,7 @@ function changeSelection(change:Int = 0, playSound:Bool = true){
 	for (i in 0...iconArray.length) iconArray[i].alpha = 0.6;
 		iconArray[curSelectedFP].alpha = 1;
 
-	curPlayingInst = Paths.inst(songs[curSelectedFP].name, 'hard');
+	curPlayingInst = Paths.inst(songs[curSelectedFP].name, 'normal');
 	trace(prevSong);
 	if(curPlayingInst!=prevSong){
 		FlxG.sound.playMusic(curPlayingInst, 1);

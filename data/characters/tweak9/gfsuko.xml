@@ -1,0 +1,9 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="tweak9/gfsuko" icon="gf" color="#a5004d" x="70" y="190" camx="-140">
+	<anim name="danceLeft" anim="gf" indices="30,0..14"/>
+	<anim name="danceRight" anim="gf" indices="15..29"/>
+	<anim name="shocked" anim="gf_surprise" x="-10" y="1" indices="0..9"/>
+	<anim name="shockedloop" anim="gf_surprise" x="-10" y="1" loop="true" indices="10,11"/>
+	<anim name="shockedend" anim="gf_surprise" x="-10" y="1" indices="26..29"/>
+</character>

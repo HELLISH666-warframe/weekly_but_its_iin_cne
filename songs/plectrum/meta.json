@@ -1,6 +1,15 @@
 {
-	"displayName": "plectrum",
-	"bpm": 160.0,
+	"customValues": {},
+	"color": "#669999",
+	"opponentModeAllowed": true,
 	"icon": "sunday",
-	"color": "#9271FD"
+	"difficulties": [
+		"normal"
+	],
+	"coopAllowed": true,
+	"stepsPerBeat": 4,
+	"displayName": "plectrum",
+	"beatsPerMeasure": 4,
+	"needsVoices": true,
+	"bpm": 160
 }

@@ -1,0 +1,11 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="tweak8/Betty" color="#a5004d" x="1000" camx="-310" camy="320">
+	<anim name="danceLeft" anim="blehL" x="63" y="-327"/>
+	<anim name="danceRight" anim="manR" x="69" y="-330"/>
+	<anim name="Walk" anim="Walk" x="78" y="-325" loop="true"/>
+	<anim name="singUP" anim="Up" x="40" y="-331"/>
+	<anim name="singLEFT" anim="Left" x="42" y="-333"/>
+	<anim name="singDOWN" anim="Down" x="100" y="-339"/>
+	<anim name="singRIGHT" anim="Right" x="24" y="-339"/>
+</character>

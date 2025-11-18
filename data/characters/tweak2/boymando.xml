@@ -1,0 +1,14 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="tweak2/boymando" icon="tweak2/boyman" color="#00ff00" x="-30" y="280" flipX="true" antialiasing="false" camx="30" camy="50">
+	<anim name="singLEFT" anim="left" x="4" y="-29"/>
+	<anim name="singDOWN" anim="down" x="12" y="-25"/>
+	<anim name="singRIGHT" anim="right" x="-49" y="-35"/>
+	<anim name="singUP" anim="up" x="-1" y="-35"/>
+	<anim name="idle" anim="idle" x="0" y="-7"/>
+	<anim name="singLEFT-alt" anim="alt left" x="4" y="-33"/>
+	<anim name="singDOWN-alt" anim="alt down" x="12" y="-24"/>
+	<anim name="singUP-alt" anim="alt up" x="-31" y="-16"/>
+	<anim name="singRIGHT-alt" anim="alt right" x="-50" y="-30"/>
+	<anim name="idle-alt" anim="alt idle" x="-1" y="-44"/>
+</character>

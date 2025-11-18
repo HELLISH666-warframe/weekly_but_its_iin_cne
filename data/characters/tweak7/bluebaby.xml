@@ -1,0 +1,9 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="tweak7/bluebaby" icon="tweak7/bluebaby" color="#48556d" x="100" y="160" camx="20" camy="90" holdTime="4.00000000000001">
+	<anim name="idle" anim="idle"/>
+	<anim name="singLEFT" anim="left" x="52" y="-12"/>
+	<anim name="singDOWN" anim="down" x="-32" y="-24"/>
+	<anim name="singUP" anim="up" x="-3" y="18"/>
+	<anim name="singRIGHT" anim="right" x="-49" y="4"/>
+</character>

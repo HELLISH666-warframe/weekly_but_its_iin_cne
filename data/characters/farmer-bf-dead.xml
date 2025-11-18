@@ -1,7 +1,0 @@
-<!DOCTYPE codename-engine-character>
-<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
-<character sprite="farmerbfdies" icon="bf" color="#31b0d1" y="350" flipX="true">
-	<anim name="firstDeath" anim="dies" x="41" y="45"/>
-	<anim name="deathLoop" anim="death loop0" x="41" y="45" loop="true"/>
-	<anim name="deathConfirm" anim="death confirm" x="-4" y="-134"/>
-</character>

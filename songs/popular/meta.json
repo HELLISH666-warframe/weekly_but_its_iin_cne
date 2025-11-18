@@ -1,0 +1,15 @@
+{
+	"color": "#424256",
+	"customValues": {},
+	"opponentModeAllowed": false,
+	"difficulties": [
+		"normal"
+	],
+	"icon": "tweak9/tomoko",
+	"coopAllowed": false,
+	"stepsPerBeat": 4,
+	"displayName": "popular",
+	"needsVoices": true,
+	"beatsPerMeasure": 4,
+	"bpm": 173
+}

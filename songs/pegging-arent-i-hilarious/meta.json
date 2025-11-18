@@ -1,6 +1,15 @@
 {
+	"customValues": {},
+	"color": "#31B0D1",
+	"opponentModeAllowed": false,
+	"icon": "tweak1/bf-peggle",
+	"difficulties": [
+		"normal"
+	],
+	"coopAllowed": false,
+	"stepsPerBeat": 4,
 	"displayName": "pegging-arent-i-hilarious",
-	"bpm": 110.0,
-	"icon": "bf-peggle",
-	"color": "#9271FD"
+	"beatsPerMeasure": 4,
+	"needsVoices": true,
+	"bpm": 110
 }

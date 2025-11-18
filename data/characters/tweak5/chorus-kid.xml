@@ -1,0 +1,11 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="tweak5/chorus_kids" icon="dad" color="#af66ce" x="120" y="550" holdTime="4.00000000000001">
+	<anim name="singLEFT" anim="sing_C" x="14" y="37"/>
+	<anim name="singDOWN" anim="sing_C" x="14" y="37"/>
+	<anim name="singUP" anim="sing_C" x="14" y="37"/>
+	<anim name="singRIGHT" anim="sing_C" x="14" y="37"/>
+	<anim name="scream" anim="Scream_C" x="19" y="44"/>
+	<anim name="idle" anim="idle_C0" loop="true"/>
+	<anim name="idle-alt" anim="idle_C_MAD0" loop="true"/>
+</character>

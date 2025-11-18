@@ -1,6 +1,15 @@
 {
+	"customValues": {},
+	"color": "#88A8C8",
+	"opponentModeAllowed": true,
+	"icon": "tweak8/fakepep",
+	"difficulties": [
+		"normal"
+	],
+	"coopAllowed": true,
+	"stepsPerBeat": 4,
 	"displayName": "frauduccine",
-	"bpm": 190.0,
-	"icon": "fakepep",
-	"color": "#9271FD"
+	"beatsPerMeasure": 4,
+	"needsVoices": true,
+	"bpm": 190
 }

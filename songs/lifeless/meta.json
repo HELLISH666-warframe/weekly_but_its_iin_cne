@@ -1,6 +1,15 @@
 {
+	"customValues": {},
+	"color": "#48556D",
+	"opponentModeAllowed": false,
+	"icon": "tweak7/bluebaby",
+	"difficulties": [
+		"normal"
+	],
+	"coopAllowed": false,
+	"stepsPerBeat": 4,
 	"displayName": "lifeless",
-	"bpm": 140.0,
-	"icon": "bluebaby",
-	"color": "#9271FD"
+	"beatsPerMeasure": 4,
+	"needsVoices": true,
+	"bpm": 140
 }

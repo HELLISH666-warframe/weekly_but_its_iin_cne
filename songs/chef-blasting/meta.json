@@ -1,0 +1,15 @@
+{
+	"color": "#C2A00B",
+	"customValues": {},
+	"opponentModeAllowed": true,
+	"difficulties": [
+		"normal"
+	],
+	"icon": "tweak1/ramsay",
+	"coopAllowed": true,
+	"stepsPerBeat": 4,
+	"displayName": "chef-blasting",
+	"needsVoices": true,
+	"beatsPerMeasure": 4,
+	"bpm": 140
+}

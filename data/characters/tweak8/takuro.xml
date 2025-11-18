@@ -1,0 +1,9 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="tweak8/takuro" icon="bf" color="#ff0000" x="110" y="640" antialiasing="false" camx="-150" camy="120" scale="3">
+	<anim name="idle" anim="idle"/>
+	<anim name="singLEFT" anim="left"/>
+	<anim name="singDOWN" anim="down"/>
+	<anim name="singUP" anim="up"/>
+	<anim name="singRIGHT" anim="right"/>
+</character>

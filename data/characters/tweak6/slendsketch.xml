@@ -1,0 +1,9 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="tweak6/sslnedertubie" icon="slenderman" color="#ffffeb" y="320" holdTime="4.00000000000001" scale="0.5">
+	<anim name="idle" anim="idle" loop="true"/>
+	<anim name="singLEFT" anim="left" x="18" y="-52"/>
+	<anim name="singDOWN" anim="down" x="-6" y="-136"/>
+	<anim name="singUP" anim="up" x="16" y="46"/>
+	<anim name="singRIGHT" anim="right" x="-6" y="-18"/>
+</character>

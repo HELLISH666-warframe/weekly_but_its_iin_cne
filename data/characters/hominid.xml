@@ -1,9 +1,0 @@
-<!DOCTYPE codename-engine-character>
-<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
-<character sprite="hominid" icon="hominid" color="#fff485" x="100" y="160" camx="20" camy="90" holdTime="4.00000000000001">
-	<anim name="idle" anim="idle"/>
-	<anim name="singLEFT" anim="left" x="91" y="-100"/>
-	<anim name="singDOWN" anim="down" x="47" y="-61"/>
-	<anim name="singUP" anim="up" x="83" y="94"/>
-	<anim name="singRIGHT" anim="right" x="-15" y="-22"/>
-</character>

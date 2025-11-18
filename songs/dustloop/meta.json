@@ -1,6 +1,15 @@
 {
+	"customValues": {},
+	"color": "#31B0D1",
+	"opponentModeAllowed": true,
+	"icon": "tweak2/venom",
+	"difficulties": [
+		"normal"
+	],
+	"coopAllowed": true,
+	"stepsPerBeat": 4,
 	"displayName": "dustloop",
-	"bpm": 130.0,
-	"icon": "venom",
-	"color": "#9271FD"
+	"beatsPerMeasure": 4,
+	"needsVoices": true,
+	"bpm": 130
 }

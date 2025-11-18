@@ -1,0 +1,14 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="siiva" icon="siiva" color="#464646" holdTime="4.00000000000001">
+	<anim name="idle" anim="idle"/>
+	<anim name="singLEFT" anim="left" x="214" y="-2"/>
+	<anim name="singDOWN" anim="down" x="78" y="-108"/>
+	<anim name="singUP" anim="up" x="109" y="61"/>
+	<anim name="singRIGHT" anim="right" x="-26" y="-126"/>
+	<anim name="idle-loop" anim="idle" loop="true" indices="11..14"/>
+	<anim name="singLEFT-loop" anim="left" x="214" y="-2" loop="true" indices="11..14"/>
+	<anim name="singDOWN-loop" anim="down" x="78" y="-108" loop="true" indices="11..14"/>
+	<anim name="singUP-loop" anim="up" x="109" y="61" loop="true" indices="11..14"/>
+	<anim name="singRIGHT-loop" anim="right" x="-26" y="-126" loop="true" indices="11..14"/>
+</character>

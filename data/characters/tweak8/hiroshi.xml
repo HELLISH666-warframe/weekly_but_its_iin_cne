@@ -1,0 +1,9 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="tweak8/hiroshi" icon="bf" color="#00ff00" x="490" y="600" flipX="true" antialiasing="false" scale="3">
+	<anim name="idle" anim="idle"/>
+	<anim name="singLEFT" anim="left"/>
+	<anim name="singDOWN" anim="down"/>
+	<anim name="singUP" anim="up"/>
+	<anim name="singRIGHT" anim="right"/>
+</character>

@@ -1,0 +1,8 @@
+<!DOCTYPE codename-engine-character>
+<character y="250" sprite="tweak10/norbert_bud" flipX="true" isPlayer="true" color="#E1E1E1">
+	<anim name="idle" anim="idle"/>
+	<anim name="singLEFT" anim="left" x="51" y="-26"/>
+	<anim name="singDOWN" anim="down" x="-55" y="-44"/>
+	<anim name="singUP" anim="up" x="-56" y="47"/>
+	<anim name="singRIGHT" anim="right" x="-57" y="-2"/>
+</character>

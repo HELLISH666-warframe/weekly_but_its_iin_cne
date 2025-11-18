@@ -1,0 +1,9 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="tweak6/kyoko" icon="tweak6/kyoko" color="#e950d7" x="10" y="210" holdTime="6.1">
+	<anim name="idle" anim="kyokoidle"/>
+	<anim name="singLEFT" anim="kyokoleft"/>
+	<anim name="singDOWN" anim="kyokodown"/>
+	<anim name="singUP" anim="kyokoup"/>
+	<anim name="singRIGHT" anim="kyokoright"/>
+</character>

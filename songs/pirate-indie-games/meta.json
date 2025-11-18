@@ -1,6 +1,15 @@
 {
+	"customValues": {},
+	"color": "#BDBDBD",
+	"opponentModeAllowed": true,
+	"icon": "tweak2/spamton",
+	"difficulties": [
+		"normal"
+	],
+	"coopAllowed": true,
+	"stepsPerBeat": 4,
 	"displayName": "pirate-indie-games",
-	"bpm": 132.0,
-	"icon": "spamton",
-	"color": "#9271FD"
+	"beatsPerMeasure": 4,
+	"needsVoices": true,
+	"bpm": 132
 }

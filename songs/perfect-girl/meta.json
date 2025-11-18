@@ -1,0 +1,15 @@
+{
+	"color": "#E37A7A",
+	"customValues": {},
+	"opponentModeAllowed": false,
+	"difficulties": [
+		"normal"
+	],
+	"icon": "tweak9/kita",
+	"coopAllowed": false,
+	"stepsPerBeat": 4,
+	"displayName": "perfect-girl",
+	"needsVoices": true,
+	"beatsPerMeasure": 4,
+	"bpm": 168
+}

@@ -1,0 +1,15 @@
+{
+	"color": "#E79459",
+	"customValues": {},
+	"opponentModeAllowed": false,
+	"difficulties": [
+		"normal"
+	],
+	"icon": "tweak9/yuuko",
+	"coopAllowed": false,
+	"stepsPerBeat": 4,
+	"displayName": "motivation",
+	"needsVoices": true,
+	"beatsPerMeasure": 4,
+	"bpm": 105
+}

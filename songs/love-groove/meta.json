@@ -1,6 +1,15 @@
 {
+	"customValues": {},
+	"color": "#5ABDAF",
+	"opponentModeAllowed": false,
+	"icon": "tweak5/miku",
+	"difficulties": [
+		"normal"
+	],
+	"coopAllowed": false,
+	"stepsPerBeat": 4,
 	"displayName": "love-groove",
-	"bpm": 180.0,
-	"icon": "miku",
-	"color": "#9271FD"
+	"beatsPerMeasure": 4,
+	"needsVoices": false,
+	"bpm": 180
 }

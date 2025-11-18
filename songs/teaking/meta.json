@@ -1,6 +1,15 @@
 {
-	"displayName": "teaking",
-	"bpm": 120.0,
+	"customValues": {},
+	"color": "#A6E9FD",
+	"opponentModeAllowed": true,
 	"icon": "tweak",
-	"color": "#9271FD"
+	"difficulties": [
+		"normal"
+	],
+	"coopAllowed": true,
+	"stepsPerBeat": 4,
+	"displayName": "teaking",
+	"beatsPerMeasure": 4,
+	"needsVoices": true,
+	"bpm": 120
 }

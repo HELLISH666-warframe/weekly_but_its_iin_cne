@@ -1,6 +1,15 @@
 {
-	"displayName": "johnny-round",
-	"bpm": 106.0,
+	"customValues": {},
+	"color": "#5EA2E5",
+	"opponentModeAllowed": false,
 	"icon": "john",
-	"color": "#9271FD"
+	"difficulties": [
+		"normal"
+	],
+	"coopAllowed": false,
+	"stepsPerBeat": 4,
+	"displayName": "johnny-round",
+	"beatsPerMeasure": 4,
+	"needsVoices": true,
+	"bpm": 106
 }

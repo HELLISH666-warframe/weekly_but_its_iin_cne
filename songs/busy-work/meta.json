@@ -1,0 +1,15 @@
+{
+	"color": "#FF7A49",
+	"customValues": {},
+	"opponentModeAllowed": false,
+	"difficulties": [
+		"normal"
+	],
+	"icon": "retsuko",
+	"coopAllowed": false,
+	"stepsPerBeat": 4,
+	"displayName": "busy-work",
+	"needsVoices": true,
+	"beatsPerMeasure": 4,
+	"bpm": 135
+}

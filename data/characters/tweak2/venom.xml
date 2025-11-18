@@ -1,0 +1,9 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="tweak2/venom" icon="tweak2/venom" color="#31b0d1" x="-80" y="-40" camx="-50" camy="-30" holdTime="4.00000000000001">
+	<anim name="idle" anim="venomidle" x="-11" y="-130"/>
+	<anim name="singLEFT" anim="venomleft" x="160" y="-75"/>
+	<anim name="singDOWN" anim="venomdown" x="-32" y="-147"/>
+	<anim name="singUP" anim="venomup" x="166" y="-39"/>
+	<anim name="singRIGHT" anim="venomright" x="-40" y="-79"/>
+</character>

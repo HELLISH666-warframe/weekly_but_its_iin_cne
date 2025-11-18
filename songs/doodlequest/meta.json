@@ -1,6 +1,27 @@
 {
+	"customValues": {},
+	"card" : {
+        "name" : "Doodlequest",
+        "expandBeat" : 0,
+		"duration": 3
+    },
+    "credits" : {
+        "music" : ["niffirg"],
+        "chart" : ["niffirg"],
+        "art" : ["kloogybaboogy", "Jam"],
+        "code" : ["OrbyyOrbinaut"],
+        "va" : null
+    },
+	"color": "#FF9900",
+	"opponentModeAllowed": false,
+	"icon": "tweak7/pants",
+	"difficulties": [
+		"normal"
+	],
+	"coopAllowed": false,
+	"stepsPerBeat": 4,
 	"displayName": "doodlequest",
-	"bpm": 184.0,
-	"icon": "pants",
-	"color": "#9271FD"
+	"beatsPerMeasure": 4,
+	"needsVoices": true,
+	"bpm": 184
 }

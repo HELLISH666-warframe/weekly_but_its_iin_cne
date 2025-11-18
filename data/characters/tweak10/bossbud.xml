@@ -1,0 +1,13 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="tweak10/boss_bud" icon="tweak10/tweak-bud" color="#70d3de" x="70" y="180">
+	<anim name="idle" anim="idle"/>
+	<anim name="singLEFT" anim="left" x="141" y="-16"/>
+	<anim name="singDOWN" anim="down" x="42" y="-37"/>
+	<anim name="singUP" anim="up" x="8" y="45"/>
+	<anim name="singRIGHT" anim="right" x="100" y="-20"/>
+	<anim name="singLEFT-alt" anim="altleft" x="223" y="14"/>
+	<anim name="singDOWN-alt" anim="altdown" x="76" y="-35"/>
+	<anim name="singUP-alt" anim="altup" x="150" y="130"/>
+	<anim name="singRIGHT-alt" anim="altright" x="-60" y="0"/>
+</character>

@@ -1,0 +1,10 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="matt" icon="matt" color="#ffb64a" x="100" y="210" flipX="true" camx="40" camy="-80">
+	<anim name="danceLeft" anim="idle" indices="27,28,1..12"/>
+	<anim name="danceRight" anim="idle" indices="13..26"/>
+	<anim name="singDOWN" anim="down" x="69" y="-52"/>
+	<anim name="singUP" anim="up" x="3" y="119"/>
+	<anim name="singLEFT" anim="right" x="-16" y="-20"/>
+	<anim name="singRIGHT" anim="left" x="-60" y="-55"/>
+</character>

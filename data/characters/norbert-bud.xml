@@ -1,8 +1,0 @@
-<!DOCTYPE codename-engine-character>
-<character y="250" sprite="norbert_bud" flipX="true" icon="norbert-bud" color="#E1E1E1">
-	<anim name="idle" anim="idle" x="0" y="0" fps="24" loop="false"/>
-	<anim name="singLEFT" anim="right" x="56" y="-3" fps="24" loop="false"/>
-	<anim name="singDOWN" anim="down" x="-4" y="-46" fps="24" loop="false"/>
-	<anim name="singUP" anim="up" x="9" y="47" fps="24" loop="false"/>
-	<anim name="singRIGHT" anim="left" x="28" y="-23" fps="24" loop="false"/>
-</character>

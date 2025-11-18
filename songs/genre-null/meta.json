@@ -1,6 +1,27 @@
 {
+	"customValues": {},
+	"color": "#997451",
+	"opponentModeAllowed": true,
+	"icon": "tweak10/null",
+	"difficulties": [
+		"normal"
+	],
+	"coopAllowed": true,
+	"stepsPerBeat": 4,
 	"displayName": "genre-null",
-	"bpm": 200.0,
-	"icon": "null",
-	"color": "#9271FD"
+	"beatsPerMeasure": 4,
+	"needsVoices": true,
+	"bpm": 200,
+	"card" : {
+        "name" : "Genre:NULL",
+        "expandBeat" : 0,
+		"duration": 3
+    },
+    "credits" : {
+        "music" : ["Kreagato"],
+        "chart" : ["Srife5"],
+        "art" : ["alphaLul1", "Dollie", "DerpDrawz", "MochaDrawss", "KatAnims", "Ito Saihara"],
+        "code" : ["DuskieWhy", "Srife5"],
+        "va" : null
+    }
 }

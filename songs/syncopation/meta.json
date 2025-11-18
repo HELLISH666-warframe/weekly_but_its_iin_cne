@@ -1,6 +1,15 @@
 {
+	"customValues": {},
+	"color": "#6C7FC4",
+	"opponentModeAllowed": false,
+	"icon": "tweak10/chill",
+	"difficulties": [
+		"normal"
+	],
+	"coopAllowed": false,
+	"stepsPerBeat": 4,
 	"displayName": "syncopation",
-	"bpm": 156.0,
-	"icon": "chill",
-	"color": "#9271FD"
+	"beatsPerMeasure": 4,
+	"needsVoices": true,
+	"bpm": 156
 }

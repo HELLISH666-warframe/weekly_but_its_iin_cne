@@ -1,0 +1,10 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="tweak7/isaac" icon="tweak7/isaac" color="#af867d" y="160" flipX="true" camx="-20" camy="-10" holdTime="4.00000000000001">
+	<anim name="idle" anim="idle"/>
+	<anim name="singLEFT" anim="left" x="112" y="2"/>
+	<anim name="singDOWN" anim="down" x="-1" y="-6"/>
+	<anim name="singUP" anim="up" x="33" y="52"/>
+	<anim name="singRIGHT" anim="right" x="35" y="17"/>
+	<anim name="miss" anim="miss" x="123" y="57"/>
+</character>

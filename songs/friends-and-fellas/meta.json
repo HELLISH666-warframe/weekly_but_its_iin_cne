@@ -1,6 +1,15 @@
 {
+	"customValues": {},
+	"color": "#443B3B",
+	"opponentModeAllowed": false,
+	"icon": "tweak10/trebron",
+	"difficulties": [
+		"normal"
+	],
+	"coopAllowed": false,
+	"stepsPerBeat": 4,
 	"displayName": "friends-and-fellas",
-	"bpm": 100,
-	"icon": "trebron",
-	"color": "#9271FD"
+	"beatsPerMeasure": 4,
+	"needsVoices": true,
+	"bpm": 100
 }

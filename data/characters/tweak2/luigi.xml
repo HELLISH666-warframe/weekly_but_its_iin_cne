@@ -1,0 +1,10 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="tweak2/luigi" color="#a1a1a1" x="820" y="170" holdTime="6.1">
+	<anim name="danceLeft" anim="luigi idle dance" indices="0..14"/>
+	<anim name="danceRight" anim="luigi idle dance" indices="15..27"/>
+	<anim name="singLEFT" anim="luigi left0" x="-3" y="-5"/>
+	<anim name="singDOWN" anim="luigi down0" x="-7" y="-12"/>
+	<anim name="singUP" anim="luigi up0" x="-13" y="23"/>
+	<anim name="singRIGHT" anim="luigi right0" x="-9" y="0"/>
+</character>

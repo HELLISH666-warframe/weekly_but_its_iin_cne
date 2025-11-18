@@ -1,6 +1,15 @@
 {
+	"customValues": {},
+	"color": "#6B6985",
+	"opponentModeAllowed": false,
+	"icon": "tweak8/four",
+	"difficulties": [
+		"normal"
+	],
+	"coopAllowed": false,
+	"stepsPerBeat": 4,
 	"displayName": "simul4crum",
-	"bpm": 160,
-	"icon": "four",
-	"color": "#9271FD"
+	"beatsPerMeasure": 4,
+	"needsVoices": true,
+	"bpm": 160
 }

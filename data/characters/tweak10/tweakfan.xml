@@ -1,0 +1,16 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="tweak10/tweaksuperfan_scary_assets" icon="tweak10/randytweakfan" color="#c9c9c9" flipX="true" camx="-100" holdTime="6.1">
+	<anim name="singLEFT" anim="tweakfan_LEFT" x="27" y="2"/>
+	<anim name="singDOWN" anim="tweakfan_DOWN" x="0" y="-6"/>
+	<anim name="singUP" anim="tweakfan_UP" x="-3" y="25"/>
+	<anim name="singRIGHT" anim="tweakfan_RIGHT" x="-16" y="3"/>
+	<anim name="singLEFT-alt" anim="tweakfan_altLEFT" x="28" y="2"/>
+	<anim name="singDOWN-alt" anim="tweakfan_altDOWN" x="-1" y="-7"/>
+	<anim name="singUP-alt" anim="tweakfan_altUP" x="-2" y="25"/>
+	<anim name="singRIGHT-alt" anim="tweakfan_altRIGHT" x="-16" y="3"/>
+	<anim name="scream" anim="tweakfan SCREAM" x="51" y="78"/>
+	<anim name="idle" anim="idle_default_LEFT" loop="true"/>
+	<anim name="idle-alt2" anim="idle_alt2" loop="true"/>
+	<anim name="idle-alt" anim="idle_alt1_RIGHT" loop="true"/>
+</character>

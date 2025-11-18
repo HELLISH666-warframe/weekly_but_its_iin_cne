@@ -1,0 +1,5 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="tweak9/tomofreak" icon="tweak9/tomoko" color="#424256" y="-30" flipX="true" camx="-70" camy="50">
+	<anim name="idle" anim="tomokoFREAK" loop="true"/>
+</character>
