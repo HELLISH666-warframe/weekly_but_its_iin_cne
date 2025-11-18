@@ -1,6 +1,5 @@
 <!DOCTYPE codename-engine-character>
-<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
-<character sprite="tweak9/tomoko" icon="tweak9/tomoko" color="#424256" y="30" flipX="true" camx="-70" camy="50" holdTime="5.1">
+<character y="30" flipX="true" camx="-70" camy="50" isPlayer="true" color="#424256" holdTime="5.1">
 	<anim name="idle" anim="idle" loop="true"/>
 	<anim name="singLEFT" anim="left0" x="9" y="1"/>
 	<anim name="singDOWN" anim="down0" x="5" y="-8"/>

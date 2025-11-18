@@ -1,5 +1,8 @@
 <!DOCTYPE codename-engine-stage>
-<stage zoom="0.55" folder="">
+<stage zoom="0.55" folder="stages/tweak4/minus/">
+	<sprite name="sky" x="-600" y="-300" sprite="sky" scroll="0.5"/>
+	<sprite name="back" x="-700" y="-100" sprite="back" scroll="0.8"/>
+	<sprite name="front" x="-900" y="100" sprite="front" scroll="1"/>
 	<girlfriend x="800" y="750"/>
 	<opponent x="215" y="870"/>
 	<player x="1480" y="910"/>
