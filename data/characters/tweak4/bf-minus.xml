@@ -1,7 +1,6 @@
 <!DOCTYPE codename-engine-character>
-<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
-<character sprite="tweak4/bluebf" icon="bf" color="#31b0d1" x="-30" y="110" flipX="true" camx="70" camy="70">
-	<anim name="idle" anim="blue idle0" x="-5" y="0"/>
+<character x="-30" y="110" sprite="tweak4/bluebf" flipX="true" camx="70" camy="70" isPlayer="true" icon="bf" color="#31B0D1">
+	<anim name="idle" anim="blue idle0" x="-5"/>
 	<anim name="singLEFT" anim="blue left0" x="71" y="-5"/>
 	<anim name="singDOWN" anim="blue down0" x="24" y="-92"/>
 	<anim name="singUP" anim="blue up0" x="7" y="40"/>

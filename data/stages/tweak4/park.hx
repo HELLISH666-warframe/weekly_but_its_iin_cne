@@ -14,8 +14,4 @@ function create() {
 
 function beatHit() if(curBeat % 2 == 0) crowd.animation.play('idle', true);
 
-function onSongStart() crowd.animation.play('idle', true);
-
-function onCountdownTick(swagCounter) if(swagCounter % 2 == 0) crowd.animation.play('idle', true);
-
 function onGameOverStart() setGameOverVideo('minus');

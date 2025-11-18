@@ -11,5 +11,17 @@
 	"displayName": "philly-mice",
 	"beatsPerMeasure": 4,
 	"needsVoices": true,
-	"bpm": 175
+	"bpm": 175,
+	"card" : {
+        "name" : "Philly Mice",
+        "expandBeat" : 0,
+		"duration": 3
+    },
+    "credits" : {
+        "music" : ["Kreagato"],
+        "chart" : ["Kye_VL"],
+        "art" : ["DerpDrawz", "Ito Saihara", "ultraspicyspray", "Dollie"],
+        "code" : ["Srife5"],
+        "va" : null
+    }
 }

@@ -30,6 +30,9 @@ static var prevSong:String = "balls";
 var bg:FlxSprite = new FlxSprite();
 
 var interpColor:FlxInterpolateColor;
+
+var leftButton:FlxSprite;
+var rightButton:FlxSprite;
  
 function create() {
 	CoolUtil.playMenuSong();
@@ -42,6 +45,23 @@ function create() {
 	add(grpSongs);
 	birth();
 	//if (curSelectedFP >= songs.length) curSelectedFP = 0;
+
+	leftButton = new FlxSprite();
+	leftButton.frames = Paths.getSparrowAtlas("mainmenu/button_left");
+	leftButton.animation.addByPrefix("idle", "left0", 10, true);
+	leftButton.animation.addByPrefix("hover", "left hover0", 10, true);
+	leftButton.animation.play("idle");
+	leftButton.screenCenter(FlxAxes.Y);
+	add(leftButton);
+
+	rightButton = new FlxSprite();
+	rightButton.frames = Paths.getSparrowAtlas("mainmenu/button_right");
+	rightButton.animation.addByPrefix("idle", "right0", 10, true);
+	rightButton.animation.addByPrefix("hover", "right hover0", 10, true);
+	rightButton.animation.play("idle");
+	rightButton.screenCenter(FlxAxes.Y);
+	rightButton.x = FlxG.width - rightButton.width;
+	add(rightButton);
 
 	interpColor = new FlxInterpolateColor(bg.color);
 }
@@ -74,7 +94,7 @@ function update(elapsed:Float) {
 		CoolUtil.playMenuSFX('CANCEL', 0.7);
 		FlxG.switchState(new ModState('weekly/WeeklyMainMenuState'));
 	}
-	if (controls.LEFT_P||controls.RIGHT_P) changeCat(controls.LEFT_P ? -1 : 1);
+	//if (controls.LEFT_P||controls.RIGHT_P) changeCat(controls.LEFT_P ? -1 : 1);
 	if (controls.ACCEPT){
 		prevSong="FUCK";
 		PlayState.loadSong(songs[curSelectedFP].name, 'normal');
@@ -82,6 +102,12 @@ function update(elapsed:Float) {
 	}
 	interpColor.fpsLerpTo(songs[curSelectedFP].color, 0.0625);
 	bg.color = interpColor.color;
+	if(controls.LEFT_P||controls.RIGHT_P) {
+		controls.LEFT_P ? leftButton.animation.play("hover") : rightButton.animation.play("hover");
+		new FlxTimer().start(0.125, ()->{
+			controls.LEFT_P ? leftButton.animation.play("idle") : rightButton.animation.play("idle");});
+		changeCat(controls.LEFT_P ? -1 : 1);
+	}
 }
 
 function changeSelection(change:Int = 0, playSound:Bool = true){
