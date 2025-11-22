@@ -1,4 +1,9 @@
 {
+	"card": {
+		"duration": 3,
+		"expandBeat": 0,
+		"name": "Mental Temple"
+	},
 	"customValues": {},
 	"color": "#366BFF",
 	"opponentModeAllowed": true,
@@ -6,10 +11,27 @@
 	"difficulties": [
 		"normal"
 	],
+	"credits": {
+		"code": [
+			"OrbyyOrbinaut"
+		],
+		"music": [
+			"niffirg"
+		],
+		"chart": [
+			"Srife5"
+		],
+		"va": null,
+		"art": [
+			"ultraspicyspray",
+			"Dollie",
+			"rotkad"
+		]
+	},
 	"coopAllowed": true,
 	"stepsPerBeat": 4,
 	"displayName": "mental-temple",
-	"beatsPerMeasure": 4,
 	"needsVoices": true,
+	"beatsPerMeasure": 4,
 	"bpm": 162
 }

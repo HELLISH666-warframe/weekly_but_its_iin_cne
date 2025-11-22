@@ -2,75 +2,31 @@ import flixel.text.FlxTextBorderStyle;
 import GradientBump;
 var backdebris:FlxSprite;
 var camandmic:FlxSprite;
-var miku:FlxAnimate;
 var black:FlxSprite;
 var black2:FlxSprite;
 var black3:FlxSprite;
 var logo:FlxSprite;
-var lyrics:FlxText;
 var grad:GradientBump;
 var shit = [];
 
 var skipIntro:Bool = false;
 
-var foreground = new FlxTypedGroup();//WHY.
-
 function create() {
-    var space:FlxSprite = new FlxSprite(-900, -400);
-    space.loadGraphic(Paths.image("stages/tweak10/genrenull/space"));
-    space.antialiasing = true;
-    space.scrollFactor.set(0.5, 0.5);
-    insert(0, space);
-
     miku = new FlxAnimate(3350, 300, 'images/stages/tweak10/genrenull/miku'); //Gulp
     miku.showPivot = false;
     miku.anim.addBySymbol('miki', 'miki',0,0,24);
     miku.antialiasing = true;
     miku.anim.play('miki');
     miku.scrollFactor.set(0.7, 0.7);
-    insert(1, miku);
-
-    backdebris = new FlxSprite(3400, 1850);
-    backdebris.loadGraphic(Paths.image("stages/tweak10/genrenull/backdebris"));
-    backdebris.antialiasing = true;
-    backdebris.scrollFactor.set(0.75, 0.75);
-    insert(2, backdebris);
+    insert(2, miku);
 
     grad = new GradientBump(-700, 3300);
     grad.originalHeight = 1300;
     grad.color = FlxColor.RED;
     insert(3,grad);
-
-    fullstage = new FlxSprite(2000, 1850);
-    fullstage.loadGraphic(Paths.image("stages/tweak10/genrenull/fullstage"));
-    fullstage.antialiasing = true;
-    insert(4, fullstage);
-
-    camandmic = new FlxSprite(2000, 3250);
-    camandmic.loadGraphic(Paths.image("stages/tweak10/genrenull/camandmic"));
-    camandmic.antialiasing = true;
-    camandmic.scrollFactor.set(1.1, 1.1);
-    foreground.add(camandmic);
-
-    black2 = new FlxSprite().makeGraphic(FlxG.width * 5, FlxG.height * 6, FlxColor.WHITE);
-    black2.color = FlxColor.BLACK;
-    black2.camera = camGame;
-    black2.alpha = 0;
-    black2.x += 2000;
-    black2.y += 1800;
-    insert(5,black2);
-
-    black3 = new FlxSprite().makeGraphic(FlxG.width * 5, FlxG.height * 6, FlxColor.WHITE);
-    black3.color = FlxColor.BLACK;
-    black3.camera = camGame;
-    black3.alpha = 0;
-    black3.x += 2000;
-    black3.y += 1300;
-    foreground.add(black3);
 }
 
 function postCreate(){
-    add(foreground);
     black = new FlxSprite().makeGraphic(1280, 720, FlxColor.WHITE);
     black.color = FlxColor.BLACK;
     black.camera = camHUD;
@@ -89,8 +45,7 @@ function postCreate(){
     if(!skipIntro){
         skipCountdown = true;
 
-        //for(m in stage.members) m.alpha = 0;
-        //for(m in stage.foreground.members) m.alpha = 0;
+        for(m in stage.stageSprites) m.alpha = 0;
         boyfriend.alpha = 0;
         dad.alpha = 0;
         for(s in shit) s.alpha = 0;
@@ -99,15 +54,35 @@ function postCreate(){
 
         for (i in 0...4) for(strum in [cpuStrums,playerStrums]) strum.members[i].alpha=0;     
     }
+}
 
-    lyrics = new FlxText(0,0,600, "", 32);
-    lyrics.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, 'center', FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-    lyrics.camera = camOther;
-    lyrics.screenCenter(FlxAxes.X);
-    lyrics.y = FlxG.height - 100;
-    lyrics.alpha = 1;
-    add(lyrics);
+function stepHit(curStep:Int) {
+    switch(curStep){
+        case 138: black.color = FlxColor.WHITE;
+        FlxTween.tween(black, {alpha: 1}, 2, {ease: FlxEase.quadInOut});
+        case 192:FlxTween.tween(black, {alpha: 0}, 1, {ease: FlxEase.quadOut});
+        for(m in stage.stageSprites) m.alpha = 1;
+        black3.alpha = 0;
+        black2.alpha = 0;
+        boyfriend.alpha = 1;
+        dad.alpha = 1;
+        for(s in shit) s.alpha = 1;
+        defaultCamZoom = 0.5;
 
+        logo.y -= 100;
+        FlxTween.tween(logo, {alpha: 1, y: logo.y + 100}, 0.5, {ease: FlxEase.expoOut});
+        new FlxTimer().start(3, (t)->{
+            FlxTween.tween(logo, {alpha: 0}, 0.5, {onComplete: (s)->{
+                remove(logo);
+            }});
+        });
+        case 792:for(s in shit) FlxTween.tween(s, {alpha: 0}, 1.5, {ease: FlxEase.quadOut});
+        FlxTween.tween(black2, {alpha: 0.4}, 4, {ease: FlxEase.quadInOut});
+        case 932:for(s in shit) s.alpha = 1;
+        camHUD.flash(FlxColor.WHITE, 1);
+        black2.alpha = 0;
+        case 3056:for(s in shit) FlxTween.tween(s, {alpha: 0}, 1.5, {ease: FlxEase.quadOut});
+    }
 }
 
 function onSongStart(){
@@ -126,13 +101,9 @@ function onSongStart(){
             camGame.zoom = s.value;
         }});
     
-       /* modManager.queueFuncOnce(138, (s,s2)->{
-            black.color = FlxColor.WHITE;
-            FlxTween.tween(black, {alpha: 1}, 2, {ease: FlxEase.quadInOut});
-        });
-    
+       /*
         var by:Float = 1/16;
-        modManager.queueFuncOnce(176, (s,s2)->{
+        modManager.queueFuncOnce(176, (s,s2)->{//These funcs are both useless and unneeded.
     
             modManager.queueSet(176, "centered", 1);
             modManager.queueSet(176, "opponentSwap", 0.5);
@@ -155,7 +126,6 @@ function onSongStart(){
         modManager.queueFuncOnce(192, (s,s2)->{
             FlxTween.tween(black, {alpha: 0}, 1, {ease: FlxEase.quadOut});
     
-            // FlxG.camera.flash(FlxColor.WHITE, 1);
             modManager.queueSet(s, "centered", 0);
             modManager.queueSet(s, "opponentSwap", 0);
             modManager.queueSet(s, "alpha", 0);
@@ -169,7 +139,6 @@ function onSongStart(){
             }
             game.isCameraOnForcedPos = false;
             for(m in game.stage.members) m.alpha = 1;
-            for(m in game.stage.foreground.members) m.alpha = 1;
             black3.alpha = 0;
             black2.alpha = 0;
             game.boyfriend.alpha = 1;
@@ -256,7 +225,6 @@ function onEvent(eventName, value1, value2){
                     trace(black3.alpha);
                 case 'lone bop':
                     for(m in game.stage.members) m.visible = false;
-                    for(m in game.stage.foreground.members) m.visible = false;
                     game.boyfriend.visible = false;
                     game.dad.visible = false;
                     for(s in shit) s.visible = false;
@@ -273,7 +241,6 @@ function onEvent(eventName, value1, value2){
                     modManager.setValue("alpha", 0);
                     // game.camHUD.alpha = 1;
                     for(m in game.stage.members) m.visible = true;
-                    for(m in game.stage.foreground.members) m.visible = true;
                     game.boyfriend.visible = true;
                     game.dad.visible = true;
                     for(s in shit){
@@ -292,19 +259,6 @@ function onEvent(eventName, value1, value2){
             FlxTween.tween(t, {alpha: 1}, 1, {ease: FlxEase.quadOut});
             FlxTween.tween(t, {y: 0}, 10, {ease: FlxEase.linear});
             trace(t.text);
-        case 'lyric':
-            if(value1 != '' || value1 != ' '){
-                lyrics.visible = true;
-                lyrics.alpha = 0;
-                lyrics.y = FlxG.height - 125;
-                FlxTween.tween(lyrics, {alpha: 1, y: FlxG.height - 100}, 0.25, {ease: FlxEase.expoOut});
-    
-                lyrics.text = value1;
-                trace(lyrics.text);
-                lyrics.screenCenter(FlxAxes.X);
-            }else{
-                FlxTween.tween(lyrics, {alpha: 0}, 0.25, {ease: FlxEase.expoOut});
-            }
 
         case 'snap cam':
             var curCharacter:Character = game.boyfriend;

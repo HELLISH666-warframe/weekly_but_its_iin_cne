@@ -1,0 +1,8 @@
+<!DOCTYPE codename-engine-stage>
+<stage zoom="1.05" folder="stages/tweak10/scarydeath/" startCamPosX="680" startCamPosY="375">
+	<sprite x="0" y="0" name="bg" sprite="bg" type="loop"/>
+        <anim name="idle" anim="bg" loop="true"/>
+	<opponent x="100" y="100" camxoffset="0" camyoffset="0" />
+	<player x="350" y="350" camxoffset="0" camyoffset="0" />
+	<sprite name="f" sprite="frontGradient" updateHitBox="true" scalex="1.5"/>
+</stage>

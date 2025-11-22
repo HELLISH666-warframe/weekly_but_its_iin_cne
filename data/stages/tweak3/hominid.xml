@@ -1,5 +1,10 @@
 <!DOCTYPE codename-engine-stage>
-<stage zoom="0.58" folder="" startCamPosY="600" startCamPosX="700">
+<stage zoom="0.58" folder="stages/tweak3/hominid/" startCamPosX="675" startCamPosY="375">
+	<sprite name="sky" x="0" y="-300" active="false" sprite="sky" scroll="0.5" scale="1.75"/>
+	<sprite name="buildings" x="100" y="-350" active="false" sprite="distand_buildings" scroll="0.8" scale="1.75"/>
+	<sprite name="side" x="-500" y="-250" active="false" sprite="side_building_1" scroll="0.9" scale="1.75"/>
+	<sprite name="side2" x="1500" y="-250" active="false" sprite="side_building_2" scroll="0.9" scale="1.75"/>
+	<sprite name="rooftop" x="50" y="700" active="false" sprite="rooftop" scroll="1" scale="1.75"/>
 	<opponent x="100" y="120" camxoffset="0" camyoffset="-90"/>
 	<player x="770" y="60" camxoffset="-400" camyoffset="-50"/>
 </stage>

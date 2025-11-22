@@ -1,4 +1,9 @@
 {
+	"card": {
+		"duration": 3,
+		"expandBeat": 48,
+		"name": "Crimson Fog"
+	},
 	"customValues": {},
 	"color": "#4E3759",
 	"opponentModeAllowed": true,
@@ -6,10 +11,30 @@
 	"difficulties": [
 		"normal"
 	],
+	"credits": {
+		"code": [
+			"OrbyyOrbinaut"
+		],
+		"music": [
+			"KatAnims"
+		],
+		"chart": [
+			"Kye_VL"
+		],
+		"va": [
+			"Kye_VL"
+		],
+		"art": [
+			"KatAnims",
+			"Ito Saihara",
+			"Dollie",
+			"DerpDrawz"
+		]
+	},
 	"coopAllowed": true,
 	"stepsPerBeat": 4,
 	"displayName": "crimson-fog",
-	"beatsPerMeasure": 4,
 	"needsVoices": true,
+	"beatsPerMeasure": 4,
 	"bpm": 174
 }

@@ -5,6 +5,6 @@
 	<sprite name="flag" x="1650" y="365" sprite="flag"/>
 	<sprite name="ground" x="0" y="-475" sprite="platforms"/>
 	<girlfriend x="2100" y="60" camxoffset="0" camyoffset="0" />
-	<boyfriend x="1880" y="135" camxoffset="-150" camyoffset="-50" />
+	<boyfriend x="1880" y="135" camxoffset="-415" camyoffset="-50" />
 	<opponent x="400" y="80" camxoffset="275" camyoffset="-50" />
 </stage>

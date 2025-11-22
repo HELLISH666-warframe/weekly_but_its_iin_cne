@@ -1,0 +1,76 @@
+{
+	"song": {
+		"events": [
+			[
+				113600,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					],
+					[
+						"Hominid Events",
+						"snap hominid",
+						""
+					]
+				]
+			],
+			[
+				114000,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					],
+					[
+						"Hominid Events",
+						"snap pico",
+						""
+					]
+				]
+			],
+			[
+				114400,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					],
+					[
+						"Hominid Events",
+						"snap hominid",
+						""
+					]
+				]
+			],
+			[
+				114800,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					],
+					[
+						"Hominid Events",
+						"snap pico",
+						""
+					]
+				]
+			],
+			[
+				115200,
+				[
+					[
+						"Hominid Events",
+						"end snap",
+						""
+					]
+				]
+			]
+		]
+	}
+}

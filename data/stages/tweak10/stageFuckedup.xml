@@ -1,5 +1,13 @@
 <!DOCTYPE codename-engine-stage>
-<stage zoom="0.2" folder="">
+<stage zoom="0.2" folder="stages/tweak10/genrenull/" startCamPosX="5250" startCamPosY="1800">
+	<sprite name="space" x="-900" y="-400" sprite="space" scroll="0.5"/>
+
+	<sprite name="backdebris" x="3400" y="1850" sprite="backdebris" scroll="0.75"/>
+
+	<sprite name="fullstage" x="2000" y="1850" sprite="fullstage"/>
+	<solid name="black2" y="2000" x="1800" width="6400" height="4300" color="black" alpha="0"/>
 	<opponent x="3980" y="3000" camxoffset="0" camyoffset="0" />
 	<player x="5500" y="3020" camxoffset="0" camyoffset="0" />
+	<sprite name="camandmic" x="2000" y="3250" sprite="camandmic" scroll="1.1"/>
+	<solid name="black3" y="2000" x="1300" width="6400" height="4300" color="black" alpha="0"/>
 </stage>

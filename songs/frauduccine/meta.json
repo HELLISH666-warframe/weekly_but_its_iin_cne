@@ -1,4 +1,9 @@
 {
+	"card": {
+		"expandBeat": 0,
+		"duration": 3,
+		"name": "Frauduccine"
+	},
 	"customValues": {},
 	"color": "#88A8C8",
 	"opponentModeAllowed": true,
@@ -6,6 +11,28 @@
 	"difficulties": [
 		"normal"
 	],
+	"credits": {
+		"music": [
+			"Cloverderus",
+			"theWAHbox"
+		],
+		"code": [
+			"Crossknife",
+			"OrbyyOrbinaut"
+		],
+		"chart": [
+			"Cloverderus"
+		],
+		"art": [
+			"MochaDrawss",
+			"Dollie",
+			"Jam",
+			"DerpDrawz",
+			"lemlem_mew",
+			"Ito Saihara"
+		],
+		"va": null
+	},
 	"coopAllowed": true,
 	"stepsPerBeat": 4,
 	"displayName": "frauduccine",

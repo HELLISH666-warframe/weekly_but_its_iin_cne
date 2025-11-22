@@ -94,7 +94,6 @@ function update(elapsed:Float) {
 		CoolUtil.playMenuSFX('CANCEL', 0.7);
 		FlxG.switchState(new ModState('weekly/WeeklyMainMenuState'));
 	}
-	//if (controls.LEFT_P||controls.RIGHT_P) changeCat(controls.LEFT_P ? -1 : 1);
 	if (controls.ACCEPT){
 		prevSong="FUCK";
 		PlayState.loadSong(songs[curSelectedFP].name, 'normal');
@@ -102,12 +101,16 @@ function update(elapsed:Float) {
 	}
 	interpColor.fpsLerpTo(songs[curSelectedFP].color, 0.0625);
 	bg.color = interpColor.color;
-	if(controls.LEFT_P||controls.RIGHT_P) {
-		controls.LEFT_P ? leftButton.animation.play("hover") : rightButton.animation.play("hover");
-		new FlxTimer().start(0.125, ()->{
-			controls.LEFT_P ? leftButton.animation.play("idle") : rightButton.animation.play("idle");});
-		changeCat(controls.LEFT_P ? -1 : 1);
+
+	if(controls.RIGHT_P){
+		rightButton.animation.play("hover");
+		new FlxTimer().start(0.125, ()-> rightButton.animation.play("idle"));
 	}
+	if(controls.LEFT_P){
+		leftButton.animation.play("hover");
+		new FlxTimer().start(0.125, ()->leftButton.animation.play("idle"));
+	}
+	if (controls.LEFT_P||controls.RIGHT_P) changeCat(controls.LEFT_P ? -1 : 1);
 }
 
 function changeSelection(change:Int = 0, playSound:Bool = true){

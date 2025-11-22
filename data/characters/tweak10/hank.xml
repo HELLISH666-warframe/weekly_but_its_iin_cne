@@ -1,6 +1,5 @@
 <!DOCTYPE codename-engine-character>
-<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
-<character sprite="hankly" icon="tweak10/hank" color="#4e3759" x="-70" y="290" camx="40" camy="30" holdTime="6.1">
+<character x="-70" y="290" sprite="hankly" camx="40" camy="30" isPlayer="true" icon="hank" color="#4D3759" holdTime="6.1">
 	<anim name="idle-loop" anim="hankidle0" loop="true" indices="10..15"/>
 	<anim name="singDOWN-loop" anim="hankdown0" x="51" y="-48" loop="true" indices="2..7"/>
 	<anim name="singUP-loop" anim="hankup0" x="17" y="51" loop="true" indices="2..7"/>

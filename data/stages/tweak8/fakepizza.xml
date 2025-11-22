@@ -1,0 +1,11 @@
+<!DOCTYPE codename-engine-stage>
+<stage startCamPosX="1900" startCamPosY="775" zoom="0.4" folder="stages/tweak8/fakepizze/">
+    <sprite name="mainBG" x="-100" y="-150" sprite="wall"/>
+	<sprite name="floor" x="-100" y="-150" sprite="floor"/>
+	<boyfriend x="1065" y="1025" camxoffset="150" camyoffset="-50" />
+	<girlfriend x="1615" y="1120" camxoffset="0" camyoffset="-170" />
+	<opponent x="2160" y="1025" camxoffset="-100" camyoffset="0" />
+	<sprite name="thelight" x="-100" y="-150" sprite="light"/>
+	<sprite name="thedark" x="-100" y="-150" sprite="shade"/>
+	<sprite name="border" x="-100" y="-150" sprite="border"/>
+</stage>

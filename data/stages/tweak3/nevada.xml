@@ -1,0 +1,11 @@
+<!DOCTYPE codename-engine-stage>
+<stage startCamPosX="600" startCamPosY="-1250" zoom="0.7" folder="stages/tweak3/nevada/">
+	<sprite name="bg" x="-855" y="-825" sprite="sky" scroll="0.85"/>
+	<sprite name="mountain" x="284" y="303" sprite="mountains" scroll="0.9"/>
+	<sprite name="bgbuilding" x="-115" y="-411" sprite="buildings" scrollx="0.95" scrolly="1"/>
+	<sprite name="floor" x="-811.2" y="-24.8" sprite="floor"/>
+
+	<sprite name="fgbuilding" x="-844.3" y="-559.45" sprite="building_hole"/>
+	<boyfriend x="875" y="-65" camxoffset="0" camyoffset="-75" />
+	<opponent x="135" y="-60" camxoffset="-50" camyoffset="-75" />
+</stage>

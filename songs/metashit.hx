@@ -10,10 +10,6 @@ function postCreate() {
 	bg = new FlxSprite().makeGraphic(Std.int(text.width + (10 * 2)), Std.int(text.height + (10 * 2)), FlxColor.BLACK);
     bg.alpha = 0.8;
 
-	add(bg);
-    add(text);
-
-
 	for(i in [bg,text]){
 	i.screenCenter(FlxAxes.Y);
 	//card.x = -card.width;
@@ -27,6 +23,8 @@ function beatHit(curBeat:Int) {
 }
 
 public function display() {
+	add(bg);
+    add(text);
 	for(i in [bg,text]){
     var initX:Float = i.x;
 	i.camera=camOther;

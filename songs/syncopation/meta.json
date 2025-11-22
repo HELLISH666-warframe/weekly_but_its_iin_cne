@@ -1,4 +1,9 @@
 {
+	"card": {
+		"duration": 3,
+		"expandBeat": 0,
+		"name": "Syncopation"
+	},
 	"customValues": {},
 	"color": "#6C7FC4",
 	"opponentModeAllowed": false,
@@ -6,10 +11,32 @@
 	"difficulties": [
 		"normal"
 	],
+	"credits": {
+		"code": [
+			"Flaguieug",
+			"OrbyyOrbinaut"
+		],
+		"music": [
+			"Dollie"
+		],
+		"chart": [
+			"Kloogybaboogy"
+		],
+		"va": null,
+		"art": [
+			"Jammy",
+			"Dollie",
+			"Flaguieug",
+			"DerpDrawz",
+			"SN0WYDREAMS",
+			"Jam",
+			"KatAnims"
+		]
+	},
 	"coopAllowed": false,
 	"stepsPerBeat": 4,
 	"displayName": "syncopation",
-	"beatsPerMeasure": 4,
 	"needsVoices": true,
+	"beatsPerMeasure": 4,
 	"bpm": 156
 }

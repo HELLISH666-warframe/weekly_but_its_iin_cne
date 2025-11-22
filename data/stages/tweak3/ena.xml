@@ -1,5 +1,12 @@
 <!DOCTYPE codename-engine-stage>
-<stage zoom="0.55" folder="">
-	<boyfriend x="950" y="0" camxoffset="-150" camyoffset="-140" />
-	<opponent x="-65" y="10" camxoffset="100" camyoffset="-75" />
+<stage startCamPosX="650" startCamPosY="75" zoom="0.55" folder="stages/tweak3/ena/">
+	<sprite name="sky" x="-685" y="-506" sprite="sky" scroll="0.65"/>
+	<sprite name="clouds" x="-712" y="-513" sprite="clouds" scroll="0.75"/>
+	<sprite name="statues" x="289" y="-14" sprite="far_places" scroll="0.8"/>
+	<sprite name="hillsback" x="-747" y="267" sprite="more_hills" scroll="0.85"/>
+	<sprite name="hills" x="-667" y="236" sprite="hills_back" scroll="0.9"/>
+	<sprite name="hourglass" x="-420" y="117" sprite="hourglasses_bg" scroll="0.95"/>
+	<sprite name="floor" x="-756" y="521" sprite="hill_floor"/>
+	<boyfriend x="950" y="0" camxoffset="-410" camyoffset="-140" />
+	<opponent x="-65" y="10" camxoffset="125" camyoffset="-75" />
 </stage>

@@ -7,6 +7,7 @@ import flixel.math.FlxMath;
 import funkin.backend.MusicBeatState;
 // I'm ngl this whole state is kind of a mess since i had to do it in a day and a half so sorry if this shit is weird
 import funkin.menus.StoryMenuState.StoryWeeklist;
+import funkin.savedata.FunkinSave;
 
 var canClick:Bool = true;
 var norbertcanIdle:Bool = false; // dumb and gay my b
@@ -240,19 +241,19 @@ function beatHit() {
 	}
 }
 function update(elapsed:Float) {
-	/*
+	
 
-	lerpScore = Math.floor(FlxMath.lerp(lerpScore, intendedScore, CoolUtil.boundTo(elapsed * 30, 0, 1)));
+	lerpScore = Math.floor(FlxMath.lerp(lerpScore, intendedScore, FlxMath.bound(elapsed * 30, 0, 1)));
 	if(Math.abs(intendedScore - lerpScore) < 10) lerpScore = intendedScore;
 
-	lerpMarathonScore = Math.floor(FlxMath.lerp(lerpMarathonScore, intendedMarathonScore, CoolUtil.boundTo(elapsed * 30, 0, 1)));
-	if(Math.abs(intendedMarathonScore - lerpMarathonScore) < 10) lerpMarathonScore = intendedMarathonScore;
+	//lerpMarathonScore = Math.floor(FlxMath.lerp(lerpMarathonScore, intendedMarathonScore, FlxMath.bound(elapsed * 30, 0, 1)));
+	//if(Math.abs(intendedMarathonScore - lerpMarathonScore) < 10) lerpMarathonScore = intendedMarathonScore;
 
 	if (!marathon) scoreText.text = "SCORE:" + lerpScore;
 
 	if (FlxG.sound.music != null) Conductor.songPosition = FlxG.sound.music.time;
 
-	*/
+	
 	//@:privateAccess
 	if (FlxG.sound.music.volume < 0.8 && inTransiton == false) {
 		FlxG.sound.music.volume += 0.5 * FlxG.elapsed;
@@ -286,10 +287,6 @@ function update(elapsed:Float) {
 		import funkin.menus.ModSwitchMenu; import funkin.editors.EditorPicker;
 		controls.SWITCHMOD ? openSubState(new ModSwitchMenu()) :openSubState(new EditorPicker());
 		persistentUpdate = !persistentDraw;
-	}
-	if (controls.BACK) {
-		CoolUtil.playMenuSFX('CANCEL', 0.7);
-		FlxG.switchState(new ModState('weekly/FreeplayState'));
 	}
 }
 	
@@ -336,7 +333,7 @@ function selectOption(id:Int){
 			}
 			canClick = true;
 		case 'more':
-			MusicBeatState.switchState(new WeeklyGalleryState());
+			FlxG.switchState(new ModState('weekly/WeeklyGalleryState'));
 			FlxG.sound.play(Paths.sound('scrollMenu'));
 			FlxG.mouse.visible = true;
 	}
@@ -425,6 +422,7 @@ function selectWeek() {
 
 	new FlxTimer().start(0.75, function(tmr:FlxTimer) {
 		PlayState.loadWeek(weeklist.weeks[curWeek], 'normal');
+		PlayState.isStoryMode=true;
 		FlxG.switchState(new PlayState());
 	});
 }
@@ -491,7 +489,7 @@ function updateText() {
 		if(curWeek == 10) // moves the text into the correct spot
 		{
 			tweakTxt.x = 1110 - 15;
-			stringThing.remove('Buds and Bluds'); // fuck my gay baka life
+			stringThing.remove('buds-and-bluds'); // fuck my gay baka life
 		}
 		else tweakTxt.x = 1110;
 	}
@@ -505,8 +503,8 @@ function updateText() {
 
 	scoreText.y = txtTracklist.height + 60;
 
-	/*#if !switch
-	intendedScore = Highscore.getWeekScore(loadedWeeks[curWeek].fileName, 'hard');
-	intendedMarathonScore = Highscore.getMarathonScore();
-	#end*/
+	#if !switch
+	intendedScore = FunkinSave.getWeekHighscore(weeklist.weeks[curWeek].name, 'normal').score;
+	//intendedMarathonScore = Highscore.getMarathonScore();
+	#end
 }
