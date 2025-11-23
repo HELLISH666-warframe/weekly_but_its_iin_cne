@@ -1,4 +1,9 @@
 {
+	"card": {
+		"expandBeat": 0,
+		"duration": 3,
+		"name": "Visiosubrideophobia"
+	},
 	"customValues": {},
 	"color": "#A685FD",
 	"opponentModeAllowed": true,
@@ -6,8 +11,27 @@
 	"difficulties": [
 		"normal"
 	],
+	"credits": {
+		"music": [
+			"niffirg"
+		],
+		"code": [
+			"Lethrial",
+			"OrbyyOrbinaut"
+		],
+		"chart": [
+			"niffirg"
+		],
+		"art": [
+			"DerpDrawz",
+			"lemlem_mew",
+			"Ito Saihara"
+		],
+		"va": null
+	},
 	"coopAllowed": true,
 	"stepsPerBeat": 4,
+	"tweak": 0,
 	"displayName": "visiosubrideophobia",
 	"beatsPerMeasure": 4,
 	"needsVoices": true,

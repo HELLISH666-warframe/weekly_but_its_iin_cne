@@ -2,5 +2,18 @@
 	"displayName": "goo",
 	"bpm": 115.0,
 	"icon": "tweak",
-	"color": "#9271FD"
+	"color": "#9271FD",
+	"tweak":0,
+	"card" : {
+        "name" : "Goo",
+        "expandBeat" : 0,
+		"duration": 3
+    },
+    "credits" : {
+        "music" : ["KatAnims"],
+        "chart" : ["lemlem_mew"],
+        "art" : ["Loggo", "DerpDrawz", "lemlem_mew", "Ito Saihara"],
+        "code" : ["Lethrial", "OrbyyOrbinaut"],
+        "va" : null
+    }
 }

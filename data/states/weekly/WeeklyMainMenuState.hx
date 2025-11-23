@@ -122,7 +122,7 @@ function create() {
 	staticSprite.visible = false;
 	add(staticSprite);
 
-	norbert = new FlxSprite(-100, 247);
+	norbert = new FunkinSprite(-100, 247);
 	norbert.frames = Paths.getSparrowAtlas(imagePrefix + 'norbert');
     norbert.antialiasing = options.antialiasing;
 	norbert.updateHitbox();
@@ -137,9 +137,6 @@ function create() {
 	{
 		norbert.visible = true;
 		norbert.animation.play('intro');
-	});
-	new FlxTimer().start(2, function(tmr:FlxTimer){
-		norbertcanIdle = true;
 	});
 
 	var counter = new FlxSprite(223.1, 566.1).loadGraphic(Paths.image('mainmenu/newsSet/counter'));
@@ -234,15 +231,13 @@ function create() {
 	Conductor.changeBPM(102);
 }
 
-function beatHit() {
+function beatHit()
 	if(norbertcanIdle) {
 		norbert.offset.set(-1013, -4);
 		norbert.animation.play('idle', true);
 	}
-}
 function update(elapsed:Float) {
-	
-
+	if (norbert.getAnimName()== 'intro' && norbert.isAnimFinished())norbertcanIdle = true;
 	lerpScore = Math.floor(FlxMath.lerp(lerpScore, intendedScore, FlxMath.bound(elapsed * 30, 0, 1)));
 	if(Math.abs(intendedScore - lerpScore) < 10) lerpScore = intendedScore;
 

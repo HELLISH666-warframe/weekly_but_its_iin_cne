@@ -1,4 +1,9 @@
 {
+	"card": {
+		"duration": 3,
+		"expandBeat": 0,
+		"name": "Teaking"
+	},
 	"customValues": {},
 	"color": "#A6E9FD",
 	"opponentModeAllowed": true,
@@ -6,10 +11,31 @@
 	"difficulties": [
 		"normal"
 	],
+	"credits": {
+		"code": [
+			"Loggo",
+			"Lethrial",
+			"OrbyyOrbinaut"
+		],
+		"music": [
+			"Loggo"
+		],
+		"chart": [
+			"lemlem_mew"
+		],
+		"va": null,
+		"art": [
+			"Loggo",
+			"DerpDrawz",
+			"lemlem_mew",
+			"Ito Saihara"
+		]
+	},
 	"coopAllowed": true,
 	"stepsPerBeat": 4,
+	"tweak": 0,
 	"displayName": "teaking",
-	"beatsPerMeasure": 4,
 	"needsVoices": true,
+	"beatsPerMeasure": 4,
 	"bpm": 120
 }
