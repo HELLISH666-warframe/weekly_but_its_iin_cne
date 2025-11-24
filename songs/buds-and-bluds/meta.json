@@ -1,4 +1,9 @@
 {
+	"card": {
+		"expandBeat": 32,
+		"duration": 3,
+		"name": "THE TWEAKING BOSSFIGHT"
+	},
 	"customValues": {},
 	"color": "#000000",
 	"opponentModeAllowed": false,
@@ -6,23 +11,28 @@
 	"difficulties": [
 		"normal"
 	],
-	"coopAllowed": false,
-	"stepsPerBeat": 4,
-	"tweak": 10,
-	"displayName": "buds-and-bluds",
-	"beatsPerMeasure": 4,
-	"needsVoices": true,
-	"bpm": 196,
 	"credits": {
-		"code": ["Mr. Boss"],
-		"music": ["Mr. Boss"],
-		"chart": ["Mr. Boss"],
-		"va": ["Mr. Boss"],
-		"art": ["Mr. Boss"]
+		"music": [
+			"Mr. Boss"
+		],
+		"code": [
+			"Mr. Boss"
+		],
+		"chart": [
+			"Mr. Boss"
+		],
+		"art": [
+			"Mr. Boss"
+		],
+		"va": [
+			"Mr. Boss"
+		]
 	},
-	"card": {
-		"duration": 3,
-		"expandBeat": 32,
-		"name": "THE TWEAKING BOSSFIGHT"
-	}
+	"coopAllowed": false,
+	"tweak": 10,
+	"stepsPerBeat": 4,
+	"displayName": "buds-and-bluds",
+	"needsVoices": true,
+	"beatsPerMeasure": 4,
+	"bpm": 196
 }

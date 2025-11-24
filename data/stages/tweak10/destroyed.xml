@@ -7,6 +7,9 @@
 	<sprite name="mainbg" x="-1214" y="-945" sprite="mainbg"/>
 	<sprite name="leftpile" x="-1350" y="126" sprite="leftpile" scroll="1.1"/>
 	<sprite name="rightpile" x="1574" y="138" sprite="rightpile" scroll="1.1"/>
+	<sprite name="addlayer" x="-1207" y="-929" sprite="add"/>
+	<sprite name="multiplylayer" x="-1207" y="-929" sprite="multiply"/>
+	<solid name="blackStage" y="-1000" x="-750" width="3200" height="18000" color="black" alpha="0.5"/>
 	<boyfriend x="1125" y="15" camxoffset="-175" camyoffset="-50" />
 	<opponent x="-100" y="10" camxoffset="75" camyoffset="5" />
 </stage>

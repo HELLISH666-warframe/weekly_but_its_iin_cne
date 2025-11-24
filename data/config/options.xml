@@ -6,6 +6,8 @@
 		<value name="Song Name" value="songName"/>
 		<value name="Disabled" value="disabled"/>
 	</choice>
+	<menu name="Tweak10 Options" desc="Options for tweak10.">
 	<checkbox id="WBNBRAIN" name="Rain" desc="Toggle'the rain shader in the tweaking boss fight.(WIP)" />
+	</menu>
 	<checkbox id="WEEKLYSPLASHSCREEN" name="Splash-screen" desc="Toggle'the splash screen on start up." />
 </menu>

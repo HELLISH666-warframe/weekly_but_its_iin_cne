@@ -19,6 +19,10 @@ var emotional;
 var intro;
 var blackHUD,titlecard,whiteHUD;
 var rainShader = new CustomShader("rain");
+
+var camCanZoom:Bool = true;
+
+var videoString:String = 'bnb_gameover';
 function create() {
     songLength=199000;
 }
@@ -64,6 +68,14 @@ function postCreate(){
         for(s in budAndBludsShitVar){ s.visible = true; }
             blackHUD.alpha = 0;
     });
+
+    stage.getSprite("addlayer").blend=0;
+    stage.getSprite("addlayer").alpha=0.5;
+
+    stage.getSprite("multiplylayer").blend=9;
+
+    stage.getSprite("blackStage").visible=false;
+    stage.getSprite("blackStage").alpha=0.5;
 }
 function onSongStart() {
     intro.play();
@@ -73,12 +85,16 @@ function onCameraMove(e)
     strumLines.members[curCameraTarget].characters[0].isPlayer == true ? defaultCamZoom = bfZoom : defaultCamZoom = bossZoom;
 var rainTime:Float=0;
 function update(elapsed:Float) {
-    if (isSpinning) iconP2.angle += elapsed * (60 / Conductor.bpm) * 12000;
     rainShader.data.uCameraBounds.value=[camGame.scroll.x + camGame.viewMarginX, camGame.scroll.y + camGame.viewMarginY, camGame.scroll.x + camGame.viewMarginX + camGame.width, camGame.scroll.y + camGame.viewMarginY + camGame.height];
     rainTime += elapsed;
     rainTime++;
     rainShader.uTime = rainTime;
+
+    camZooming = camCanZoom;
+
+    if (isSpinning) iconP2.angle += elapsed * (60 / Conductor.bpm) * 12000;
 }
+
 function beatHit() {
     // i love you tweaking icons
     if (iconCanTweak) {
@@ -100,6 +116,15 @@ function stepHit(curStep) {
             FlxG.camera.removeShader(mosaic);camHUD.removeShader(mosaic);
             for(s in budAndBludsShitVar){ s.alpha = 0; }
         //  ExUtils.addShader(rainShader, game.camGame);
+        case 1440: defaultCamZoom = 0.65;
+        stage.getSprite("blackStage").visible=true;
+        stage.getSprite("rightpile").alpha=0;
+        stage.getSprite("leftpile").alpha=0;
+        case 1888: stage.getSprite("blackStage").visible=false;
+        stage.getSprite("rightpile").alpha=1;
+        stage.getSprite("leftpile").alpha=1;
+        case 3330:
+            inst.volume = 1;
     }
 }
 
@@ -140,16 +165,14 @@ function norbert_Video(){
     });
 }
 function tenseSection(ok:Bool){
+    blackStage.visible =!blackStage.visible;
     if(ok){
-        blackStage.visible = true;
         rightpile.alpha = 0;
         leftpile.alpha = 0;
     }else{
-        blackStage.visible = false;
         rightpile.alpha = 1;
         leftpile.alpha = 1;
     }
-
 }
 
 function cutToBlack(){
@@ -202,3 +225,5 @@ function end(){
     FlxTween.tween(whiteHUD, {alpha: 1}, 0.75, {ease: FlxEase.linear});
     FlxTween.tween(FlxG.camera, {zoom: 0.45}, 1.0, {ease: FlxEase.smootherStepInOut});
 }
+
+function onGameOverStart() setGameOverVideo(videoString);

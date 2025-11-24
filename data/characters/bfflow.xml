@@ -1,9 +1,8 @@
 <!DOCTYPE codename-engine-character>
-<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
-<character sprite="BoyFriendflow" icon="bf" color="#31b0d1" y="350" flipX="true">
-	<anim name="idle" anim="BF idle dance" x="-5" y="0"/>
+<character y="350" sprite="BoyFriendflow" flipX="true" isPlayer="true" icon="bf" color="#31B0D1">
+	<anim name="idle" anim="BF idle dance" x="-5"/>
 	<anim name="singLEFT" anim="BF NOTE LEFT0" x="-12" y="-25"/>
-	<anim name="singDOWN" anim="BF NOTE DOWN0" x="0" y="-55"/>
+	<anim name="singDOWN" anim="BF NOTE DOWN0" y="-55"/>
 	<anim name="singUP" anim="BF NOTE UP0" x="-46" y="7"/>
 	<anim name="singRIGHT" anim="BF NOTE RIGHT0" x="-44" y="-9"/>
 	<anim name="singLEFTmiss" anim="BF NOTE LEFT MISS" x="7" y="19"/>
@@ -12,7 +11,7 @@
 	<anim name="singRIGHTmiss" anim="BF NOTE RIGHT MISS" x="-44" y="22"/>
 	<anim name="hey" anim="BF HEY" x="-4" y="-4"/>
 	<anim name="hurt" anim="BF hit" x="14" y="18"/>
-	<anim name="scared" anim="BF idle shaking" x="-4" y="0" loop="true"/>
+	<anim name="scared" anim="BF idle shaking" x="-4" loop="true"/>
 	<anim name="dodge" anim="boyfriend dodge" x="-10" y="-16"/>
 	<anim name="attack" anim="boyfriend attack" x="294" y="267"/>
 	<anim name="pre-attack" anim="bf pre attack" x="-40" y="-40"/>
