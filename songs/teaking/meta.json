@@ -1,7 +1,7 @@
 {
 	"card": {
-		"duration": 3,
 		"expandBeat": 0,
+		"duration": 3,
 		"name": "Teaking"
 	},
 	"customValues": {},
@@ -12,30 +12,30 @@
 		"normal"
 	],
 	"credits": {
+		"music": [
+			"Loggo"
+		],
 		"code": [
 			"Loggo",
 			"Lethrial",
 			"OrbyyOrbinaut"
 		],
-		"music": [
-			"Loggo"
-		],
 		"chart": [
 			"lemlem_mew"
 		],
-		"va": null,
 		"art": [
 			"Loggo",
 			"DerpDrawz",
 			"lemlem_mew",
 			"Ito Saihara"
-		]
+		],
+		"va": null
 	},
 	"coopAllowed": true,
 	"stepsPerBeat": 4,
 	"tweak": 0,
 	"displayName": "teaking",
-	"needsVoices": true,
 	"beatsPerMeasure": 4,
+	"needsVoices": true,
 	"bpm": 120
 }

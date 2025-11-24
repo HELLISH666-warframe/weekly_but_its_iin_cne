@@ -11,12 +11,14 @@ var text:FlxText;
 
 var baby:FlxSprite;
 
-function onCreatePost(){
+var hudshits;
+
+function postCreate() {
     baby = new FlxSprite().loadGraphic(Paths.image("stages/tweak0/baby"));
     baby.antialiasing = true;
     baby.x = boyfriend.x;
-    baby.y = boyfriend.y + 400;
-    baby.alpha = 0.001;
+    baby.y = boyfriend.y+400;
+    baby.alpha = 0.01;
 	add(baby); 
 
     barleft = new FlxSprite(0,0).loadGraphic(Paths.image('stages/tweak0/YALLGONNAHATEMEFORTHIS'));
@@ -71,6 +73,7 @@ function onCreatePost(){
     text.screenCenter(FlxAxes.Y);
     text.borderSize = 3;
     add(text);
+    hudshits=[timeBar,timeBarBG,timeTxt,healthBarBG,healthBar,iconP1,iconP2,scoreTxt,accuracyTxt,missesTxt];
 }
 
 function stepHit(curStep:Int)
@@ -88,16 +91,10 @@ function middleshit(mid:Bool = false){
         tik.alpha = 1;
         barleft.alpha = 1;
         barRight.alpha = 1;
-        timeBar.alpha = 0.0001;
-        healthBarBG.alpha = 0.0001;
-        healthBar.alpha = 0.0001;
-        timeTxt.alpha = 0.0001;
-        iconP1.alpha = 0.0001;
-        iconP2.alpha = 0.0001;
-        scoreTxt.alpha = 0.0001;
+        for(s in hudshits)s.alpha=0.001;
         for (i in 0...4){
 		playerStrums.members[i].x -= 325;
-        cpuStrums.members[i].alpha = 0.0001;
+        cpuStrums.members[i].x -= 500;
 	    }
     } else {
         FlxG.camera.flash(FlxColor.WHITE, 1);
@@ -105,23 +102,17 @@ function middleshit(mid:Bool = false){
         tik.alpha = 0;
         barleft.alpha = 0;
         barRight.alpha = 0;
-        timeBar.alpha = 1;
-        healthBarBG.alpha = 1;
-        healthBar.alpha = 1;
-        timeTxt.alpha = 1;
-        iconP1.alpha = 1;
-        iconP2.alpha = 1;
-        scoreTxt.alpha = 1;
+        for(s in hudshits)s.alpha=1;
         for (i in 0...4){
 		playerStrums.members[i].x += 325;
-        cpuStrums.members[i].alpha = 1;
+        cpuStrums.members[i].x += 500;
 	    }
     }
 }
 
 function jumpscare(val:String){
     switch(val){
-        case "true": jump.alpha = 1;
+        case "on": jump.alpha = 1;
         default: jump.alpha = 0.000001;	
     }
 }
@@ -132,9 +123,9 @@ function caption(txt:String){
     text.screenCenter(FlxAxes.Y);
 }
 
-function baby(val:String){
+function baby_thang(val:String){
     switch(val){
-        case "baby": baby.alpha = 1; boyfriend.alpha = 0.001;	
-        default: baby.alpha = 0.001; boyfriend.alpha = 1;
+        case "baby": baby.alpha = 1; boyfriend.alpha = 0.001; iconP1.setIcon('tweak0/fatassbabybruh');
+        default: baby.alpha = 0.001; boyfriend.alpha = 1; iconP1.setIcon('bf');
     }
 }

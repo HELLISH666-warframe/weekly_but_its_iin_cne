@@ -1,5 +1,4 @@
 import openfl.display.BlendMode;
-var PREFIX:String = 'stages/newsSetConan/'; // the leth signiture
 
 var nanoc:Character;
 var focusChar:Character = null;
@@ -16,55 +15,25 @@ var isFused:Bool = false;
 var white:FlxSprite;
 var allowEnd:Bool = false;
 
-function postCreate() 
-{
- //   addCharacterToList('connoc', 2);
-
-    var bg_hole:FlxSprite = new FlxSprite(-1357, -739).loadGraphic(Paths.image(PREFIX + 'bg_hole'));
-    insert(1, bg_hole);
-    add(bg_hole);
-
-    var broken_shit:FlxSprite = new FlxSprite(-770, 1000).loadGraphic(Paths.image(PREFIX + 'broken_shit'));
-    insert(8, broken_shit);
-    add(broken_shit);
-
-//var rain:BGSprite = new BGSprite(PREFIX + 'rain', -50, -750, 1, 1, ['rain0'], true);
-  //  rain.alpha = 0.5;
-    //foreground.add(rain);
-
+function postCreate() {
     white = new FlxSprite(0, 0).makeGraphic(FlxG.width, FlxG.height, FlxColor.WHITE);
-    white.cameras = [camHUD];
+    white.camera = camHUD;
     white.alpha = 0;
     white.blend = BlendMode.ADD;
     add(white);
 
-    nanoc = new Character(dad.x + 700, gf.y, 'nanoc', false);
-    nanoc.flipX = false;
-    insert(members.indexOf(dad)-1, nanoc);
+    strumLines.members[3].characters[0].setPosition(dad.x + 700, gf.y);
+    insert(members.indexOf(dad)-1, strumLines.members[3].characters[0]);
 
     gf.flipX = !gf.flipX;
     gf.alpha = 0.001;
-    nanoc.alpha = 0.001;
-}
-function onSpawnNotePost(note:Note)
-{
-    if (note.noteType == 'Nanoc Note') note.noAnimation = true;
+    strumLines.members[3].characters[0].alpha = 0.001;
 }
 
-function opponentNoteHit(note:Note)
-{
-    if (note.noteType == 'Nanoc Note') {
-        nanoc.playAnim(game.singAnimations[note.noteData % 4], true);
-        nanoc.holdTimer = 0;
-    }
+function onNoteHit(e) if (e.noteType == "Nanoc Note"){
+    e.cancelAnim();
+    strumLines.members[3].characters[0].playSingAnim(e.direction, e.animSuffix);
 }
-
-function beatHit()
-{
-    var anim:String = nanoc.animation.curAnim.name;
-    if (curBeat % Math.round(gfSpeed * nanoc.danceEveryNumBeats) == 0 && (anim == 'danceLeft' || anim == 'danceRight')) nanoc.dance();
-}
-
 /*function onEvent(name:String, v1:String, v2:String)
 {
     switch (name) 
@@ -136,11 +105,9 @@ function onUpdate(elapsed)
     }
 }
 
-function fakeMoveCamera(char:Character, toggle:Bool)
-{
-    game.isCameraOnForcedPos = toggle;
-    if (toggle)
-    {
+function fakeMoveCamera(char:Character, toggle:Bool) {
+    isCameraOnForcedPos = toggle;
+    if (toggle) {
         var curCharacter:Character = char;
         if (game.camCurTarget != null) curCharacter = game.camCurTarget;
 
@@ -159,8 +126,8 @@ function fakeMoveCamera(char:Character, toggle:Bool)
 
         var displacement:FlxPoint = curCharacter.returnDisplacePoint();
 
-        game.camFollow.x = desiredPos.x + displacement.x;
-        game.camFollow.y = desiredPos.y + displacement.y;
+        camFollow.x = desiredPos.x + displacement.x;
+        camFollow.y = desiredPos.y + displacement.y;
 
         displacement.put();
         desiredPos.put();
@@ -197,23 +164,23 @@ function onGameOverStart()
 }
 function jump_in(){  
     var pigY:Float = gf.y;
-    var fagY:Float = nanoc.y; // pork faggot (the food)
+    var fagY:Float = strumLines.members[3].characters[0].y; // pork faggot (the food)
 
     gf.y -= 1000;
     gf.alpha = 1;
-    nanoc.y -= 1000;
-    nanoc.alpha = 1;
+    strumLines.members[3].characters[0].y -= 1000;
+    strumLines.members[3].characters[0].alpha = 1;
 
     FlxTween.tween(gf, {y : pigY}, 0.6, {ease: FlxEase.quadIn});
     -gf.playAnim('singUP');
-    FlxTween.tween(nanoc, {y : fagY}, 0.6, {ease: FlxEase.quadIn, startDelay: 0.3, onComplete: function(twn:FlxTween) { nanoc.playAnim('singDOWN'); }});
-    nanoc.playAnim('singUP');
+    FlxTween.tween(strumLines.members[3].characters[0], {y : fagY}, 0.6, {ease: FlxEase.quadIn, startDelay: 0.3, onComplete: function(twn:FlxTween) {strumLines.members[3].characters[0].playAnim('singDOWN');}});
+    strumLines.members[3].characters[0].playAnim('singUP');
 }
 function fuse(){  
     FlxTween.tween(white, {alpha : 1}, 0.3);
-    FlxTween.tween(nanoc, {x : nanoc.x + 200}, 0.3, {ease: FlxEase.quadIn, onComplete: function(twn:FlxTween) {
+    FlxTween.tween(strumLines.members[3].characters[0], {x : strumLines.members[3].characters[0].x + 200}, 0.3, {ease: FlxEase.quadIn, onComplete: function(twn:FlxTween) {
         gf.flipX = !gf.flipX;
         FlxTween.tween(white, {alpha : 0}, 0.3);
-        nanoc.kill();
+        strumLines.members[3].characters[0].kill();
     }});
 }

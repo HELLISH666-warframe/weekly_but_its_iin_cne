@@ -1,4 +1,9 @@
 {
+	"card": {
+		"duration": 3,
+		"expandBeat": 0,
+		"name": "Evolution"
+	},
 	"customValues": {},
 	"color": "#4F4F4F",
 	"opponentModeAllowed": false,
@@ -6,10 +11,26 @@
 	"difficulties": [
 		"normal"
 	],
+	"credits": {
+		"code": [
+			"Srife5"
+		],
+		"music": [
+			"Kreagato"
+		],
+		"chart": [
+			"Srife5"
+		],
+		"va": null,
+		"art": [
+			"DerpDrawz",
+			"Alphalul1"
+		]
+	},
 	"coopAllowed": false,
 	"stepsPerBeat": 4,
 	"displayName": "evolution",
-	"beatsPerMeasure": 4,
 	"needsVoices": true,
+	"beatsPerMeasure": 4,
 	"bpm": 270
 }

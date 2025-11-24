@@ -1,0 +1,26 @@
+{
+	"song": {
+		"events": [
+			[
+				35333.3333333333,
+				[
+					[
+						"Change Character",
+						"bf",
+						"fatassbaby"
+					]
+				]
+			],
+			[
+				50458.3333333333,
+				[
+					[
+						"Change Character",
+						"bf",
+						"bfflow"
+					]
+				]
+			]
+		]
+	}
+}

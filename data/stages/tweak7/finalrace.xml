@@ -1,5 +1,11 @@
 <!DOCTYPE codename-engine-stage>
-<stage zoom="0.5" folder="">
+<stage zoom="0.5" folder="stages/tweak7/ducklife/" startCamPosX="1200" startCamPosY="900" >
+	<sprite name="galaxy" x="-900" y="-400" sprite="galaxy" scroll="0.5"/>
+	<sprite name="stage" x="-300" y="1050" sprite="stage" scroll="1"/>
+	<sprite name="domo" x="2200" y="850" sprite="domo" scroll="1"/>
+	<sprite name="domo1" x="0" y="850" sprite="domo" scroll="1" flipX="true"/>
+	<sprite name="domojet" x="275" y="-300" sprite="domojet" scroll="1"/>
+	<sprite name="domojet1" x="1850" y="-300" sprite="domojet" scroll="1" flipX="true"/>
 	<boyfriend x="1370" y="590" camxoffset="0" camyoffset="0" />
 	<opponent x="680" y="590" camxoffset="0" camyoffset="0" />
 </stage>

@@ -1,6 +1,10 @@
 <!DOCTYPE codename-engine-stage>
-<stage zoom="0.7" folder="">
+<stage zoom="0.7" folder="stages/tweak10/newsSetConan/">
+	<sprite name="bg" x="-1357" y="-739" sprite="bg_hole" scroll="1"/>
 	<player x="1500" y="400" camxoffset="0" camyoffset="0"/>
 	<girlfriend x="830" y="310" camxoffset="0" camyoffset="0"/>
 	<opponent x="-600" y="380" camxoffset="0" camyoffset="0"/>
+	<sprite name="broken_shit" x="-770" y="-1000" sprite="broken_shit" scroll="1"/>
+	<sprite name="rain" x="-50" y="-750" sprite="rain" alpha="0.5" scroll="1" type="loop"/>
+        <anim name="idle" anim="rain0" loop="true"/>
 </stage>

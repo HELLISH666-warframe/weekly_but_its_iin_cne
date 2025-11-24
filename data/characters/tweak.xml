@@ -1,5 +1,5 @@
 <!DOCTYPE codename-engine-character>
-<character x="110" y="340" scale="2.2" camx="-200" icon="tweak" color="#70D3DE">
+<character x="110" y="340" scale="2.2" camx="20" camy="100" icon="tweak" color="#70D3DE">
 	<anim name="idle" anim="tweak idle"/>
 	<anim name="singLEFT" anim="tweak left" x="100" y="36.36"/>
 	<anim name="singDOWN" anim="tweak down" x="45.45" y="-90.91"/>
