@@ -20,8 +20,6 @@ var intro;
 var blackHUD,titlecard,whiteHUD;
 var rainShader = new CustomShader("rain");
 
-var camCanZoom:Bool = true;
-
 var videoString:String = 'bnb_gameover';
 function create() {
     songLength=199000;
@@ -90,8 +88,6 @@ function update(elapsed:Float) {
     rainTime++;
     rainShader.uTime = rainTime;
 
-    camZooming = camCanZoom;
-
     if (isSpinning) iconP2.angle += elapsed * (60 / Conductor.bpm) * 12000;
 }
 
@@ -107,14 +103,12 @@ function beatHit() {
 }
 function stepHit(curStep) {
     switch (curStep) {
-        case 1407:
-            FlxG.camera.addShader(mosaic);camHUD.addShader(mosaic);
-            FlxTween.num(1, 25, 1.5, {ease: FlxEase.linear, onUpdate: function(strength:FlxTween){
-                mosaic.data.uBlocksize.value = [strength.value, strength.value];
-            }});
-        case 1423:
-            FlxG.camera.removeShader(mosaic);camHUD.removeShader(mosaic);
-            for(s in budAndBludsShitVar){ s.alpha = 0; }
+        case 1407: FlxG.camera.addShader(mosaic);camHUD.addShader(mosaic);
+        FlxTween.num(1, 25, 1.5, {ease: FlxEase.linear, onUpdate: function(strength:FlxTween){
+            mosaic.data.uBlocksize.value = [strength.value, strength.value];
+        }});
+        case 1423: FlxG.camera.removeShader(mosaic);camHUD.removeShader(mosaic);
+        for(s in budAndBludsShitVar){ s.alpha = 0; }
         //  ExUtils.addShader(rainShader, game.camGame);
         case 1440: defaultCamZoom = 0.65;
         stage.getSprite("blackStage").visible=true;
@@ -123,8 +117,7 @@ function stepHit(curStep) {
         case 1888: stage.getSprite("blackStage").visible=false;
         stage.getSprite("rightpile").alpha=1;
         stage.getSprite("leftpile").alpha=1;
-        case 3330:
-            inst.volume = 1;
+        case 3330: inst.volume = 1;
     }
 }
 
@@ -144,17 +137,16 @@ function norbert_Video(){
     camZooming=false;
     emotional.antialiasing = true;
     emotional.camera = camHUD;
-    vocals.volume = 0;
-    inst.volume = 0;
+    vocals.volume = inst.volume = 0;
     emotional.play([FlxVideoSprite.MUTED]);
     emotional.bitmap.onEndReached.add(function() {
         camGame.flash(0xFFFFFFFF, 1.0);
         blackHUD.alpha = 0;
         emotional.kill();
-        boyfriend.cameraOffset[0] = -200;
-        boyfriend.cameraOffset[1] = -210;
-        dad.cameraOffset[0] = 100;
-        dad.cameraOffset[1] = -185;
+        /*boyfriend.cameraOffset.x = -200;
+        boyfriend.cameraOffset.y = -210;
+        dad.cameraOffset.x = 100;
+        dad.cameraOffset.y = -185;*/
         videoString = 'tweak10/OOGITYGOOGAMEOVER';
         Options.camZoomOnBeat = true;
         FlxTween.tween(titlecard, {alpha: 1}, 0.5);

@@ -1,7 +1,7 @@
 {
 	"card": {
-		"expandBeat": 32,
 		"duration": 3,
+		"expandBeat": 32,
 		"name": "THE TWEAKING BOSSFIGHT"
 	},
 	"customValues": {},
@@ -12,19 +12,19 @@
 		"normal"
 	],
 	"credits": {
-		"music": [
+		"code": [
 			"Mr. Boss"
 		],
-		"code": [
+		"music": [
 			"Mr. Boss"
 		],
 		"chart": [
 			"Mr. Boss"
 		],
-		"art": [
+		"va": [
 			"Mr. Boss"
 		],
-		"va": [
+		"art": [
 			"Mr. Boss"
 		]
 	},
@@ -32,7 +32,7 @@
 	"tweak": 10,
 	"stepsPerBeat": 4,
 	"displayName": "buds-and-bluds",
-	"needsVoices": true,
 	"beatsPerMeasure": 4,
+	"needsVoices": true,
 	"bpm": 196
 }

@@ -1,5 +1,6 @@
 <!DOCTYPE codename-mod-options>
 <menu name="Weekly Options" desc="Idk_bro.">
+    <checkbox id="WEEKLY_FLASHING" name="Flashing lights." desc="Toggle'flashing lights." />
     <choice id="TimeBar" name="Time Bar" desc="What should the Time Bar display?">
 		<value name="Time Left" value="left"/>
 		<value name="Time Elapsed" value="elapsed"/>

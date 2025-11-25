@@ -1,6 +1,6 @@
 <!DOCTYPE codename-engine-character>
 <!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
-<character sprite="tweak10/666" icon="666" color="#d70000" x="140" y="320" camx="-420" camy="-260" holdTime="6.1" scale="1.1">
+<character sprite="tweak10/666" icon="666" color="#d70000" x="140" y="320" camx="-10" camy="-400" holdTime="6.1" scale="1.1">
 	<anim name="singLEFT" anim="left0" x="239.09090909090907" y="244.54545454545453"/>
 	<anim name="singDOWN" anim="down0" x="232.72727272727272" y="247.27272727272725"/>
 	<anim name="singUP" anim="up0" x="238.18181818181816" y="246.36363636363635"/>

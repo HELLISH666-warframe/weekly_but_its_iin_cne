@@ -1,6 +1,15 @@
 <!DOCTYPE codename-engine-stage>
-<stage zoom="0.45" folder="">
+<stage zoom="0.45" folder="stages/tweak10/tenkaichi/" startCamPosX="710" startCamPosY="175">
+    <sprite name="sky" x="-675" y="-800" sprite="sky" scroll="0.5"/>
+	<sprite name="city" x="-675" y="-1000" sprite="city" scroll="0.75"/>
+	<sprite name="cameoDistant" x="2800" y="-600" sprite="cameos/eight" scroll="0.8"/>
+	<sprite name="zero" x="-400" y="-400" sprite="cameos/zero" scroll="0.9"/>
+	<sprite name="floor" x="-575" y="-772" sprite="floor"/>
+	<solid name="light" x="-1000" y="-1000" width="5000" height="4000" color="white" alpha="0.001"/>
+	<solid name="white" x="-600" y="-400" width="2560" height="1440" color="white" alpha="0" scroll="0"/>
+	<solid name="black" x="0" y="0" width="1280" height="720" color="black"/>
 	<player x="1400" y="-250" camxoffset="-100" camyoffset="-20" />
-	<girlfriend x="-50" y="200" camxoffset="0" camyoffset="0" />
 	<opponent x="450" y="-300" camxoffset="100" camyoffset="-50" />
+	<girlfriend x="-50" y="200" camxoffset="0" camyoffset="0" />
+	<sprite name="cameoFG" x="-1800" y="300" sprite="cameos/pants" scroll="1.1"/>
 </stage>

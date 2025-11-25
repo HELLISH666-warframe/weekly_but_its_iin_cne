@@ -1,6 +1,5 @@
 <!DOCTYPE codename-engine-character>
-<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
-<character sprite="tweak10/spiderman" color="#31b0d1" x="30" y="70" flipX="true" camx="130" camy="-10">
+<character x="30" y="70" camx="-690" camy="-110" isPlayer="true" color="#31B0D1">
 	<anim name="idle" anim="idle"/>
 	<anim name="singLEFT" anim="left" x="170" y="-113"/>
 	<anim name="singDOWN" anim="down" x="10" y="-217"/>

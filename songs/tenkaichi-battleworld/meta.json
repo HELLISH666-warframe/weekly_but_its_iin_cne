@@ -1,4 +1,9 @@
 {
+	"card": {
+		"duration": 3,
+		"expandBeat": 64,
+		"name": "Tenkaichi Battleworld"
+	},
 	"customValues": {},
 	"color": "#1F5980",
 	"opponentModeAllowed": false,
@@ -6,10 +11,32 @@
 	"difficulties": [
 		"normal"
 	],
+	"credits": {
+		"code": [
+			"OrbyyOrbinaut"
+		],
+		"music": [
+			"Biddle3"
+		],
+		"chart": [
+			"Kye_VL",
+			"OrbyyOrbinaut"
+		],
+		"va": null,
+		"art": [
+			"Ito Saihara",
+			"lemlem_mew",
+			"Flaguieug",
+			"DerpDrawz",
+			"alphalul1",
+			"TerminalRepo"
+		]
+	},
 	"coopAllowed": false,
+	"tweak": 10,
 	"stepsPerBeat": 4,
 	"displayName": "tenkaichi-battleworld",
-	"beatsPerMeasure": 4,
 	"needsVoices": true,
+	"beatsPerMeasure": 4,
 	"bpm": 178
 }

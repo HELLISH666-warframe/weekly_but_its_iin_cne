@@ -1,6 +1,5 @@
 <!DOCTYPE codename-engine-character>
-<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
-<character sprite="tweak10/gokubutblue" icon="tweak10/gokuspidey" color="#3bb1ff" y="-160" flipX="true" camx="150">
+<character y="-160" sprite="tweak10/gokubutblue" flipX="true" camx="150" isPlayer="true" icon="tweak10/gokuspidey" color="#3BB1FF">
 	<anim name="idle" anim="idle0"/>
 	<anim name="singDOWN" anim="down0" x="40" y="-210"/>
 	<anim name="singUP" anim="up0" x="-20" y="150"/>
