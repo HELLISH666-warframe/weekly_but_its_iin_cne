@@ -1,6 +1,10 @@
 <!DOCTYPE codename-engine-stage>
-<stage zoom="0.9" folder="">
-	<boyfriend x="720" y="90" camxoffset="-250" camyoffset="80" />
-	<girlfriend x="250" y="60" camxoffset="0" camyoffset="0" />
+<stage startCamPosX="700" startCamPosY="500" zoom="0.9" folder="stages/tweak8/guest/">
+	<sprite name="sky" x="-600" y="-50" sprite="Sky" scroll="0.8"/>
+	<sprite name="bg" x="-900" y="-200" sprite="BG" scroll="1"/>
+	<solid name="black" x="-300" y="-300" width="2560" height="1440" color="black" scroll="0" alpha="0"/>
+	<girlfriend x="450" y="60" camxoffset="0" camyoffset="0" />
+	<boyfriend x="720" y="90" camxoffset="25" camyoffset="80" />
 	<opponent x="-50" y="155" camxoffset="0" camyoffset="40" />
+	<sprite name="overlay" x="0" y="0" sprite="overlay" scroll="0" scale="1.25"/>
 </stage>

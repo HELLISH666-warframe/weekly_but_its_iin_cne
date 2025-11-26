@@ -1,6 +1,5 @@
 <!DOCTYPE codename-engine-character>
-<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
-<character sprite="tweak8/Billy" icon="tweak8/Billy" color="#dcdcdc" flipX="true" camx="-140" camy="270">
+<character flipX="true" camx="-140" camy="270" isPlayer="true" color="#DCDCDC">
 	<anim name="danceLeft" anim="manL" x="68" y="-347"/>
 	<anim name="danceRight" anim="blehR" x="59" y="-355"/>
 	<anim name="singLEFT" anim="Left" x="107" y="-357"/>

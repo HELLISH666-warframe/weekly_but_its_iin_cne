@@ -1,8 +1,8 @@
 import flixel.text.FlxTextBorderStyle;
 if(SONG.meta.card==null)return;
 function postCreate() {
-	trace(SONG.meta.credits);
-	text = new FlxText(10, 10).setFormat(Paths.font("vcr.ttf"), 24, FlxColor.WHITE, 'left', FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+    SONG.meta.card.font ==null ? 'vcr.ttf' : SONG.meta.card.font;
+	text = new FlxText(10, 10).setFormat(Paths.font(SONG.meta.card.font), 24, FlxColor.WHITE, 'left', FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
     //text.antialiasing = ClientPrefs.globalAntialiasing;
 
 	text.text = SONG.meta.card.name+'\n\nSong: '+SONG.meta.credits.music.join(', ')+'\nChart: '+SONG.meta.credits.chart.join(', ');

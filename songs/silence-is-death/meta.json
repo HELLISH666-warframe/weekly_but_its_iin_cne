@@ -1,4 +1,11 @@
 {
+	"card": {
+		"fontSize": 20,
+		"duration": 5,
+		"expandBeat": 16,
+		"name": "Silence is Death",
+		"font": "tweak8/Boblox.ttf"
+	},
 	"customValues": {},
 	"color": "#AF062E",
 	"opponentModeAllowed": false,
@@ -6,10 +13,25 @@
 	"difficulties": [
 		"normal"
 	],
+	"credits": {
+		"code": [
+			"Flaguieug"
+		],
+		"music": [
+			"niffirg"
+		],
+		"chart": [
+			"niffirg"
+		],
+		"va": null,
+		"art": [
+			"Flaguieug, SN0WYDREAMS"
+		]
+	},
 	"coopAllowed": false,
 	"stepsPerBeat": 4,
 	"displayName": "silence-is-death",
-	"beatsPerMeasure": 4,
 	"needsVoices": true,
+	"beatsPerMeasure": 4,
 	"bpm": 185
 }
